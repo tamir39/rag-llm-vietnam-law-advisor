@@ -83,17 +83,19 @@ def generate(
         messages,
         add_generation_prompt=True,
         return_tensors="pt",
+        return_dict=True,
     ).to(model.device)
+    input_ids = inputs["input_ids"]
 
     do_sample = temperature is not None and temperature > 0
     with torch.no_grad():
         out = model.generate(
-            inputs,
+            **inputs,
             max_new_tokens=max_new_tokens,
             do_sample=do_sample,
             temperature=temperature if do_sample else 1.0,
             top_p=0.9 if do_sample else 1.0,
             pad_token_id=tokenizer.pad_token_id,
         )
-    new_tokens = out[0, inputs.shape[1]:]
+    new_tokens = out[0, input_ids.shape[1]:]
     return tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
