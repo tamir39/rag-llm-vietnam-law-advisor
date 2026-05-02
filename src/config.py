@@ -21,7 +21,8 @@ RESULTS_DIR = ROOT_DIR / "experiments" / "results"
 
 EMBEDDING_MODEL = "intfloat/multilingual-e5-base"
 BASE_LLM = "Qwen/Qwen2.5-7B-Instruct"
-LORA_ADAPTER = CHECKPOINTS_DIR / "qwen2_5-7b-vat-lora"
+LORA_ADAPTER = CHECKPOINTS_DIR / "qwen2_5-7b-vietnam-tax-lora"
+HF_LORA_REPO = "Tamir39/qwen2_5-7b-vietnam-tax-lora"
 
 VECTOR_STORE = "faiss"
 TOP_K = 5
