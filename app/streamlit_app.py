@@ -67,6 +67,17 @@ def get_pipeline(config_path_str: str) -> InferencePipeline:
     return pipe
 
 
+# Eager-load on startup if LAWMATE_PRELOAD_CONFIG is set (e.g. "D"). This warms
+# Streamlit's @st.cache_resource before the public URL goes live, so the first
+# visitor doesn't trigger a 15GB download through the tunnel.
+import os as _os
+_preload_key = _os.environ.get("LAWMATE_PRELOAD_CONFIG")
+if _preload_key:
+    _label = next((k for k in CONFIG_OPTIONS if k.startswith(_preload_key)), None)
+    if _label:
+        get_pipeline(str(CONFIG_OPTIONS[_label]))
+
+
 # ----- Main ------------------------------------------------------------------
 
 DEFAULT_QS = [
