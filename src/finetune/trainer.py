@@ -87,7 +87,7 @@ def train(base_model_id: str, dataset, output_dir: Path, eval_dataset=None):
         gradient_accumulation_steps=GRAD_ACCUM_STEPS,
         learning_rate=LEARNING_RATE,
         warmup_ratio=WARMUP_RATIO,
-        max_seq_length=MAX_SEQ_LEN,
+        max_length=MAX_SEQ_LEN,
         logging_steps=10,
         save_strategy="epoch",
         save_total_limit=2,
@@ -101,7 +101,7 @@ def train(base_model_id: str, dataset, output_dir: Path, eval_dataset=None):
 
     trainer = SFTTrainer(
         model=model,
-        tokenizer=tokenizer,
+        processing_class=tokenizer,
         args=sft_config,
         train_dataset=dataset,
         eval_dataset=eval_dataset,
