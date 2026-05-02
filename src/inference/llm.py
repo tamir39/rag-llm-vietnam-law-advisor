@@ -41,10 +41,11 @@ def load_llm(
             bnb_4bit_use_double_quant=True,
         )
 
+    device_map = {"": 0} if torch.cuda.is_available() else "auto"
     model = AutoModelForCausalLM.from_pretrained(
         model_id,
         quantization_config=quant_config,
-        device_map="auto",
+        device_map=device_map,
         torch_dtype=torch.bfloat16,
     )
     model.config.use_cache = True
