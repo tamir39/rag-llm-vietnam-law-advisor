@@ -23,6 +23,8 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from enum import Enum
 from pathlib import Path
+import torch
+import gc
 
 import yaml
 
@@ -130,9 +132,29 @@ class InferencePipeline:
                 temperature=gen_cfg.get("temperature", 0.2),
             )
             return PipelineResult(answer=text)
+        
+    def unload(self):
+        self._model = None
+        self._tokenizer = None
+        self._embedder = None
+        self._faiss_index = None
+        gc.collect()
+        torch.cuda.empty_cache()
+        print("Pipeline resources cleared.")
 
+_current_pipe = None
+_current_config = None
 
 def answer(question: str, config: Config, configs_dir: Path | None = None) -> str:
+    global _current_pipe, _current_config
+    
+    if _current_pipe is not None and _current_config == config:
+        return _current_pipe.answer(question).answer
+
+    if _current_pipe is not None:
+        _current_pipe.unload()
+        _current_pipe = None
+
     """Convenience one-shot for the demo / CLI; reloads the model each call."""
     from src.config import ROOT_DIR
 
@@ -143,6 +165,8 @@ def answer(question: str, config: Config, configs_dir: Path | None = None) -> st
         Config.C_FT_NO_RAG: "C_finetuned_no_rag.yaml",
         Config.D_FT_RAG: "D_finetuned_with_rag.yaml",
     }
-    pipe = InferencePipeline(configs_dir / name_map[config])
-    pipe.load()
-    return pipe.answer(question).answer
+    _current_pipe = InferencePipeline(configs_dir / name_map[config])
+    _current_pipe.load()
+    _current_config = config
+    
+    return _current_pipe.answer(question).answer
