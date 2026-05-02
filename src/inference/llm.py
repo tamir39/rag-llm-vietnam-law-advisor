@@ -46,7 +46,15 @@ def load_llm(
             bnb_4bit_use_double_quant=True,
         )
 
-    device_map = {"": 0} if torch.cuda.is_available() else "auto"
+    # Single GPU: pin everything to GPU 0 (avoids bnb's CPU-dispatch validation
+    # error when accelerate gets cautious with headroom).
+    # Multi-GPU (e.g. Kaggle T4 x2): split via "auto" so the 4-bit Qwen + KV
+    # cache + activations have ~30 GB to spread across instead of cramming
+    # into one 15 GB card.
+    if torch.cuda.is_available():
+        device_map = "auto" if torch.cuda.device_count() > 1 else {"": 0}
+    else:
+        device_map = "auto"
     model = AutoModelForCausalLM.from_pretrained(
         model_id,
         quantization_config=quant_config,
