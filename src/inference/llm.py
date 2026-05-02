@@ -32,12 +32,17 @@ def load_llm(
     import torch
     from transformers import AutoModelForCausalLM, BitsAndBytesConfig
 
+    # T4 (Turing) has no native bf16; bnb 4-bit ops fall back to fp32 emulation
+    # which is dramatically slower. Use bf16 only on Ampere+ (A100/A10/L4),
+    # fp16 elsewhere.
+    compute_dtype = torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16
+
     quant_config = None
     if load_in_4bit:
         quant_config = BitsAndBytesConfig(
             load_in_4bit=True,
             bnb_4bit_quant_type="nf4",
-            bnb_4bit_compute_dtype=torch.bfloat16,
+            bnb_4bit_compute_dtype=compute_dtype,
             bnb_4bit_use_double_quant=True,
         )
 
@@ -46,7 +51,7 @@ def load_llm(
         model_id,
         quantization_config=quant_config,
         device_map=device_map,
-        torch_dtype=torch.bfloat16,
+        torch_dtype=compute_dtype,
     )
     model.config.use_cache = True
 
