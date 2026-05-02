@@ -30,7 +30,11 @@ def load_llm(
     Pass ``None`` for the base model only.
     """
     import torch
+    import os
     from transformers import AutoModelForCausalLM, BitsAndBytesConfig
+    from accelerate import infer_auto_device_map, init_empty_weights
+
+    os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 
     # T4 (Turing) has no native bf16; bnb 4-bit ops fall back to fp32 emulation
     # which is dramatically slower. Use bf16 only on Ampere+ (A100/A10/L4),
@@ -44,6 +48,13 @@ def load_llm(
             bnb_4bit_quant_type="nf4",
             bnb_4bit_compute_dtype=compute_dtype,
             bnb_4bit_use_double_quant=True,
+        )
+
+    with init_empty_weights():
+        model = AutoModelForCausalLM.from_pretrained(
+            model_id,
+            quantization_config=quant_config,
+            torch_dtype=compute_dtype,
         )
 
     # Single GPU: pin everything to GPU 0 (avoids bnb's CPU-dispatch validation
@@ -60,6 +71,8 @@ def load_llm(
         quantization_config=quant_config,
         device_map=device_map,
         torch_dtype=compute_dtype,
+        offload_folder="offload",
+        low_cpu_mem_usage=True
     )
     model.config.use_cache = True
 

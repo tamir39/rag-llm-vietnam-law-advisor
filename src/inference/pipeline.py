@@ -138,9 +138,13 @@ class InferencePipeline:
         self._tokenizer = None
         self._embedder = None
         self._faiss_index = None
+    
         gc.collect()
+    
         torch.cuda.empty_cache()
-        print("Pipeline resources cleared.")
+        torch.cuda.ipc_collect()
+        
+        print("GPU memory cleared.")
 
 _current_pipe = None
 _current_config = None
