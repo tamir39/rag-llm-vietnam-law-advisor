@@ -145,6 +145,12 @@ class InferencePipeline:
         torch.cuda.ipc_collect()
         
         print("GPU memory cleared.")
+    
+    def __del__(self):
+        self._model = None
+        self._tokenizer = None
+        gc.collect()
+        torch.cuda.empty_cache()
 
 _current_pipe = None
 _current_config = None

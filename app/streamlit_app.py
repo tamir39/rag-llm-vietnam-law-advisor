@@ -63,7 +63,7 @@ with st.sidebar:
 
 # ----- Pipeline cache --------------------------------------------------------
 
-@st.cache_resource(show_spinner="Đang tải mô hình ... (lần đầu mất 1-2 phút)")
+@st.cache_resource(show_spinner="Đang tải mô hình...")
 def get_pipeline(config_path_str: str) -> InferencePipeline:
     pipe = InferencePipeline(Path(config_path_str))
     pipe.load()
@@ -86,6 +86,11 @@ ask = st.button("Trả lời", type="primary", use_container_width=False)
 
 if ask and question.strip():
     cfg_path = CONFIG_OPTIONS[config_label]
+
+    if "last_config" in st.session_state and st.session_state.last_config != config_label:
+        st.cache_resource.clear()
+    st.session_state.last_config = config_label
+
     pipe = get_pipeline(str(cfg_path))
 
     # Apply per-call overrides without mutating the cached pipeline.

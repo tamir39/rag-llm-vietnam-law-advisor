@@ -71,10 +71,10 @@ def load_llm(
         quantization_config=quant_config,
         device_map=device_map,
         torch_dtype=compute_dtype,
-        offload_folder="offload",
+        offload_folder="/kaggle/working/offload",
         low_cpu_mem_usage=True
     )
-    model.config.use_cache = True
+    model.config.use_cache = False 
 
     if lora_path is not None:
         from peft import PeftModel
