@@ -1,0 +1,13 @@
+name: B_base_with_rag
+description: Base LLM with RAG
+model:
+  base_id: Qwen/Qwen2.5-7B-Instruct
+  lora_adapter: null
+rag:
+  enabled: true
+  embedding_model: intfloat/multilingual-e5-base
+  vector_store: faiss
+  top_k: 5
+generation:
+  max_new_tokens: 512
+  temperature: 0.2

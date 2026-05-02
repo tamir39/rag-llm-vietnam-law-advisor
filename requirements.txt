@@ -1,0 +1,31 @@
+# Core
+numpy>=1.26
+pandas>=2.1
+pyyaml>=6.0
+python-dotenv>=1.0
+tqdm>=4.66
+
+# RAG
+sentence-transformers>=3.0
+faiss-cpu>=1.8
+langchain>=0.2
+langchain-community>=0.2
+
+# LLM + fine-tuning
+transformers>=4.44
+accelerate>=0.33
+peft>=0.12
+trl>=0.9
+bitsandbytes>=0.43
+datasets>=2.20
+
+# Evaluation
+sacrebleu>=2.4
+rouge-score>=0.1.2
+bert-score>=0.3.13
+
+# Demo
+streamlit>=1.36
+
+# Tests
+pytest>=8.0

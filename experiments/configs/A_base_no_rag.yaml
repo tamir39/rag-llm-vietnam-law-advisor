@@ -1,0 +1,10 @@
+name: A_base_no_rag
+description: Base LLM, no retrieval
+model:
+  base_id: Qwen/Qwen2.5-7B-Instruct
+  lora_adapter: null
+rag:
+  enabled: false
+generation:
+  max_new_tokens: 512
+  temperature: 0.2
