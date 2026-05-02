@@ -11,7 +11,7 @@ QA_DIR = DATA_DIR / "qa"
 PROCESSED_DIR = DATA_DIR / "processed"
 RAW_DIR = DATA_DIR / "raw"
 
-KB_CSV = KB_DIR / "knowledge_base_dvs_final.csv"
+KB_CSV = KB_DIR / "knowledge_base.csv"
 TRAIN_QA = QA_DIR / "train_qa.jsonl"
 TEST_QA = QA_DIR / "test_qa.jsonl"
 
