@@ -1,0 +1,10 @@
+name: C_finetuned_no_rag
+description: Fine-tuned LLM (LoRA), no retrieval
+model:
+  base_id: Qwen/Qwen2.5-7B-Instruct
+  lora_adapter: checkpoints/qwen2_5-7b-vat-lora
+rag:
+  enabled: false
+generation:
+  max_new_tokens: 512
+  temperature: 0.2

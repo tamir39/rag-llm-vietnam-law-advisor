@@ -1,0 +1,13 @@
+name: D_finetuned_with_rag
+description: Fine-tuned LLM (LoRA) with RAG
+model:
+  base_id: Qwen/Qwen2.5-7B-Instruct
+  lora_adapter: checkpoints/qwen2_5-7b-vat-lora
+rag:
+  enabled: true
+  embedding_model: intfloat/multilingual-e5-base
+  vector_store: faiss
+  top_k: 5
+generation:
+  max_new_tokens: 512
+  temperature: 0.2

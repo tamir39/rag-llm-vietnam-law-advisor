@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Jupyter
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# Env / secrets
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Course materials (kept locally, not in repo)
+*.docx
+*.pdf
+
+# ML artifacts
+checkpoints/*
+!checkpoints/.gitkeep
+*.faiss
+*.bin
+*.safetensors
+*.pt
+*.ckpt
+
+# Data — keep curated KB & QA files; ignore raw/processed dumps
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Experiment outputs
+experiments/results/*
+!experiments/results/.gitkeep
+experiments/index/
+
+# Logs
+*.log
+wandb/
+runs/
