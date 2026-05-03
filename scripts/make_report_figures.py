@@ -3,7 +3,7 @@
 Outputs to `docs/report/figures/`:
   - metrics_bar.png       — BLEU / ROUGE-L / BERTScore-F1 across A/B/C/D
   - retrieval_bar.png     — Recall@5 and MRR@10 for B/D
-  - human_eval_bar.png    — placeholder human-eval means (overwrite when real)
+  - human_eval_bar.png    — human-eval means + ≥4 rate per config
 """
 from __future__ import annotations
 
