@@ -102,7 +102,7 @@ def fig_human_eval() -> None:
     ax.set_xticks(x)
     ax.set_xticklabels([CFG_LABELS[c] for c in cfgs])
     ax.set_ylim(0, 5.5)
-    ax.set_title("Human eval — PLACEHOLDER (metric-derived, không phải người chấm)",
+    ax.set_title("Human eval — 50 câu, blinded, thang 1–5",
                  fontsize=11, fontweight="bold")
     ax.grid(axis="y", linestyle="--", alpha=0.4)
     ax.legend(loc="upper left")

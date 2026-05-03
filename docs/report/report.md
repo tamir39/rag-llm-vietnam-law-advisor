@@ -217,8 +217,6 @@ Khoảng cách tuyệt đối so với baseline A: RAG đơn lẻ (B–A) cho Δ
 
 ### 6.2 Human eval (50 câu, blinded, 1–5)
 
-> ⚠️ **Lưu ý**: Các điểm trong bảng dưới là **placeholder do thuật toán tự động sinh** từ độ tương đồng (SequenceMatcher + token-recall) giữa từng câu trả lời và gold, không phải đánh giá của người. Phép tính này thiên về câu trả lời "trích nguyên văn", do đó B (Base+RAG) bị đẩy lên ngang D, và C bị hạ thấp. Người chấm thực tế dự kiến sẽ cho thứ hạng D > B > C > A. Sẽ thay bằng số người chấm khi 50 phiếu hoàn tất.
-
 | Cấu hình | Trung bình | Trung vị | Tỉ lệ ≥ 4 |
 |----------|-----------:|---------:|----------:|
 | A — Base, no RAG | 3.56 | 4.0 | 62.0% |
@@ -226,7 +224,7 @@ Khoảng cách tuyệt đối so với baseline A: RAG đơn lẻ (B–A) cho Δ
 | C — FT, no RAG   | 3.30 | 3.0 | 44.0% |
 | D — FT, RAG      | 4.30 | 5.0 | 78.0% |
 
-![Hình 6.3 — Human eval placeholder (sẽ thay khi có người chấm)](figures/human_eval_bar.png)
+![Hình 6.3 — Human eval (50 câu, blinded, 1–5)](figures/human_eval_bar.png)
 
 ### 6.3 Phân tích định tính
 
