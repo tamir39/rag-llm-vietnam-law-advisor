@@ -98,10 +98,32 @@ def _gpu_status() -> tuple[str, str]:
 def unload_active_pipeline() -> None:
     pipe = st.session_state.get("pipe")
     if pipe is not None:
-        pipe.unload()
+        try:
+            pipe.unload()
+        except Exception:
+            pass
         st.session_state.pipe = None
         st.session_state.loaded_code = None
         gc.collect()
+
+
+def _is_oom(exc: BaseException) -> bool:
+    """OOM check that works across PyTorch versions (sometimes raised as
+    torch.cuda.OutOfMemoryError, sometimes as plain RuntimeError)."""
+    return "out of memory" in str(exc).lower()
+
+
+def _free_vram_after_oom() -> None:
+    """Aggressively release VRAM after an OOM so the UI can recover without
+    a kernel restart."""
+    unload_active_pipeline()
+    try:
+        import torch
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+            torch.cuda.ipc_collect()
+    except Exception:
+        pass
 
 
 def load_pipeline(code: str) -> InferencePipeline:
@@ -200,9 +222,20 @@ for col, card in zip(cols, CONFIGS):
                 clicked_code = card.code
 
 if clicked_code is not None:
-    with st.spinner(f"Đang tải cấu hình {clicked_code} (lần đầu mất 1–2 phút)..."):
-        load_pipeline(clicked_code)
-    st.rerun()
+    try:
+        with st.spinner(f"Đang tải cấu hình {clicked_code} (lần đầu mất 1–2 phút)..."):
+            load_pipeline(clicked_code)
+        st.rerun()
+    except Exception as exc:
+        if _is_oom(exc):
+            _free_vram_after_oom()
+            st.error(
+                f"🔴 **Hết bộ nhớ GPU** khi tải cấu hình **{clicked_code}**. "
+                "Đã tự động giải phóng VRAM. "
+                "Hãy đợi vài giây rồi thử tải lại, hoặc chọn cấu hình khác."
+            )
+        else:
+            raise
 
 st.caption(
     "💡 Chỉ một cấu hình được giữ trong VRAM tại một thời điểm — "
@@ -242,9 +275,21 @@ with tab_qa:
             st.rerun()
 
     if btn:
-        with st.spinner("Đang sinh câu trả lời..."):
-            result = run_answer(st.session_state.pipe, question,
-                                temperature, max_new_tokens, top_k)
+        try:
+            with st.spinner("Đang sinh câu trả lời..."):
+                result = run_answer(st.session_state.pipe, question,
+                                    temperature, max_new_tokens, top_k)
+        except Exception as exc:
+            if _is_oom(exc):
+                _free_vram_after_oom()
+                st.error(
+                    "🔴 **Hết bộ nhớ GPU** khi sinh câu trả lời. "
+                    "Đã tự động giải phóng VRAM. "
+                    "Hãy giảm **Max new tokens** hoặc **Top-k truy hồi** ở "
+                    "thanh bên trái rồi tải lại cấu hình."
+                )
+                st.stop()
+            raise
 
         pipe = st.session_state.pipe
         retrieved_rows = []
@@ -328,30 +373,49 @@ with tab_cmp:
 
     if run_cmp:
         results = {}
+        oom_codes: list[str] = []
         progress = st.progress(0.0, text="Bắt đầu...")
         for i, code in enumerate(chosen_codes, start=1):
-            progress.progress((i - 1) / len(chosen_codes),
-                              text=f"Đang tải cấu hình {code} "
-                                   f"({i}/{len(chosen_codes)})...")
-            pipe = load_pipeline(code)
-            progress.progress((i - 0.5) / len(chosen_codes),
-                              text=f"Đang sinh câu trả lời cho {code} ...")
-            res = run_answer(pipe, cmp_question,
-                             temperature, max_new_tokens, top_k)
-            results[code] = {
-                "answer": res.answer,
-                "retrieved": [
-                    (pid, float(sc))
-                    for pid, sc in zip(res.retrieved_passage_ids,
-                                        res.retrieved_scores)
-                ],
-            }
+            try:
+                progress.progress((i - 1) / len(chosen_codes),
+                                  text=f"Đang tải cấu hình {code} "
+                                       f"({i}/{len(chosen_codes)})...")
+                pipe = load_pipeline(code)
+                progress.progress((i - 0.5) / len(chosen_codes),
+                                  text=f"Đang sinh câu trả lời cho {code} ...")
+                res = run_answer(pipe, cmp_question,
+                                 temperature, max_new_tokens, top_k)
+                results[code] = {
+                    "answer": res.answer,
+                    "retrieved": [
+                        (pid, float(sc))
+                        for pid, sc in zip(res.retrieved_passage_ids,
+                                           res.retrieved_scores)
+                    ],
+                }
+            except Exception as exc:
+                if _is_oom(exc):
+                    _free_vram_after_oom()
+                    oom_codes.append(code)
+                    results[code] = {
+                        "answer": ("🔴 **Hết bộ nhớ GPU** khi chạy cấu hình này. "
+                                   "VRAM đã được giải phóng tự động."),
+                        "retrieved": [],
+                    }
+                    continue
+                raise
         progress.progress(1.0, text="Hoàn tất.")
         st.session_state.last_cmp = {
             "question": cmp_question.strip(),
             "codes": list(chosen_codes),
             "results": results,
         }
+        if oom_codes:
+            st.warning(
+                f"⚠️ Không đủ VRAM cho cấu hình: {', '.join(oom_codes)}. "
+                "Hãy giảm **Max new tokens** / **Top-k** hoặc bỏ chọn cấu "
+                "hình nặng hơn rồi thử lại."
+            )
 
     cmp_state = st.session_state.get("last_cmp")
     if cmp_state is not None:
