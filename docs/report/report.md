@@ -39,6 +39,8 @@ Phần 2 mô tả KB và bộ QA. Phần 3 trình bày kiến trúc hệ thống
 
 ## 2. Dữ liệu
 
+> Toàn bộ KB và bộ QA được phát hành công khai dưới giấy phép **CC-BY-4.0** tại HuggingFace Datasets: [`Tamir39/vietnam-tax-qa`](https://huggingface.co/datasets/Tamir39/vietnam-tax-qa). Có thể tải bằng `datasets.load_dataset("Tamir39/vietnam-tax-qa", "knowledge_base"|"qa", split=...)`.
+
 ### 2.1 Tri thức nền (KB)
 
 | Trường        | Mô tả                                                       |
@@ -307,6 +309,8 @@ A rơi vào **vòng lặp sinh lặp** (`"doanh nghiệp có vốn đầu tư...
 5. Lewis et al. *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks*. NeurIPS 2020.
 6. Zhang et al. *BERTScore: Evaluating Text Generation with BERT*. ICLR 2020.
 7. Cổng Thông tin Pháp luật Chính phủ Việt Nam — vanban.chinhphu.vn.
+8. Phí Vương Tường Tâm. *Vietnamese Tax Law QA + Knowledge Base*. HuggingFace Datasets, `Tamir39/vietnam-tax-qa`, 2026. https://huggingface.co/datasets/Tamir39/vietnam-tax-qa
+9. Phí Vương Tường Tâm. *qwen2_5-7b-vietnam-tax-lora* (QLoRA adapter). HuggingFace, `Tamir39/qwen2_5-7b-vietnam-tax-lora`, 2026. https://huggingface.co/Tamir39/qwen2_5-7b-vietnam-tax-lora
 
 ---
 
