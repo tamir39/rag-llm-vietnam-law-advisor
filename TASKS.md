@@ -30,7 +30,7 @@ Tick each item when the corresponding work merges into `develop`.
 - [x] Implement `src/finetune/dataset.py`, `lora_config.py`, `trainer.py`
 - [x] Kaggle notebook ready (`notebooks/03_finetune_lora_kaggle.ipynb`)
 - [x] Push adapter to HF Hub (`Tamir39/qwen2_5-7b-vietnam-tax-lora`)
-- [x] Document training metrics in `docs/report/POST_TRAINING.md` (config snapshot done; loss curve still TODO — needs a 1-epoch Kaggle re-run for the chart)
+- [x] Document training metrics in `docs/report/POST_TRAINING.md` (config snapshot + loss curve in §4.4 of report.md)
 
 ## Phase 4 — Inference & Evaluation
 

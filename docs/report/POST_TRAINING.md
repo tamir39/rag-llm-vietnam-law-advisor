@@ -25,38 +25,20 @@ Lấy từ [`src/finetune/lora_config.py`](../../src/finetune/lora_config.py):
 | Hạ tầng                      | Kaggle Notebook P100 16GB hoặc T4 ×2 30GB            |
 | Adapter                      | `Tamir39/qwen2_5-7b-vietnam-tax-lora` (~160 MB)      |
 
-### 1.2 Loss curve (cần điền)
+### 1.2 Loss curve
 
-`train()` đã hỗ trợ `return_trainer=True` → trả về `(adapter_dir, trainer)` để truy cập `trainer.state.log_history`. Các bước trên Kaggle:
+Đã trích từ output bảng training của notebook 03 trên Kaggle (logging mỗi 10 step, tổng 60 step / 3 epoch). Dữ liệu thô lưu tại [`experiments/loss_history.json`](../../experiments/loss_history.json); biểu đồ render bằng `scripts/plot_loss_curve.py` → [`figures/train_loss.png`](figures/train_loss.png), nhúng trong **§4.4** của `report.md`.
 
-1. Mở `notebooks/03_finetune_lora_kaggle.ipynb`, **Settings → GPU P100**, secret `HF_TOKEN`.
-2. Chạy cell 1–4 như bình thường (clone, pip, HF login, dataset).
-3. Thay cell huấn luyện chính bằng cell harvest dưới đây (≈30 phút trên P100):
+| Step | Loss     |
+|-----:|---------:|
+|   10 | 1.283906 |
+|   20 | 0.452158 |
+|   30 | 0.381566 |
+|   40 | 0.336385 |
+|   50 | 0.298256 |
+|   60 | 0.278185 |
 
-   ```python
-   from src.finetune.trainer import train
-   from src.config import LORA_ADAPTER, BASE_LLM
-   import json
-   from pathlib import Path
-
-   adapter_dir, trainer = train(
-       base_model_id=BASE_LLM,
-       dataset=train_ds,
-       output_dir=LORA_ADAPTER,
-       return_trainer=True,
-   )
-
-   Path("/kaggle/working/loss_history.json").write_text(
-       json.dumps(trainer.state.log_history, ensure_ascii=False, indent=2)
-   )
-   print("done →", "/kaggle/working/loss_history.json")
-   ```
-
-4. Tải `loss_history.json` từ tab **Output** của Kaggle về repo, đặt tại `experiments/loss_history.json`.
-5. Local: chạy `python scripts/plot_loss_curve.py` → tạo `docs/report/figures/train_loss.png`.
-6. Chèn ảnh + nhận xét vào **§4** của `report.md` (giảm đều hay overfit, có spike không).
-
-> Có thể giảm `NUM_TRAIN_EPOCHS=1` trong `lora_config.py` cho lần harvest này nếu chỉ cần chụp xu hướng. Adapter cuối đã có sẵn trên HF nên không cần đụng tới.
+Giảm đơn điệu, không spike, kết thúc ở 0,278 — chi tiết đánh giá xem §4.4.
 
 ## 2. Chạy đánh giá tự động
 
