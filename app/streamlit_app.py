@@ -75,6 +75,8 @@ st.set_page_config(page_title="LawMate — VN Tax Q&A",
 
 st.session_state.setdefault("pipe", None)
 st.session_state.setdefault("loaded_code", None)
+st.session_state.setdefault("last_qa", None)
+st.session_state.setdefault("last_cmp", None)
 
 
 # ----- Helpers ---------------------------------------------------------------
@@ -148,9 +150,15 @@ c4.metric("FAISS", value="✅" if faiss_ok else "❌")
 st.divider()
 
 
-# ----- Sidebar: advanced -----------------------------------------------------
+# ----- Sidebar ---------------------------------------------------------------
 
 with st.sidebar:
+    st.header("💡 Câu hỏi gợi ý")
+    st.caption("Sao chép một câu hỏi bên dưới và dán vào ô câu hỏi bên phải.")
+    for q in DEFAULT_QS:
+        st.markdown(f"• {q}")
+    st.divider()
+
     st.header("Tham số sinh")
     temperature = st.slider("Temperature", 0.0, 1.0, 0.2, 0.05)
     max_new_tokens = st.slider("Max new tokens", 64, 1024, 384, 64)
@@ -210,43 +218,71 @@ tab_qa, tab_cmp = st.tabs(["🗣️ Hỏi 1 cấu hình", "⚖️ So sánh nhi�
 
 with tab_qa:
     st.subheader("2. Đặt câu hỏi")
-    example = st.selectbox("Câu hỏi mẫu (chọn để điền vào ô bên dưới)",
-                           [""] + DEFAULT_QS, key="ex_single")
-    question = st.text_area("Câu hỏi của bạn", value=example, height=120,
-                            key="q_single")
+    question = st.text_area("Câu hỏi của bạn", height=120, key="q_single",
+                            placeholder="Nhập câu hỏi, hoặc sao chép một gợi ý "
+                                        "từ thanh bên trái.")
 
     loaded = st.session_state.loaded_code
     if loaded is None:
         st.info("⬆️ Tải một cấu hình ở phần trên trước khi hỏi.")
-    btn = st.button(
-        f"Trả lời với cấu hình {loaded}" if loaded else "Trả lời",
-        type="primary",
-        disabled=(loaded is None or not question.strip()),
-        key="ask_single",
-    )
+    col_ask, col_clear = st.columns([3, 1])
+    with col_ask:
+        btn = st.button(
+            f"Trả lời với cấu hình {loaded}" if loaded else "Trả lời",
+            type="primary",
+            disabled=(loaded is None or not question.strip()),
+            key="ask_single",
+            use_container_width=True,
+        )
+    with col_clear:
+        if st.button("Xóa kết quả", key="clear_single",
+                     use_container_width=True,
+                     disabled=(st.session_state.get("last_qa") is None)):
+            st.session_state.last_qa = None
+            st.rerun()
 
     if btn:
         with st.spinner("Đang sinh câu trả lời..."):
             result = run_answer(st.session_state.pipe, question,
                                 temperature, max_new_tokens, top_k)
 
-        st.subheader("Câu trả lời")
-        st.markdown(result.answer)
+        pipe = st.session_state.pipe
+        retrieved_rows = []
+        for pid, score in zip(result.retrieved_passage_ids,
+                              result.retrieved_scores):
+            row = next((m for m in pipe._faiss_meta
+                        if m["passage_id"] == pid), None)
+            retrieved_rows.append({
+                "pid": pid,
+                "score": float(score),
+                "title": row["title"] if row else "",
+                "passage_text": row["passage_text"] if row else None,
+                "url": row.get("url") if row else None,
+            })
+        st.session_state.last_qa = {
+            "config": loaded,
+            "question": question.strip(),
+            "answer": result.answer,
+            "retrieved": retrieved_rows,
+        }
 
-        if result.retrieved_passage_ids:
+    qa = st.session_state.get("last_qa")
+    if qa is not None:
+        st.subheader("Câu trả lời")
+        st.caption(f"Cấu hình **{qa['config']}** · Câu hỏi: _{qa['question']}_")
+        st.markdown(qa["answer"])
+
+        if qa["retrieved"]:
             st.subheader("📚 Căn cứ pháp lý đã truy hồi")
-            pipe = st.session_state.pipe
-            for rank, (pid, score) in enumerate(zip(
-                    result.retrieved_passage_ids,
-                    result.retrieved_scores), start=1):
-                row = next((m for m in pipe._faiss_meta
-                            if m["passage_id"] == pid), None)
-                title = row["title"] if row else ""
-                with st.expander(f"#{rank}  {pid}  (score={score:.3f}) — {title}"):
-                    if row:
-                        st.markdown(f"**Đoạn trích:**\n\n{row['passage_text']}")
-                        if row.get("url"):
-                            st.markdown(f"[Nguồn]({row['url']})")
+            for rank, item in enumerate(qa["retrieved"], start=1):
+                with st.expander(
+                    f"#{rank}  {item['pid']}  (score={item['score']:.3f}) — "
+                    f"{item['title']}"
+                ):
+                    if item["passage_text"]:
+                        st.markdown(f"**Đoạn trích:**\n\n{item['passage_text']}")
+                        if item["url"]:
+                            st.markdown(f"[Nguồn]({item['url']})")
                     else:
                         st.write("(không tìm thấy metadata)")
 
@@ -264,21 +300,31 @@ with tab_cmp:
             if picked:
                 chosen_codes.append(card.code)
 
-    cmp_example = st.selectbox("Câu hỏi mẫu", [""] + DEFAULT_QS, key="ex_cmp")
-    cmp_question = st.text_area("Câu hỏi", value=cmp_example, height=120,
-                                key="q_cmp")
+    cmp_question = st.text_area(
+        "Câu hỏi", height=120, key="q_cmp",
+        placeholder="Nhập câu hỏi, hoặc sao chép một gợi ý từ thanh bên trái.",
+    )
 
     st.caption(
         "ℹ️ Mỗi cấu hình được tải / giải phóng tuần tự để VRAM luôn chỉ giữ 1 mô hình. "
         "Tổng thời gian ≈ thời-gian-tải × số-cấu-hình."
     )
 
-    run_cmp = st.button(
-        f"So sánh {len(chosen_codes)} cấu hình (tuần tự)",
-        type="primary",
-        disabled=(len(chosen_codes) == 0 or not cmp_question.strip()),
-        key="ask_cmp",
-    )
+    col_run, col_clear_cmp = st.columns([3, 1])
+    with col_run:
+        run_cmp = st.button(
+            f"So sánh {len(chosen_codes)} cấu hình (tuần tự)",
+            type="primary",
+            disabled=(len(chosen_codes) == 0 or not cmp_question.strip()),
+            key="ask_cmp",
+            use_container_width=True,
+        )
+    with col_clear_cmp:
+        if st.button("Xóa kết quả", key="clear_cmp",
+                     use_container_width=True,
+                     disabled=(st.session_state.get("last_cmp") is None)):
+            st.session_state.last_cmp = None
+            st.rerun()
 
     if run_cmp:
         results = {}
@@ -290,23 +336,39 @@ with tab_cmp:
             pipe = load_pipeline(code)
             progress.progress((i - 0.5) / len(chosen_codes),
                               text=f"Đang sinh câu trả lời cho {code} ...")
-            results[code] = run_answer(pipe, cmp_question,
-                                       temperature, max_new_tokens, top_k)
+            res = run_answer(pipe, cmp_question,
+                             temperature, max_new_tokens, top_k)
+            results[code] = {
+                "answer": res.answer,
+                "retrieved": [
+                    (pid, float(sc))
+                    for pid, sc in zip(res.retrieved_passage_ids,
+                                        res.retrieved_scores)
+                ],
+            }
         progress.progress(1.0, text="Hoàn tất.")
+        st.session_state.last_cmp = {
+            "question": cmp_question.strip(),
+            "codes": list(chosen_codes),
+            "results": results,
+        }
 
+    cmp_state = st.session_state.get("last_cmp")
+    if cmp_state is not None:
         st.subheader("Kết quả so sánh")
-        result_cols = st.columns(len(chosen_codes))
-        for col, code in zip(result_cols, chosen_codes):
+        st.caption(f"Câu hỏi: _{cmp_state['question']}_")
+        codes = cmp_state["codes"]
+        result_cols = st.columns(len(codes))
+        for col, code in zip(result_cols, codes):
             card = CONFIG_BY_CODE[code]
-            res = results[code]
+            res = cmp_state["results"][code]
             with col:
                 with st.container(border=True):
                     st.markdown(f"#### {card.title}")
                     st.caption(f"{card.base_lora} · {card.rag}")
-                    st.markdown(res.answer)
-                    if res.retrieved_passage_ids:
+                    st.markdown(res["answer"])
+                    if res["retrieved"]:
                         with st.expander(
-                            f"📚 {len(res.retrieved_passage_ids)} đoạn truy hồi"):
-                            for pid, sc in zip(res.retrieved_passage_ids,
-                                               res.retrieved_scores):
+                            f"📚 {len(res['retrieved'])} đoạn truy hồi"):
+                            for pid, sc in res["retrieved"]:
                                 st.markdown(f"- `{pid}` ({sc:.3f})")
