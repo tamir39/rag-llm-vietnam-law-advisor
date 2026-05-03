@@ -7,41 +7,47 @@ Tick each item when the corresponding work merges into `develop`.
 - [x] Initial commit (main)
 - [x] Create `develop` branch
 - [x] Scaffold project structure (`feature/init-structure`)
+- [x] Windows one-shot launcher (`run.bat`)
 - [ ] Add CONTRIBUTING / branch protection notes (optional)
 
 ## Phase 1 — Data
 
-- [ ] Audit seed `knowledge_base_dvs_final.csv` (encoding, duplicates, length)
-- [ ] Add any extra source documents (decrees, circulars) to `data/raw/`
-- [ ] Define chunking strategy (notebook 02)
-- [ ] Generate ≥ 300 train QA pairs → `data/qa/train_qa.jsonl`
-- [ ] Hand-write ≥ 50 test QA pairs → `data/qa/test_qa.jsonl`
+- [x] Audit seed `knowledge_base.csv` (encoding, duplicates, length)
+- [x] Add source documents (5 tax laws, 600 passages) to `data/knowledge_base/`
+- [x] Define chunking strategy (`src/data/chunker.py`)
+- [x] Generate ≥ 300 train QA pairs → `data/qa/train_qa.jsonl` (305 pairs)
+- [x] Hand-write ≥ 50 test QA pairs → `data/qa/test_qa.jsonl` (54 pairs)
 
 ## Phase 2 — RAG
 
-- [ ] Implement `src/data/loader.py`, `src/data/chunker.py`
-- [ ] Implement `src/rag/embeddings.py`, `vectorstore.py`, `retriever.py`
-- [ ] `scripts/build_index.py` produces a FAISS index
-- [ ] Prompt templates finalized (`src/rag/prompts.py`)
+- [x] Implement `src/data/loader.py`, `src/data/chunker.py`
+- [x] Implement `src/rag/embeddings.py`, `vectorstore.py`, `retriever.py`
+- [x] `scripts/build_index.py` produces a FAISS index
+- [x] Prompt templates finalized (`src/rag/prompts.py`)
 
 ## Phase 3 — Fine-tuning
 
-- [ ] Implement `src/finetune/dataset.py`, `trainer.py`
-- [ ] Run `notebooks/03_finetune_lora_colab.ipynb` end-to-end on Colab Free
-- [ ] Push adapter to HF Hub, mirror to Drive
-- [ ] Document training metrics in `docs/report/`
+- [x] Implement `src/finetune/dataset.py`, `lora_config.py`, `trainer.py`
+- [x] Kaggle notebook ready (`notebooks/03_finetune_lora_kaggle.ipynb`)
+- [x] Push adapter to HF Hub (`Tamir39/qwen2_5-7b-vietnam-tax-lora`)
+- [ ] Document training metrics in `docs/report/POST_TRAINING.md`
 
 ## Phase 4 — Inference & Evaluation
 
-- [ ] Implement `src/inference/llm.py`, `pipeline.py`
-- [ ] Implement `src/evaluation/metrics.py`, `retrieval_eval.py`
-- [ ] `scripts/run_eval.py` runs A/B/C/D and writes `experiments/results/{A,B,C,D}.json`
-- [ ] Human eval form + collect 50 ratings
+- [x] Implement `src/inference/llm.py`, `pipeline.py`
+- [x] Implement `src/evaluation/metrics.py`, `retrieval_eval.py`
+- [x] `scripts/run_eval.py` wired for A/B/C/D matrix
+- [x] `scripts/build_human_eval.py` builds blinded form
+- [x] Eval Kaggle notebook (`notebooks/07_eval_kaggle.ipynb`)
+- [ ] **Run `scripts/run_eval.py` end-to-end → produce `experiments/results/{A,B,C,D}/*.json`**
+- [ ] Human eval form filled (50 ratings)
 
 ## Phase 5 — Demo & Delivery
 
-- [ ] Streamlit app working for D (LLM fine-tuned + RAG)
+- [x] Streamlit app working for all 4 configs (`app/streamlit_app.py`)
+- [x] Kaggle demo notebook with Cloudflare tunnel (`notebooks/06_demo_kaggle.ipynb`)
+- [x] Single-slot model loading + OOM auto-recovery in the demo
 - [ ] Record 3–5 min demo video
-- [ ] Final report (15–20 pages)
+- [ ] Final report (15–20 pages) — fill `docs/report/report.md` with eval numbers
 - [ ] Slides
 - [ ] Tag release; merge `develop` → `main` (only when instructor signs off)
