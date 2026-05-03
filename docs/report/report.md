@@ -10,7 +10,7 @@
 
 ## Tóm tắt (abstract)
 
-<!-- 150–200 từ. Sau khi có kết quả mới viết. Cấu trúc gợi ý: bài toán → cách tiếp cận (RAG + QLoRA) → dữ liệu (5 luật thuế VN, 600 đoạn, 305+54 QA) → cấu hình so sánh A/B/C/D → kết quả nổi bật (BLEU/ROUGE-L/BERTScore/Recall@5 + human eval) → kết luận. -->
+Báo cáo này trình bày một hệ thống hỏi-đáp tiếng Việt cho lĩnh vực **pháp luật thuế**, kết hợp **truy hồi tăng cường** (Retrieval-Augmented Generation, RAG) với **mô hình ngôn ngữ lớn được tinh chỉnh** (Qwen2.5-7B-Instruct + QLoRA). Tri thức nền gồm 600 đoạn pháp lý có cấu trúc, trích từ 5 luật thuế Việt Nam (GTGT, TNCN, đất phi nông nghiệp, TTĐB, TNDN). Bộ dữ liệu QA gồm 305 cặp huấn luyện và 54 cặp kiểm thử do tác giả biên soạn, mỗi cặp đối chiếu một `passage_id` xác định để bảo đảm tính có-căn-cứ. Hệ thống được đánh giá trên ma trận 2×2 gồm bốn cấu hình: (A) base không RAG, (B) base + RAG, (C) tinh chỉnh không RAG, (D) tinh chỉnh + RAG. Kết quả tự động cho thấy mức cải thiện đơn điệu A < B < C < D — BLEU tăng từ 3,7 lên **40,1**, ROUGE-L từ 0,20 lên **0,59**, BERTScore-F1 từ 0,70 lên **0,85**; retriever đạt Recall@5 = 0,944, MRR@10 = 0,790. Đặc biệt, ΔBLEU của D vượt xa tổng độc lập của RAG (B-A) và fine-tune (C-A), chứng minh **hiệu ứng cộng hưởng** giữa hai kỹ thuật. Mã nguồn, dữ liệu (CC-BY-4.0) và adapter LoRA đều phát hành công khai trên GitHub và HuggingFace.
 
 **Từ khóa**: Vietnamese NLP, RAG, QLoRA, Qwen2.5, multilingual-e5, FAISS, tax law QA.
 
@@ -296,7 +296,7 @@ A rơi vào **vòng lặp sinh lặp** (`"doanh nghiệp có vốn đầu tư...
 
 ## 8. Kết luận
 
-<!-- 100–150 từ tóm tắt: bài toán, đóng góp, kết quả nổi bật, ý nghĩa thực tiễn. Viết sau cùng. -->
+Bài toán hỏi-đáp pháp luật thuế tiếng Việt, vốn đòi hỏi **độ chính xác cao** và **căn cứ pháp lý rõ ràng**, đã được giải quyết bằng kiến trúc kết hợp RAG + QLoRA trên Qwen2.5-7B-Instruct. Đóng góp chính của đồ án gồm: (i) bộ tri thức nền 600 đoạn có cấu trúc + bộ QA 359 cặp đối chiếu `passage_id` cho 5 luật thuế Việt Nam, phát hành công khai dưới CC-BY-4.0; (ii) khung đánh giá 2×2 cho phép phân tách định lượng đóng góp của RAG, fine-tune và sự kết hợp; (iii) bằng chứng thực nghiệm rõ ràng cho **hiệu ứng cộng hưởng** giữa RAG và mixed-context SFT — cấu hình D đạt BLEU 40,1, ROUGE-L 0,59, BERTScore-F1 0,85, vượt xa tổng độc lập của hai kỹ thuật. Hệ thống đã được đóng gói thành demo Streamlit có khả năng tự động giải phóng VRAM khi chuyển đổi cấu hình, sẵn sàng cho mục đích giảng dạy hoặc làm bệ phóng cho các nghiên cứu mở rộng (KB lớn hơn, retriever lai, reranker chéo, hoặc DPO trên cặp ưa thích).
 
 ---
 

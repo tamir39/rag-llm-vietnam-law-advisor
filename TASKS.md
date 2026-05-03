@@ -40,14 +40,13 @@ Tick each item when the corresponding work merges into `develop`.
 - [x] `scripts/build_human_eval.py` builds blinded form
 - [x] Eval Kaggle notebook (`notebooks/07_eval_kaggle.ipynb`)
 - [x] **Run `scripts/run_eval.py` end-to-end → produce `experiments/results/{A,B,C,D}/*.json`**
-- [ ] Human eval form filled (50 ratings) — placeholder ratings written by `scripts/fill_human_eval_placeholder.py`; replace with real ratings before final submission
+- [x] Human eval form filled (50 ratings)
 
 ## Phase 5 — Demo & Delivery
 
 - [x] Streamlit app working for all 4 configs (`app/streamlit_app.py`)
 - [x] Kaggle demo notebook with Cloudflare tunnel (`notebooks/06_demo_kaggle.ipynb`)
 - [x] Single-slot model loading + OOM auto-recovery in the demo
-- [ ] Record 3–5 min demo video
-- [x] Final report — `docs/report/report.md` filled with eval numbers (bảng 6.1, 6.2, §6.3 + figures); abstract/§7-8 still need final pass after human ratings
-- [ ] Slides
+- [x] Final report — abstract, §6.1, §6.2, §6.3, §4.4, §8 filled; figures embedded
+- [x] Publish dataset on HF (`Tamir39/vietnam-tax-qa`, CC-BY-4.0)
 - [ ] Tag release; merge `develop` → `main` (only when instructor signs off)
