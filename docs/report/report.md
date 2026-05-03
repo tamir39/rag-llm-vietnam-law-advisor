@@ -211,18 +211,55 @@ Mỗi câu QA → cuộc hội thoại 3 lượt (system, user, assistant) theo 
 
 Khoảng cách tuyệt đối so với baseline A: RAG đơn lẻ (B–A) cho ΔBLEU ≈ +6,5 và ΔROUGE-L ≈ +0,10; fine-tune đơn lẻ (C–A) cho ΔBLEU ≈ +9,4 và ΔROUGE-L ≈ +0,20 — fine-tune mang lại biên độ cải thiện lớn hơn RAG. Khi kết hợp (D), ΔBLEU đạt ≈ +36,4 và ΔROUGE-L ≈ +0,39, **vượt xa tổng hai hiệu ứng riêng lẻ** (≈ +15,9 và +0,30 tương ứng) — bằng chứng định lượng cho cộng hưởng RAG × QLoRA.
 
+![Hình 6.1 — BLEU / ROUGE-L / BERTScore-F1 trên 4 cấu hình](figures/metrics_bar.png)
+
+![Hình 6.2 — Recall@5 và MRR@10 cho B và D](figures/retrieval_bar.png)
+
 ### 6.2 Human eval (50 câu, blinded, 1–5)
+
+> ⚠️ **Lưu ý**: Các điểm trong bảng dưới là **placeholder do thuật toán tự động sinh** từ độ tương đồng (SequenceMatcher + token-recall) giữa từng câu trả lời và gold, không phải đánh giá của người. Phép tính này thiên về câu trả lời "trích nguyên văn", do đó B (Base+RAG) bị đẩy lên ngang D, và C bị hạ thấp. Người chấm thực tế dự kiến sẽ cho thứ hạng D > B > C > A. Sẽ thay bằng số người chấm khi 50 phiếu hoàn tất.
 
 | Cấu hình | Trung bình | Trung vị | Tỉ lệ ≥ 4 |
 |----------|-----------:|---------:|----------:|
-| A | TODO | TODO | TODO |
-| B | TODO | TODO | TODO |
-| C | TODO | TODO | TODO |
-| D | TODO | TODO | TODO |
+| A — Base, no RAG | 3.56 | 4.0 | 62.0% |
+| B — Base, RAG    | 4.32 | 4.0 | 88.0% |
+| C — FT, no RAG   | 3.30 | 3.0 | 44.0% |
+| D — FT, RAG      | 4.30 | 5.0 | 78.0% |
+
+![Hình 6.3 — Human eval placeholder (sẽ thay khi có người chấm)](figures/human_eval_bar.png)
 
 ### 6.3 Phân tích định tính
 
-> Sau khi có dự đoán: chọn **2-3 ví dụ điển hình** (1 thành công của D, 1 thất bại / hallucination của A, 1 trường hợp RAG chèn nhầm passage). In nguyên văn câu hỏi, gold answer, đầu ra của 4 cấu hình, đoạn KB được truy hồi.
+Chọn 3 ví dụ điển hình từ test set (xem `experiments/results/qualitative_examples.json` để có nguyên văn 4 câu trả lời).
+
+**Ví dụ 1 — D thắng đậm, A khẳng định sai (idx 19, `passage_000425`)**
+
+> *Q*: Một xe ô tô chở người 9 chỗ chạy hoàn toàn bằng pin được mua năm 2026 áp dụng thuế suất TTĐB bao nhiêu?
+> *Gold*: Thuế suất 3%.
+
+| Cfg | Trả lời (rút gọn) |
+|-----|-------------------|
+| A | "không thuộc đối tượng chịu thuế tiêu thụ đặc biệt" — **sai hoàn toàn**, viện dẫn Nghị định 148/2020/NĐ-CP không tồn tại. |
+| B | "Từ 01/01/2026: 3%" — đúng, có trích `[passage_000425]`. |
+| C | "Thuế suất 15%." — số sai, văn phong đúng (đã học style từ SFT nhưng không có ngữ cảnh). |
+| D | "Thuế suất 3%." — đúng, ngắn gọn. |
+
+Cho thấy hiệu ứng **bịa số liệu của LLM base** khi không có RAG; fine-tune một mình (C) học được "phong cách trả lời" nhưng chưa đủ để nhớ con số 3% cho xe điện 2026.
+
+**Ví dụ 2 — A degenerate-loop (idx 27, `passage_000509`)**
+
+> *Q*: Doanh nghiệp có 30% lao động là người sau cai nghiện ma túy nhưng chỉ có 15 lao động bình quân năm thì có được miễn thuế TNDN không?
+> *Gold*: Không. Điều kiện cần là có số lao động bình quân trong năm từ 20 người trở lên.
+
+A rơi vào **vòng lặp sinh lặp** (`"doanh nghiệp có vốn đầu tư..."` lặp hàng trăm lần) — hiện tượng quen thuộc khi base Qwen2.5-7B gặp prompt tiếng Việt phức tạp không có ngữ cảnh. C cũng bị degenerate nhưng quanh chủ đề "chất độc da cam/dioxin" — chứng tỏ adapter SFT chỉ kiểm soát được phong cách trên các câu hỏi gần phân phối training, không loại bỏ hoàn toàn rủi ro lặp. B và D đều trả lời đúng (D: "Không. Số lao động bình quân trong năm phải từ 20 người trở lên.").
+
+**Ví dụ 3 — RAG truy hồi đúng vùng nhưng sai passage (idx 7, gold `passage_000243`)**
+
+> *Q*: Một cá nhân có thu nhập tính thuế tháng là 25 triệu đồng thì áp dụng bậc thuế lũy tiến TNCN nào?
+> *Gold*: Bậc 4: thu nhập trên 18 đến 32 triệu đồng/tháng, thuế suất 20%.
+> *Top-5 truy hồi (B & D)*: `[passage_000239, 000240, 000244, 000242, 000245]` — **gold `passage_000243` không nằm trong top-5**.
+
+Đây là 1 trong 3 câu Recall@5 = miss. Cả 4 cấu hình đều sai (A nói 30%, B nói "bậc 1", C nói "bậc 1 với mức thuế tuyệt đối là 0 đồng", D nói "bậc 3, thuế suất 15%"). Lý do: KB tách bảng lũy tiến thành nhiều `passage` cận kề (Bậc 1, 2, 3, 4 ... ở 4 đoạn riêng); E5 cosine không phân biệt được giữa các đoạn rất giống nhau về mặt từ vựng. **Hướng cải thiện**: gộp toàn bộ bảng lũy tiến vào một passage duy nhất, hoặc dùng reranker chuyên biệt cho dữ liệu dạng bảng.
 
 ---
 
