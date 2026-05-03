@@ -274,6 +274,7 @@ Windows one-shot launcher. On first run: bootstraps `.venv` via `uv`, installs `
 
 - **Base LLM**: `Qwen/Qwen2.5-7B-Instruct`, loaded in 4-bit nf4 with `bitsandbytes`. Fits a Kaggle P100 (16 GB) or one T4 (15 GB).
 - **Adapter**: [`Tamir39/qwen2_5-7b-vietnam-tax-lora`](https://huggingface.co/Tamir39/qwen2_5-7b-vietnam-tax-lora) (~160 MB).
+- **Dataset**: [`Tamir39/vietnam-tax-qa`](https://huggingface.co/datasets/Tamir39/vietnam-tax-qa) — 600-passage KB + 305 train / 54 test QA, CC-BY-4.0.
 - **Embeddings**: `intfloat/multilingual-e5-base` (768 dim, normalized, with `query:` / `passage:` prefixes).
 - **Vector store**: FAISS `IndexFlatIP` (= cosine since vectors are unit-norm), top-k = 5.
 - **Generation**: `temperature=0.2`, `max_new_tokens=512` by default.
