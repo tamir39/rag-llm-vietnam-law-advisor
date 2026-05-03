@@ -30,7 +30,7 @@ Tick each item when the corresponding work merges into `develop`.
 - [x] Implement `src/finetune/dataset.py`, `lora_config.py`, `trainer.py`
 - [x] Kaggle notebook ready (`notebooks/03_finetune_lora_kaggle.ipynb`)
 - [x] Push adapter to HF Hub (`Tamir39/qwen2_5-7b-vietnam-tax-lora`)
-- [ ] Document training metrics in `docs/report/POST_TRAINING.md`
+- [x] Document training metrics in `docs/report/POST_TRAINING.md` (config snapshot done; loss curve still TODO — needs a 1-epoch Kaggle re-run for the chart)
 
 ## Phase 4 — Inference & Evaluation
 
@@ -39,8 +39,8 @@ Tick each item when the corresponding work merges into `develop`.
 - [x] `scripts/run_eval.py` wired for A/B/C/D matrix
 - [x] `scripts/build_human_eval.py` builds blinded form
 - [x] Eval Kaggle notebook (`notebooks/07_eval_kaggle.ipynb`)
-- [ ] **Run `scripts/run_eval.py` end-to-end → produce `experiments/results/{A,B,C,D}/*.json`**
-- [ ] Human eval form filled (50 ratings)
+- [x] **Run `scripts/run_eval.py` end-to-end → produce `experiments/results/{A,B,C,D}/*.json`**
+- [ ] Human eval form filled (50 ratings) — placeholder ratings written by `scripts/fill_human_eval_placeholder.py`; replace with real ratings before final submission
 
 ## Phase 5 — Demo & Delivery
 
@@ -48,6 +48,6 @@ Tick each item when the corresponding work merges into `develop`.
 - [x] Kaggle demo notebook with Cloudflare tunnel (`notebooks/06_demo_kaggle.ipynb`)
 - [x] Single-slot model loading + OOM auto-recovery in the demo
 - [ ] Record 3–5 min demo video
-- [ ] Final report (15–20 pages) — fill `docs/report/report.md` with eval numbers
+- [x] Final report — `docs/report/report.md` filled with eval numbers (bảng 6.1, 6.2, §6.3 + figures); abstract/§7-8 still need final pass after human ratings
 - [ ] Slides
 - [ ] Tag release; merge `develop` → `main` (only when instructor signs off)

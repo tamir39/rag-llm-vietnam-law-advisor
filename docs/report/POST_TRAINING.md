@@ -4,9 +4,44 @@ Checklist khép vòng dự án.
 
 ## 1. Xác nhận adapter đã có
 
-- [ ] Tab **HF**: https://huggingface.co/Tamir39/qwen2_5-7b-vietnam-tax-lora hiển thị adapter mới.
-- [ ] Loss cuối cùng (in trên log Kaggle) hợp lý — không phải NaN, không nhảy lên đột ngột.
-- [ ] Thử inference nhanh ngay trong notebook 03 (cell cuối): hỏi 1-2 câu, kiểm tra trả lời tiếng Việt mạch lạc.
+- [x] Tab **HF**: https://huggingface.co/Tamir39/qwen2_5-7b-vietnam-tax-lora hiển thị adapter mới.
+- [x] Thử inference nhanh: kết quả 4-config (đặc biệt C và D) cho thấy adapter sinh tiếng Việt mạch lạc, không NaN — xem [`experiments/results/summary.json`](../../experiments/results/summary.json).
+
+### 1.1 Cấu hình huấn luyện (snapshot)
+
+Lấy từ [`src/finetune/lora_config.py`](../../src/finetune/lora_config.py):
+
+| Tham số                      | Giá trị                                              |
+|------------------------------|------------------------------------------------------|
+| Base model                   | `Qwen/Qwen2.5-7B-Instruct`                           |
+| Quantization                 | 4-bit nf4, double-quant, compute = bfloat16          |
+| LoRA `r` / `alpha` / dropout | 16 / 32 / 0.05                                       |
+| Target modules               | `q,k,v,o_proj` + `gate,up,down_proj` (att + MLP)     |
+| Per-device batch / grad accum| 1 / 16  (effective batch = 16)                       |
+| Learning rate                | 2e-4, scheduler = cosine, warmup ratio = 0.03        |
+| Optimizer                    | `paged_adamw_8bit` (mặc định TRL)                    |
+| Epochs / max-seq-len         | 3 / 2048                                             |
+| Train ví dụ                  | 305 (mixed-context 50/50 — chèn `passage_text` vàng)|
+| Hạ tầng                      | Kaggle Notebook P100 16GB hoặc T4 ×2 30GB            |
+| Adapter                      | `Tamir39/qwen2_5-7b-vietnam-tax-lora` (~160 MB)      |
+
+### 1.2 Loss curve (cần điền)
+
+Notebook 03 không lưu lại JSON loss-history; trước khi nộp báo cáo:
+
+1. Mở `notebooks/03_finetune_lora_kaggle.ipynb` trên Kaggle.
+2. Trong cell huấn luyện, sửa `TrainingArguments` để bật `report_to="none"` + thêm `logging_steps=5` (đã có) — output console sẽ in `{'loss': X, 'epoch': Y}` mỗi 5 step.
+3. Copy toàn bộ stdout, lưu vào `experiments/training_log.txt` rồi parse:
+   ```python
+   import re, json, matplotlib.pyplot as plt
+   log = open("experiments/training_log.txt").read()
+   pts = [(float(s), float(e)) for s, e in re.findall(r"'loss':\s*([\d.]+).*?'epoch':\s*([\d.]+)", log)]
+   plt.plot([e for _, e in pts], [s for s, _ in pts])
+   plt.xlabel("epoch"); plt.ylabel("train loss"); plt.savefig("docs/report/figures/train_loss.png", dpi=150)
+   ```
+4. Chèn vào **§4** của `report.md`: hình `train_loss.png` + 2-3 câu nhận xét (giảm đều hay overfit, có spike không).
+
+> Nếu lần huấn luyện đã xong và log không còn — chạy lại 1 epoch nhanh (~30 phút) chỉ để chụp loss curve. Adapter cuối không cần đụng tới.
 
 ## 2. Chạy đánh giá tự động
 

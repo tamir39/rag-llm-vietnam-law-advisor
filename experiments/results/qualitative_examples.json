@@ -1,0 +1,104 @@
+{
+  "d_wins_big": {
+    "idx": 19,
+    "question": "Một xe ô tô chở người 9 chỗ chạy hoàn toàn bằng pin được mua năm 2026 áp dụng thuế suất TTĐB bao nhiêu?",
+    "gold": "Thuế suất 3%.",
+    "gold_pid": "passage_000425",
+    "preds": {
+      "A": "Theo quy định hiện hành của Việt Nam, xe ô tô chở người hoàn toàn bằng điện (bao gồm cả xe chạy bằng pin) không thuộc đối tượng chịu thuế tiêu thụ đặc biệt (TTĐB). Do đó, không có thuế suất TTĐB áp dụng cho trường hợp này.\n\nTheo Nghị định số 148/2020/NĐ-CP ngày 13 tháng 11 năm 2020 của Chính phủ về quản lý thuế tiêu thụ đặc biệt, thuế xuất khẩu, thuế nhập khẩu và thuế giá trị gia tăng, các loại xe ô tô chở người dùng năng lượng điện không phải chịu thuế TTĐB.",
+      "B": "Theo ngữ cảnh tham khảo từ [passage_000425], xe ô tô chở người và xe chở người bốn bánh có gắn động cơ từ 9 chỗ trở xuống, xe ô tô pick-up chở người áp dụng thuế suất:\n\n- Từ 01/01/2026: 3%\n\nVì vậy, một xe ô tô chở người 9 chỗ chạy hoàn toàn bằng pin được mua năm 2026 sẽ áp dụng thuế suất thuế tiêu thụ đặc biệt là 3%.",
+      "C": "Thuế suất 15%.",
+      "D": "Thuế suất 3%."
+    },
+    "retrieved": {
+      "B": [
+        "passage_000425",
+        "passage_000426",
+        "passage_000427",
+        "passage_000428",
+        "passage_000430"
+      ],
+      "D": [
+        "passage_000425",
+        "passage_000426",
+        "passage_000427",
+        "passage_000428",
+        "passage_000430"
+      ]
+    },
+    "sims": {
+      "A": 0.3564425770308123,
+      "B": 0.5392749244712991,
+      "C": 0.7777777777777777,
+      "D": 1.0
+    }
+  },
+  "a_hallucinates": {
+    "idx": 27,
+    "question": "Doanh nghiệp có 30% lao động là người sau cai nghiện ma túy nhưng chỉ có 15 lao động bình quân năm thì có được miễn thuế TNDN không?",
+    "gold": "Không. Điều kiện cần là có số lao động bình quân trong năm từ 20 người trở lên; doanh nghiệp này không đủ điều kiện được miễn thuế TNDN.",
+    "gold_pid": "passage_000509",
+    "preds": {
+      "A": "Theo quy định hiện hành tại Nghị định số 83/2019/NĐ-CP ngày 14 tháng 8 năm 2019 của Chính phủ về một số chính sách khuyến khích việc giải quyết việc làm cho người lao động bị nghiện ma túy, người lao động sau cai nghiện ma túy, người lao động có hoàn cảnh khó khăn, người lao động nữ có con nhỏ dưới 36 tháng tuổi, người lao động ở vùng sâu, vùng xa, vùng khó khăn, vùng đồng bào dân tộc thiểu số nghèo, người lao động ở các khu công nghiệp, khu chế xuất, khu kinh tế, doanh nghiệp có vốn đầu tư nước ngoài, doanh nghiệp có vốn đầu tư trực tiếp nước ngoài, doanh nghiệp có vốn đầu tư trong nước, doanh nghiệp có vốn đầu tư nước ngoài, doanh nghiệp có vốn đầu tư trực tiếp nước ngoài, doanh nghiệp có vốn đầu tư trong nước, doanh nghiệp có vốn đầu tư nước ngoài, doanh nghiệp có vốn đầu tư trực tiếp nước ngoài, doanh nghiệp có vốn đầu tư trong nước, doanh nghiệp có vốn đầu tư nước ngoài, doanh nghiệp có vốn đầu tư trực tiếp nước ngoài, doanh nghiệp có vốn đầu tư trong nước, doanh nghiệp có vốn đầu tư nước ngoài, doanh nghiệp có vốn đầu tư trực tiếp nước ngoài, doanh nghiệp có vốn đầu tư trong nước, doanh nghiệp có vốn đầu tư nước ngoài, doanh nghiệp có vốn đầu tư trực tiếp nước ngoài, doanh nghiệp có vốn đầu tư trong nước, doanh nghiệp có vốn đầu tư nước ngoài, doanh nghiệp có vốn đầu tư trực tiếp nước ngoài, doanh nghiệp có vốn đầu tư trong nước, doanh nghiệp có vốn đầu tư nước ngoài, doanh nghiệp có vốn đầu tư trực tiếp nước ngoài, doanh nghiệp có vốn đầu tư trong nước, doanh nghiệp có vốn đầu tư nước ngoài, doanh nghiệp có vốn đầu tư trực tiếp nước ngoài, doanh nghiệp có vốn đầu tư trong nước, doanh nghiệp có vốn đầu tư nước ngoài, doanh nghiệp có vốn đầu tư trực tiếp nước ngoài, doanh nghiệp có vốn đầu tư trong nước, doanh nghiệp có vốn đầu tư nước ngoài, doanh nghiệp có vốn đầu tư trực tiếp nước ngoài, doanh nghiệp có vốn đầu tư trong nước, doanh nghiệp có vốn đầu tư nước ngoài, doanh nghiệp có vốn đầu",
+      "B": "Theo ngữ cảnh tham khảo từ [passage_000509], để doanh nghiệp được miễn thuế TNDN từ hoạt động sản xuất, kinh doanh hàng hóa, dịch vụ có từ 30% số lao động bình quân trong năm trở lên là người khuyết tật, người sau cai nghiện ma túy, người nhiễm HIV/AIDS và có số lao động bình quân trong năm từ 20 người trở lên, thì doanh nghiệp phải đáp ứng cả hai điều kiện này.\n\nTrong trường hợp này, doanh nghiệp có 30% lao động là người sau cai nghiện ma túy, nhưng chỉ có 15 lao động bình quân năm. Điều này không đáp ứng điều kiện về số lượng lao động bình quân trong năm phải từ 20 người trở lên.\n\nVì vậy, doanh nghiệp không được miễn thuế TNDN theo quy định này.",
+      "C": "Có. Doanh nghiệp có ít nhất 30% số lao động là người sau cai nghiện ma túy hoặc người khuyết tật, người cao tuổi, người nhiễm HIV, người nhiễm bệnh AIDS, người nhiễm bệnh lây truyền qua đường tình dục, người bị bệnh tâm thần, bệnh hiểm nghèo, bệnh hiểm nghèo ở trẻ em, người bị tai nạn lao động, bệnh nghề nghiệp, người bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác tại địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác tại địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/d",
+      "D": "Không. Số lao động bình quân trong năm phải từ 20 người trở lên."
+    },
+    "retrieved": {
+      "B": [
+        "passage_000509",
+        "passage_000524",
+        "passage_000237",
+        "passage_000331",
+        "passage_000565"
+      ],
+      "D": [
+        "passage_000509",
+        "passage_000524",
+        "passage_000237",
+        "passage_000331",
+        "passage_000565"
+      ]
+    },
+    "sims": {
+      "A": 0.20263118664281454,
+      "B": 0.61703782942721,
+      "C": 0.18018860572052062,
+      "D": 0.54
+    }
+  },
+  "rag_miss": {
+    "idx": 7,
+    "question": "Một cá nhân có thu nhập tính thuế tháng là 25 triệu đồng thì áp dụng bậc thuế lũy tiến TNCN nào?",
+    "gold": "Bậc 4: thu nhập trên 18 đến 32 triệu đồng/tháng, thuế suất 20%.",
+    "gold_pid": "passage_000243",
+    "preds": {
+      "A": "Theo Luật Thuế thu nhập cá nhân năm 2020, bậc lũy tiến áp dụng cho thu nhập từ tiền lương, tiền công như sau:\n\n- Thuế suất 0% với thu nhập từ 0 - 1.950.000 đồng/tháng.\n- Thuế suất 5% với thu nhập từ 1.950.001 - 3.900.000 đồng/tháng.\n- Thuế suất 10% với thu nhập từ 3.900.001 - 7.800.000 đồng/tháng.\n- Thuế suất 15% với thu nhập từ 7.800.001 - 11.700.000 đồng/tháng.\n- Thuế suất 20% với thu nhập từ 11.700.001 - 15.600.000 đồng/tháng.\n- Thuế suất 25% với thu nhập từ 15.600.001 - 20.500.000 đồng/tháng.\n- Thuế suất 30% với thu nhập từ 20.500.001 - 26.000.000 đồng/tháng.\n- Thuế suất 35% với thu nhập từ 26.000.001 - 34.000.000 đồng/tháng.\n- Thuế suất 45% với thu nhập từ 34.000.001 đồng trở lên/tháng.\n\nVới thu nhập 25 triệu đồng/tháng, thu nhập này nằm trong khoảng từ 20.500.001 - 26.000.000 đồng/tháng nên sẽ áp dụng thuế suất 30%.",
+      "B": "Dựa vào ngữ cảnh tham khảo, thu nhập tính thuế tháng là 25 triệu đồng thuộc bậc thuế 1, vì mức thuế này áp dụng cho phần thu nhập tính thuế/tháng từ 0 đến 5 triệu đồng.\n\nTuy nhiên, để xác định chính xác bậc thuế lũy tiến, cần biết tổng thu nhập tính thuế/năm của cá nhân đó. Nếu thu nhập tính thuế/năm chưa đạt đến bậc thuế 2 (trên 60 triệu đồng/năm), thì thu nhập tính thuế tháng 25 triệu đồng thuộc bậc thuế 1.\n\nNếu có thông tin về thu nhập tính thuế/năm, tôi có thể xác định chính xác bậc thuế lũy tiến.",
+      "C": "Áp dụng bậc 1 với mức thuế tuyệt đối là 0 đồng.",
+      "D": "Áp dụng bậc 3, thuế suất 15%."
+    },
+    "retrieved": {
+      "B": [
+        "passage_000239",
+        "passage_000240",
+        "passage_000244",
+        "passage_000242",
+        "passage_000245"
+      ],
+      "D": [
+        "passage_000239",
+        "passage_000240",
+        "passage_000244",
+        "passage_000242",
+        "passage_000245"
+      ]
+    },
+    "sims": {
+      "A": 0.38058035714285715,
+      "B": 0.4022721566658298,
+      "C": 0.2707792207792208,
+      "D": 0.3027950310559006
+    }
+  }
+}
