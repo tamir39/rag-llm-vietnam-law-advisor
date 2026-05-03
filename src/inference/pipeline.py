@@ -138,19 +138,11 @@ class InferencePipeline:
         self._tokenizer = None
         self._embedder = None
         self._faiss_index = None
-    
+        self._faiss_meta = None
         gc.collect()
-    
-        torch.cuda.empty_cache()
-        torch.cuda.ipc_collect()
-        
-        print("GPU memory cleared.")
-    
-    def __del__(self):
-        self._model = None
-        self._tokenizer = None
-        gc.collect()
-        torch.cuda.empty_cache()
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+            torch.cuda.ipc_collect()
 
 _current_pipe = None
 _current_config = None

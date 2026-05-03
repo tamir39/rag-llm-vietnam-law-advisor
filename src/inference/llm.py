@@ -71,7 +71,7 @@ def load_llm(
         quantization_config=quant_config,
         device_map=device_map,
         torch_dtype=compute_dtype,
-        offload_folder="/kaggle/working/offload",
+        offload_folder="offload",
         low_cpu_mem_usage=True
     )
     model.config.use_cache = False 
