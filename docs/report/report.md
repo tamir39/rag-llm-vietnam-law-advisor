@@ -162,8 +162,14 @@ Mỗi câu QA → cuộc hội thoại 3 lượt (system, user, assistant) theo 
 ### 4.3 Hạ tầng
 
 - Kaggle Notebook, GPU P100 16 GB (hoặc T4 ×2 30 GB), Internet on, secret `HF_TOKEN`.
-- Wall time dự kiến: ~1.5–2 h cho 3 epoch trên 305 ví dụ.
+- Wall time thực tế: ~1.5 h cho 3 epoch trên 305 ví dụ (60 optimization step, logging mỗi 10 step).
 - Adapter được push tới `Tamir39/qwen2_5-7b-vietnam-tax-lora`.
+
+### 4.4 Đường cong huấn luyện
+
+![Hình 4.1 — Loss curve QLoRA (3 epoch, 60 step)](figures/train_loss.png)
+
+Loss giảm rất mạnh trong epoch 1 (1,284 → 0,452 sau 20 step — tương đương khoảng cách giữa "chưa biết format Qwen chat" và "đã quen template"), sau đó giảm chậm nhưng đều đặn xuống 0,278 ở step 60 (giảm tổng cộng ~78%). Đường cong **đơn điệu giảm**, không có spike và không thấy dấu hiệu overfit (loss vẫn còn giảm ở step cuối). Trên 305 ví dụ với hiệu dụng batch = 16, mỗi epoch chỉ ~19 step nên 3 epoch là một quyết định hợp lý — ít hơn nữa thì chưa hội tụ, nhiều hơn thì rủi ro overfit cao do tập SFT nhỏ.
 
 ---
 

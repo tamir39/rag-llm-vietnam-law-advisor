@@ -68,12 +68,8 @@ def _peft_config():
     )
 
 
-def train(base_model_id: str, dataset, output_dir: Path, eval_dataset=None, return_trainer: bool = False):
-    """Fine-tune ``base_model_id`` with QLoRA and save the adapter to ``output_dir``.
-
-    When ``return_trainer=True``, returns ``(output_dir, trainer)`` so the caller
-    can read ``trainer.state.log_history`` for the loss curve.
-    """
+def train(base_model_id: str, dataset, output_dir: Path, eval_dataset=None):
+    """Fine-tune ``base_model_id`` with QLoRA and save the adapter to ``output_dir``."""
     from peft import prepare_model_for_kbit_training
     from trl import SFTConfig, SFTTrainer
 
@@ -115,6 +111,4 @@ def train(base_model_id: str, dataset, output_dir: Path, eval_dataset=None, retu
     trainer.train()
     trainer.save_model(str(output_dir))
     tokenizer.save_pretrained(str(output_dir))
-    if return_trainer:
-        return output_dir, trainer
     return output_dir
