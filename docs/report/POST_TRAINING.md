@@ -27,21 +27,36 @@ Lấy từ [`src/finetune/lora_config.py`](../../src/finetune/lora_config.py):
 
 ### 1.2 Loss curve (cần điền)
 
-Notebook 03 không lưu lại JSON loss-history; trước khi nộp báo cáo:
+`train()` đã hỗ trợ `return_trainer=True` → trả về `(adapter_dir, trainer)` để truy cập `trainer.state.log_history`. Các bước trên Kaggle:
 
-1. Mở `notebooks/03_finetune_lora_kaggle.ipynb` trên Kaggle.
-2. Trong cell huấn luyện, sửa `TrainingArguments` để bật `report_to="none"` + thêm `logging_steps=5` (đã có) — output console sẽ in `{'loss': X, 'epoch': Y}` mỗi 5 step.
-3. Copy toàn bộ stdout, lưu vào `experiments/training_log.txt` rồi parse:
+1. Mở `notebooks/03_finetune_lora_kaggle.ipynb`, **Settings → GPU P100**, secret `HF_TOKEN`.
+2. Chạy cell 1–4 như bình thường (clone, pip, HF login, dataset).
+3. Thay cell huấn luyện chính bằng cell harvest dưới đây (≈30 phút trên P100):
+
    ```python
-   import re, json, matplotlib.pyplot as plt
-   log = open("experiments/training_log.txt").read()
-   pts = [(float(s), float(e)) for s, e in re.findall(r"'loss':\s*([\d.]+).*?'epoch':\s*([\d.]+)", log)]
-   plt.plot([e for _, e in pts], [s for s, _ in pts])
-   plt.xlabel("epoch"); plt.ylabel("train loss"); plt.savefig("docs/report/figures/train_loss.png", dpi=150)
-   ```
-4. Chèn vào **§4** của `report.md`: hình `train_loss.png` + 2-3 câu nhận xét (giảm đều hay overfit, có spike không).
+   from src.finetune.trainer import train
+   from src.config import LORA_ADAPTER, BASE_LLM
+   import json
+   from pathlib import Path
 
-> Nếu lần huấn luyện đã xong và log không còn — chạy lại 1 epoch nhanh (~30 phút) chỉ để chụp loss curve. Adapter cuối không cần đụng tới.
+   adapter_dir, trainer = train(
+       base_model_id=BASE_LLM,
+       dataset=train_ds,
+       output_dir=LORA_ADAPTER,
+       return_trainer=True,
+   )
+
+   Path("/kaggle/working/loss_history.json").write_text(
+       json.dumps(trainer.state.log_history, ensure_ascii=False, indent=2)
+   )
+   print("done →", "/kaggle/working/loss_history.json")
+   ```
+
+4. Tải `loss_history.json` từ tab **Output** của Kaggle về repo, đặt tại `experiments/loss_history.json`.
+5. Local: chạy `python scripts/plot_loss_curve.py` → tạo `docs/report/figures/train_loss.png`.
+6. Chèn ảnh + nhận xét vào **§4** của `report.md` (giảm đều hay overfit, có spike không).
+
+> Có thể giảm `NUM_TRAIN_EPOCHS=1` trong `lora_config.py` cho lần harvest này nếu chỉ cần chụp xu hướng. Adapter cuối đã có sẵn trên HF nên không cần đụng tới.
 
 ## 2. Chạy đánh giá tự động
 
