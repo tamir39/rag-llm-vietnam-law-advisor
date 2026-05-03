@@ -49,4 +49,4 @@ Tick each item when the corresponding work merges into `develop`.
 - [x] Single-slot model loading + OOM auto-recovery in the demo
 - [x] Final report — abstract, §6.1, §6.2, §6.3, §4.4, §8 filled; figures embedded
 - [x] Publish dataset on HF (`Tamir39/vietnam-tax-qa`, CC-BY-4.0)
-- [ ] Tag release; merge `develop` → `main` (only when instructor signs off)
+- [x] Tag release `v1.0`; merge `develop` → `main` (PR #1, merge commit `b3f544c`)
