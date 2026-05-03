@@ -1,21 +1,21 @@
-"""Streamlit demo: ask Vietnamese tax-law questions across the 4 configs.
+"""Streamlit demo for LawMate — Vietnamese Tax Q&A.
 
-Run from the repo root:
-
-    streamlit run app/streamlit_app.py
-
-Requirements before launch:
-    1. ``python scripts/build_index.py`` has produced ``experiments/index/``.
-    2. (For configs C / D) the LoRA adapter is either at the local path
-       ``checkpoints/qwen2_5-7b-vietnam-tax-lora/`` or pullable from
-       ``Tamir39/qwen2_5-7b-vietnam-tax-lora`` on the Hub.
+UX goals:
+  * Always show which config is currently loaded in VRAM.
+  * Single-slot model loading: switching configs unloads the previous one
+    BEFORE allocating the new one, so VRAM stays bounded to one Qwen2.5-7B
+    (~6 GB in 4-bit) regardless of how many configs the user clicks through.
+  * Compare-mode runs configs sequentially (load → answer → unload), never
+    holding more than one model in VRAM.
 """
 from __future__ import annotations
 
 import os
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 
+import gc
 import sys
+from dataclasses import dataclass
 from pathlib import Path
 
 import streamlit as st
@@ -28,49 +28,36 @@ from src.config import INDEX_DIR, ROOT_DIR
 from src.inference.pipeline import InferencePipeline
 
 
-CONFIG_OPTIONS = {
-    "A — LLM gốc, không RAG": ROOT_DIR / "experiments" / "configs" / "A_base_no_rag.yaml",
-    "B — LLM gốc, có RAG": ROOT_DIR / "experiments" / "configs" / "B_base_with_rag.yaml",
-    "C — LLM fine-tuned, không RAG": ROOT_DIR / "experiments" / "configs" / "C_finetuned_no_rag.yaml",
-    "D — LLM fine-tuned, có RAG": ROOT_DIR / "experiments" / "configs" / "D_finetuned_with_rag.yaml",
-}
+# ----- Config catalog --------------------------------------------------------
+
+@dataclass(frozen=True)
+class ConfigCard:
+    code: str
+    title: str
+    subtitle: str
+    base_lora: str
+    rag: str
+    yaml_path: Path
+    recommended: bool = False
 
 
-st.set_page_config(page_title="Hỏi đáp Luật Thuế VN — RAG + LoRA", page_icon="⚖️", layout="wide")
+CONFIGS: list[ConfigCard] = [
+    ConfigCard("A", "A · Cơ sở", "LLM gốc, không RAG",
+               "Base", "Không RAG",
+               ROOT_DIR / "experiments/configs/A_base_no_rag.yaml"),
+    ConfigCard("B", "B · +RAG", "LLM gốc + truy hồi tài liệu",
+               "Base", "Có RAG",
+               ROOT_DIR / "experiments/configs/B_base_with_rag.yaml"),
+    ConfigCard("C", "C · +LoRA", "LLM fine-tuned, không RAG",
+               "Fine-tuned", "Không RAG",
+               ROOT_DIR / "experiments/configs/C_finetuned_no_rag.yaml"),
+    ConfigCard("D", "D · LoRA + RAG", "Cấu hình đầy đủ — khuyến nghị",
+               "Fine-tuned", "Có RAG",
+               ROOT_DIR / "experiments/configs/D_finetuned_with_rag.yaml",
+               recommended=True),
+]
+CONFIG_BY_CODE = {c.code: c for c in CONFIGS}
 
-st.title("⚖️ Hệ thống hỏi đáp Luật Thuế Việt Nam")
-st.caption(
-    "RAG (FAISS + multilingual-e5-base) + Qwen2.5-7B-Instruct (QLoRA fine-tuned). "
-    "Phạm vi: Thuế GTGT, Thuế TNCN, Thuế sử dụng đất phi nông nghiệp, Thuế TTĐB, Thuế TNDN."
-)
-
-# ----- Sidebar ---------------------------------------------------------------
-
-with st.sidebar:
-    st.header("Cấu hình")
-    config_label = st.selectbox("Chọn cấu hình", list(CONFIG_OPTIONS.keys()), index=3)
-
-    st.divider()
-    st.markdown("**Tham số sinh**")
-    temperature = st.slider("temperature", 0.0, 1.0, 0.2, 0.05)
-    max_new_tokens = st.slider("max_new_tokens", 64, 1024, 384, 64)
-    top_k_override = st.slider("top-k truy hồi", 1, 10, 5, 1)
-
-    st.divider()
-    st.markdown("**Trạng thái**")
-    st.caption(f"FAISS index: {'✅' if (INDEX_DIR / 'kb.faiss').exists() else '❌ chưa build'}")
-
-
-# ----- Pipeline cache --------------------------------------------------------
-
-@st.cache_resource(show_spinner="Đang tải mô hình...")
-def get_pipeline(config_path_str: str) -> InferencePipeline:
-    pipe = InferencePipeline(Path(config_path_str))
-    pipe.load()
-    return pipe
-
-
-# ----- Main ------------------------------------------------------------------
 
 DEFAULT_QS = [
     "Thuế suất thuế giá trị gia tăng đối với hàng hóa xuất khẩu là bao nhiêu?",
@@ -79,44 +66,247 @@ DEFAULT_QS = [
     "Thu nhập chịu thuế thu nhập cá nhân gồm những khoản nào?",
     "Thuế suất thuế thu nhập doanh nghiệp phổ thông hiện nay là bao nhiêu?",
 ]
-example = st.selectbox("Ví dụ câu hỏi (tùy chọn)", [""] + DEFAULT_QS)
-question = st.text_area("Câu hỏi của bạn:", value=example, height=110, key="question")
 
-ask = st.button("Trả lời", type="primary", use_container_width=False)
 
-if ask and question.strip():
-    cfg_path = CONFIG_OPTIONS[config_label]
+# ----- Page setup ------------------------------------------------------------
 
-    if "last_config" in st.session_state and st.session_state.last_config != config_label:
-        st.cache_resource.clear()
-    st.session_state.last_config = config_label
+st.set_page_config(page_title="LawMate — VN Tax Q&A",
+                   page_icon="⚖️", layout="wide")
 
-    pipe = get_pipeline(str(cfg_path))
+st.session_state.setdefault("pipe", None)
+st.session_state.setdefault("loaded_code", None)
 
-    # Apply per-call overrides without mutating the cached pipeline.
+
+# ----- Helpers ---------------------------------------------------------------
+
+def _gpu_status() -> tuple[str, str]:
+    try:
+        import torch
+        if not torch.cuda.is_available():
+            return "CPU", "—"
+        idx = torch.cuda.current_device()
+        name = torch.cuda.get_device_name(idx)
+        used = torch.cuda.memory_allocated(idx) / 1024**3
+        total = torch.cuda.get_device_properties(idx).total_memory / 1024**3
+        return name, f"{used:.1f} / {total:.1f} GB"
+    except Exception as exc:
+        return "GPU?", f"({exc})"
+
+
+def unload_active_pipeline() -> None:
+    pipe = st.session_state.get("pipe")
+    if pipe is not None:
+        pipe.unload()
+        st.session_state.pipe = None
+        st.session_state.loaded_code = None
+        gc.collect()
+
+
+def load_pipeline(code: str) -> InferencePipeline:
+    """Load `code` into the single slot, unloading any prior pipeline first."""
+    if st.session_state.loaded_code == code and st.session_state.pipe is not None:
+        return st.session_state.pipe
+    unload_active_pipeline()
+    card = CONFIG_BY_CODE[code]
+    pipe = InferencePipeline(card.yaml_path)
+    pipe.load()
+    st.session_state.pipe = pipe
+    st.session_state.loaded_code = code
+    return pipe
+
+
+def run_answer(pipe: InferencePipeline, question: str,
+               temperature: float, max_new_tokens: int, top_k: int):
     pipe.cfg["generation"]["temperature"] = temperature
     pipe.cfg["generation"]["max_new_tokens"] = max_new_tokens
     if pipe.cfg["rag"]["enabled"]:
-        pipe.cfg["rag"]["top_k"] = top_k_override
+        pipe.cfg["rag"]["top_k"] = top_k
+    return pipe.answer(question.strip())
 
-    with st.spinner("Đang sinh câu trả lời..."):
-        result = pipe.answer(question.strip())
 
-    st.subheader("Trả lời")
-    st.write(result.answer)
+# ----- Header ----------------------------------------------------------------
 
-    if result.retrieved_passage_ids:
-        st.subheader("Căn cứ pháp lý đã truy hồi")
-        for rank, (pid, score) in enumerate(
-            zip(result.retrieved_passage_ids, result.retrieved_scores), start=1
-        ):
-            row = next((m for m in pipe._faiss_meta if m["passage_id"] == pid), None)
-            with st.expander(f"#{rank}  {pid}  (score={score:.3f}) — {row['title'] if row else ''}"):
-                if row:
-                    st.markdown(f"**Đoạn trích:**\n\n{row['passage_text']}")
-                    if row.get("url"):
-                        st.markdown(f"[Nguồn]({row['url']})")
-                else:
-                    st.write("(không tìm thấy metadata)")
-elif ask:
-    st.warning("Hãy nhập câu hỏi.")
+st.title("⚖️ LawMate — Hỏi đáp Luật Thuế Việt Nam")
+st.caption(
+    "RAG (FAISS + multilingual-e5-base) + Qwen2.5-7B-Instruct (QLoRA fine-tuned). "
+    "Phạm vi: GTGT, TNCN, TTĐB, TNDN, Thuế sử dụng đất phi nông nghiệp."
+)
+
+# ----- Status bar ------------------------------------------------------------
+
+dev, vram = _gpu_status()
+loaded_code = st.session_state.loaded_code
+loaded_label = CONFIG_BY_CODE[loaded_code].title if loaded_code else "—"
+faiss_ok = (INDEX_DIR / "kb.faiss").exists()
+
+c1, c2, c3, c4 = st.columns([1.6, 1.0, 1.0, 0.6])
+c1.metric("Đang tải", value=loaded_label)
+c2.metric("GPU", value=dev)
+c3.metric("VRAM", value=vram)
+c4.metric("FAISS", value="✅" if faiss_ok else "❌")
+
+st.divider()
+
+
+# ----- Sidebar: advanced -----------------------------------------------------
+
+with st.sidebar:
+    st.header("Tham số sinh")
+    temperature = st.slider("Temperature", 0.0, 1.0, 0.2, 0.05)
+    max_new_tokens = st.slider("Max new tokens", 64, 1024, 384, 64)
+    top_k = st.slider("Top-k truy hồi (RAG)", 1, 10, 5, 1)
+    st.divider()
+    st.markdown("**Thư mục FAISS index**")
+    st.code(str(INDEX_DIR), language="text")
+    st.divider()
+    if st.button("🧹 Giải phóng GPU", use_container_width=True,
+                 disabled=(loaded_code is None)):
+        unload_active_pipeline()
+        st.rerun()
+
+
+# ----- Config picker (cards) -------------------------------------------------
+
+st.subheader("1. Chọn cấu hình")
+
+cols = st.columns(4)
+clicked_code: str | None = None
+for col, card in zip(cols, CONFIGS):
+    with col:
+        is_active = (st.session_state.loaded_code == card.code)
+        badge = " · ✅ ĐANG TẢI" if is_active else (" · ⭐" if card.recommended else "")
+        with st.container(border=True):
+            st.markdown(f"**{card.title}**{badge}")
+            st.caption(card.subtitle)
+            st.markdown(
+                f"- LLM: **{card.base_lora}**\n"
+                f"- Truy hồi: **{card.rag}**"
+            )
+            if st.button(
+                "✅ Đang dùng" if is_active else "⬇️ Tải cấu hình",
+                key=f"load_{card.code}",
+                use_container_width=True,
+                type=("primary" if (card.recommended and not is_active) else "secondary"),
+                disabled=is_active,
+            ):
+                clicked_code = card.code
+
+if clicked_code is not None:
+    with st.spinner(f"Đang tải cấu hình {clicked_code} (lần đầu mất 1–2 phút)..."):
+        load_pipeline(clicked_code)
+    st.rerun()
+
+st.caption(
+    "💡 Chỉ một cấu hình được giữ trong VRAM tại một thời điểm — "
+    "khi đổi cấu hình, mô hình cũ được giải phóng trước, mô hình mới mới được tải."
+)
+
+st.divider()
+
+
+# ----- Tabs: single QA vs compare -------------------------------------------
+
+tab_qa, tab_cmp = st.tabs(["🗣️ Hỏi 1 cấu hình", "⚖️ So sánh nhiều cấu hình"])
+
+with tab_qa:
+    st.subheader("2. Đặt câu hỏi")
+    example = st.selectbox("Câu hỏi mẫu (chọn để điền vào ô bên dưới)",
+                           [""] + DEFAULT_QS, key="ex_single")
+    question = st.text_area("Câu hỏi của bạn", value=example, height=120,
+                            key="q_single")
+
+    loaded = st.session_state.loaded_code
+    if loaded is None:
+        st.info("⬆️ Tải một cấu hình ở phần trên trước khi hỏi.")
+    btn = st.button(
+        f"Trả lời với cấu hình {loaded}" if loaded else "Trả lời",
+        type="primary",
+        disabled=(loaded is None or not question.strip()),
+        key="ask_single",
+    )
+
+    if btn:
+        with st.spinner("Đang sinh câu trả lời..."):
+            result = run_answer(st.session_state.pipe, question,
+                                temperature, max_new_tokens, top_k)
+
+        st.subheader("Câu trả lời")
+        st.markdown(result.answer)
+
+        if result.retrieved_passage_ids:
+            st.subheader("📚 Căn cứ pháp lý đã truy hồi")
+            pipe = st.session_state.pipe
+            for rank, (pid, score) in enumerate(zip(
+                    result.retrieved_passage_ids,
+                    result.retrieved_scores), start=1):
+                row = next((m for m in pipe._faiss_meta
+                            if m["passage_id"] == pid), None)
+                title = row["title"] if row else ""
+                with st.expander(f"#{rank}  {pid}  (score={score:.3f}) — {title}"):
+                    if row:
+                        st.markdown(f"**Đoạn trích:**\n\n{row['passage_text']}")
+                        if row.get("url"):
+                            st.markdown(f"[Nguồn]({row['url']})")
+                    else:
+                        st.write("(không tìm thấy metadata)")
+
+with tab_cmp:
+    st.subheader("2. Chọn cấu hình muốn so sánh")
+    chosen_codes: list[str] = []
+    cols2 = st.columns(4)
+    for col, card in zip(cols2, CONFIGS):
+        with col:
+            picked = st.checkbox(
+                f"{card.title}", key=f"cmp_{card.code}",
+                value=(card.code == "D"),
+            )
+            st.caption(f"{card.base_lora} · {card.rag}")
+            if picked:
+                chosen_codes.append(card.code)
+
+    cmp_example = st.selectbox("Câu hỏi mẫu", [""] + DEFAULT_QS, key="ex_cmp")
+    cmp_question = st.text_area("Câu hỏi", value=cmp_example, height=120,
+                                key="q_cmp")
+
+    st.caption(
+        "ℹ️ Mỗi cấu hình được tải / giải phóng tuần tự để VRAM luôn chỉ giữ 1 mô hình. "
+        "Tổng thời gian ≈ thời-gian-tải × số-cấu-hình."
+    )
+
+    run_cmp = st.button(
+        f"So sánh {len(chosen_codes)} cấu hình (tuần tự)",
+        type="primary",
+        disabled=(len(chosen_codes) == 0 or not cmp_question.strip()),
+        key="ask_cmp",
+    )
+
+    if run_cmp:
+        results = {}
+        progress = st.progress(0.0, text="Bắt đầu...")
+        for i, code in enumerate(chosen_codes, start=1):
+            progress.progress((i - 1) / len(chosen_codes),
+                              text=f"Đang tải cấu hình {code} "
+                                   f"({i}/{len(chosen_codes)})...")
+            pipe = load_pipeline(code)
+            progress.progress((i - 0.5) / len(chosen_codes),
+                              text=f"Đang sinh câu trả lời cho {code} ...")
+            results[code] = run_answer(pipe, cmp_question,
+                                       temperature, max_new_tokens, top_k)
+        progress.progress(1.0, text="Hoàn tất.")
+
+        st.subheader("Kết quả so sánh")
+        result_cols = st.columns(len(chosen_codes))
+        for col, code in zip(result_cols, chosen_codes):
+            card = CONFIG_BY_CODE[code]
+            res = results[code]
+            with col:
+                with st.container(border=True):
+                    st.markdown(f"#### {card.title}")
+                    st.caption(f"{card.base_lora} · {card.rag}")
+                    st.markdown(res.answer)
+                    if res.retrieved_passage_ids:
+                        with st.expander(
+                            f"📚 {len(res.retrieved_passage_ids)} đoạn truy hồi"):
+                            for pid, sc in zip(res.retrieved_passage_ids,
+                                               res.retrieved_scores):
+                                st.markdown(f"- `{pid}` ({sc:.3f})")
