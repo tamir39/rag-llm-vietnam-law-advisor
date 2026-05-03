@@ -162,7 +162,7 @@ Mỗi câu QA → cuộc hội thoại 3 lượt (system, user, assistant) theo 
 ### 4.3 Hạ tầng
 
 - Kaggle Notebook, GPU P100 16 GB (hoặc T4 ×2 30 GB), Internet on, secret `HF_TOKEN`.
-- Wall time thực tế: ~1.5 h cho 3 epoch trên 305 ví dụ (60 optimization step, logging mỗi 10 step).
+- Wall time thực tế: **1 giờ 42 phút 37 giây** cho 3 epoch trên 305 ví dụ (60 optimization step, logging mỗi 10 step) — Kaggle GPU P100.
 - Adapter được push tới `Tamir39/qwen2_5-7b-vietnam-tax-lora`.
 
 ### 4.4 Đường cong huấn luyện
