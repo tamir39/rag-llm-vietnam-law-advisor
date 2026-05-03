@@ -195,19 +195,21 @@ Mỗi câu QA → cuộc hội thoại 3 lượt (system, user, assistant) theo 
 
 ## 6. Kết quả
 
-> **TODO sau khi train xong trên Kaggle**:
-> 1. Cập nhật bảng 6.1 từ `experiments/results/summary.json`.
+> **Còn lại**:
+> 1. ~~Cập nhật bảng 6.1 từ `experiments/results/summary.json`.~~ ✅
 > 2. Cập nhật bảng 6.2 sau khi join human-eval với `key.csv`.
 > 3. Vẽ biểu đồ cột so sánh A/B/C/D, lưu `docs/report/figures/`.
 
 ### 6.1 Chỉ số tự động trên test set 54 câu
 
-| Cấu hình | BLEU | ROUGE-L | BERTScore F1 | Recall@5 | MRR@10 |
-|----------|-----:|--------:|-------------:|---------:|-------:|
-| A — Base, no RAG       | TODO | TODO | TODO |    —     |   —    |
-| B — Base, RAG          | TODO | TODO | TODO |   TODO   |  TODO  |
-| C — FT,   no RAG       | TODO | TODO | TODO |    —     |   —    |
-| D — FT,   RAG          | TODO | TODO | TODO |   TODO   |  TODO  |
+| Cấu hình | BLEU  | ROUGE-L | BERTScore F1 | Recall@5 | MRR@10 |
+|----------|------:|--------:|-------------:|---------:|-------:|
+| A — Base, no RAG       |  3.69 | 0.203 | 0.698 |    —    |    —   |
+| B — Base, RAG          | 10.23 | 0.304 | 0.747 |  0.944  | 0.790  |
+| C — FT,   no RAG       | 13.13 | 0.403 | 0.787 |    —    |    —   |
+| D — FT,   RAG          | **40.10** | **0.592** | **0.848** | **0.944** | **0.790** |
+
+Khoảng cách tuyệt đối so với baseline A: RAG đơn lẻ (B–A) cho ΔBLEU ≈ +6,5 và ΔROUGE-L ≈ +0,10; fine-tune đơn lẻ (C–A) cho ΔBLEU ≈ +9,4 và ΔROUGE-L ≈ +0,20 — fine-tune mang lại biên độ cải thiện lớn hơn RAG. Khi kết hợp (D), ΔBLEU đạt ≈ +36,4 và ΔROUGE-L ≈ +0,39, **vượt xa tổng hai hiệu ứng riêng lẻ** (≈ +15,9 và +0,30 tương ứng) — bằng chứng định lượng cho cộng hưởng RAG × QLoRA.
 
 ### 6.2 Human eval (50 câu, blinded, 1–5)
 
@@ -228,9 +230,10 @@ Mỗi câu QA → cuộc hội thoại 3 lượt (system, user, assistant) theo 
 
 ### 7.1 Quan sát chính
 
-- Đóng góp tương đối của RAG vs fine-tuning: <!-- TODO so sánh ΔB-A vs ΔC-A; ΔD vs các cấu hình khác -->
-- Điểm chênh giữa BERTScore (cao) và BLEU (thường thấp với tiếng Việt) cho thấy: <!-- TODO -->
-- Recall@5 cho retriever E5 trên KB pháp lý VN đạt: <!-- TODO -->
+- **Đóng góp tương đối của RAG vs fine-tuning**: trên cùng baseline A, fine-tune (C) đem lại cải thiện lớn hơn RAG (B) ở mọi chỉ số (ΔBLEU +9,4 vs +6,5; ΔROUGE-L +0,20 vs +0,10; ΔBERTScore-F1 +0,09 vs +0,05). Điều này cho thấy mô hình base Qwen2.5-7B chưa quen với phong cách diễn đạt pháp lý tiếng Việt, và 305 ví dụ SFT đã đủ để chỉnh "giọng văn" — riêng việc nhồi ngữ cảnh chưa khắc phục được lỗi style.
+- **Cộng hưởng RAG × QLoRA**: D vượt xa tổng B + C trên BLEU (40,1 vs ≈ 19,9 nếu cộng tuyến tính các Δ) và ROUGE-L (0,59 vs ≈ 0,40). Giải thích: adapter được huấn luyện ở chế độ mixed-context 50/50 nên đã học cách *trích dẫn từ ngữ cảnh* — lợi ích này chỉ kích hoạt khi có RAG ở thời điểm suy luận.
+- **BERTScore vs BLEU**: BERTScore F1 chỉ chênh 0,15 giữa A và D (0,70 → 0,85) trong khi BLEU chênh hơn 36 điểm. Phù hợp với tính chất tiếng Việt nhiều cách diễn đạt đồng nghĩa: BLEU rất nhạy với token-overlap (cải thiện rõ khi style đã đúng), còn BERTScore đo độ tương tự ngữ nghĩa (A vốn đã trả lời "đúng nghĩa" nhưng sai văn phong).
+- **Chất lượng retriever**: E5-base + FAISS đạt Recall@5 = 0,944 (51/54 câu) và MRR@10 = 0,790 trên KB 600 đoạn. 3 câu miss thuộc các tình huống cần lập luận đa-passage hoặc câu hỏi có thuật ngữ thường (ngoài thuật ngữ luật) — vẫn là dư địa tốt cho hybrid retrieval / reranker.
 
 ### 7.2 Hạn chế
 

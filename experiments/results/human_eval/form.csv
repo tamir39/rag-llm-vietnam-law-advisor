@@ -1,0 +1,521 @@
+row_id,question,gold_answer,answer_1,answer_2,answer_3,answer_4,rating_1,rating_2,rating_3,rating_4,notes
+1,Một doanh nghiệp tại Việt Nam mua dịch vụ từ tổ chức nước ngoài không có cơ sở thường trú để thăm dò dầu khí thì nghĩa vụ thuế GTGT được xác định ra sao?,"Tổ chức tại Việt Nam mua dịch vụ phải nộp thuế GTGT thay cho tổ chức nước ngoài, vì tổ chức nước ngoài không có cơ sở thường trú và không cư trú tại Việt Nam.",Nghĩa vụ thuế GTGT của doanh nghiệp áp dụng phương pháp khấu trừ.,"Mức thuế suất 0%, áp dụng phương pháp khấu trừ thuế do bên Việt Nam kê khai, khấu trừ, nộp thay.","Theo ngữ cảnh tham khảo từ [passage_000006], một doanh nghiệp tại Việt Nam mua dịch vụ từ tổ chức nước ngoài không có cơ sở thường trú tại Việt Nam để tiến hành hoạt động tìm kiếm thăm dò, phát triển mỏ dầu khí và khai thác dầu khí sẽ nộp thuế theo phương pháp khấu trừ thuế do bên Việt Nam kê khai, khấu trừ, nộp thay (theo Điều 11, khoản 2, điểm c của VBHN 12/VBHN-VPQH năm 2026).
+
+Vì vậy, nghĩa vụ thuế GTGT của doanh nghiệp tại Việt Nam trong trường hợp này sẽ được xác định bằng cách kê khai, khấu trừ và nộp thay cho tổ chức nước ngoài cung cấp dịch vụ.","Theo quy định của Luật Quản lý thuế số 39/2009/QH12 và Nghị định 111/2013/NĐ-CP, trong trường hợp một doanh nghiệp tại Việt Nam mua dịch vụ từ tổ chức nước ngoài không có cơ sở thường trú để thăm dò dầu khí, nghĩa vụ thuế GTGT sẽ được xác định như sau:
+
+1. Doanh nghiệp mua dịch vụ từ tổ chức nước ngoài không có cơ sở thường trú tại Việt Nam sẽ chịu nghĩa vụ nộp thuế GTGT.
+
+2. Tuy nhiên, tổ chức nước ngoài này không phải nộp thuế GTGT tại Việt Nam.
+
+3. Giá trị tính thuế GTGT sẽ là tổng giá trị dịch vụ được cung cấp, bao gồm cả thuế GTGT đã được khấu trừ.
+
+4. Doanh nghiệp cần cung cấp chứng từ hợp pháp để chứng minh việc mua dịch vụ này, như hợp đồng mua bán, hóa đơn VAT, và các giấy tờ khác theo quy định.
+
+5. Doanh nghiệp phải kê khai và nộp thuế GTGT theo quy định của cơ quan thuế.
+
+6. Trường hợp tổ chức nước ngoài không cung cấp đầy đủ chứng từ hoặc thông tin, cơ quan thuế có quyền yêu cầu doanh nghiệp cung cấp thêm thông tin hoặc điều tra.
+
+Tóm lại, doanh nghiệp mua dịch vụ từ tổ chức nước ngoài không có cơ sở thường trú tại Việt Nam vẫn phải chịu nghĩa vụ nộp thuế GTGT, nhưng tổ chức nước ngoài không phải nộp thuế GTGT tại Việt Nam.",,,,,
+2,Doanh nghiệp Việt Nam áp dụng phương pháp khấu trừ thuế khi mua dịch vụ qua nền tảng số của nhà cung cấp nước ngoài thì có nghĩa vụ gì?,Phải thực hiện khấu trừ và nộp thay nghĩa vụ thuế GTGT phải nộp của nhà cung cấp nước ngoài.,"Khi áp dụng phương pháp khấu trừ thuế đối với việc mua dịch vụ qua nền tảng số từ nhà cung cấp nước ngoài, doanh nghiệp Việt Nam có một số nghĩa vụ chính:
+
+1. **Cung cấp thông tin**: Doanh nghiệp phải cung cấp thông tin về giao dịch cho cơ quan thuế theo quy định.
+
+2. **Lập hóa đơn**: Theo Điều 30 Thông tư 78/2021/TT-BTC, doanh nghiệp phải lập hóa đơn điện tử theo quy định.
+
+3. **Khám nghiệm kiểm tra**: Doanh nghiệp phải tuân thủ các quy định về khám nghiệm kiểm tra của cơ quan thuế.
+
+4. **Giữ hồ sơ**: Theo Điều 59 Nghị định 119/2018/NĐ-CP, doanh nghiệp phải giữ các hồ sơ, tài liệu liên quan đến giao dịch, bao gồm hóa đơn, chứng từ, trong thời hạn tối thiểu 5 năm kể từ ngày kết thúc thời hạn nộp thuế giá trị gia tăng.
+
+5. **Nộp thuế**: Theo quy định, doanh nghiệp phải nộp thuế giá trị gia tăng theo đúng thời hạn và hình thức được quy định.
+
+6. **Xác nhận thuế**: Doanh nghiệp cần xác nhận với cơ quan thuế về việc đã hoàn thành nghĩa vụ thuế theo quy định.
+
+Nếu không đủ thông tin cụ thể về tình huống cụ thể, cần tham khảo thêm các quy định cụ thể tại các văn bản pháp luật hiện hành như Thông tư 78/2021/TT-BTC và Nghị định 119/2018/NĐ-CP.","Dựa vào ngữ cảnh tham khảo, doanh nghiệp Việt Nam áp dụng phương pháp khấu trừ thuế khi mua dịch vụ qua nền tảng số của nhà cung cấp nước ngoài sẽ có nghĩa vụ:
+
+1. Áp dụng phương pháp tính thuế giá trị gia tăng là phương pháp khấu trừ thuế cho các dịch vụ mua từ nhà cung cấp nước ngoài không có cơ sở thường trú tại Việt Nam thông qua kênh thương mại điện tử hoặc các nền tảng số.
+
+2. Khấu trừ, nộp thay nghĩa vụ thuế phải nộp của nhà cung cấp nước ngoài.
+
+3. Kê khai số thuế đã khấu trừ.
+
+Tuy nhiên, ngữ cảnh không cung cấp chi tiết cụ thể về nghĩa vụ kê khai hay thời hạn kê khai, nên cần tham khảo thêm quy định của cơ quan thuế để biết rõ hơn về thủ tục kê khai.","Phải khấu trừ, nộp thay nghĩa vụ thuế GTGT của nhà cung cấp nước ngoài.","Có nghĩa vụ kê khai, nộp thuế GTGT đầu vào được khấu trừ theo quy định.",,,,,
+3,"Khi doanh nghiệp, hợp tác xã mua sản phẩm cây trồng chưa chế biến để bán cho doanh nghiệp khác thì có phải kê khai, nộp thuế GTGT không?","Không phải kê khai, tính nộp thuế GTGT, nhưng vẫn được khấu trừ thuế GTGT đầu vào.","Không. Sản phẩm cây trồng, rừng trồng, chăn nuôi, thủy sản nuôi trồng, đánh bắt chưa chế biến thành các sản phẩm khác hoặc chỉ qua sơ chế thông thường thuộc đối tượng không chịu thuế GTGT.","Khi doanh nghiệp hoặc hợp tác xã mua sản phẩm cây trồng chưa chế biến để bán cho doanh nghiệp khác, họ sẽ phải kê khai và nộp thuế Giá trị gia tăng (GTGT) đối với hoạt động bán hàng này.
+
+Theo quy định tại Điều 12 Thông tư 38/2021/TT-BTC, việc mua bán cây trồng chưa chế biến thuộc đối tượng chịu thuế GTGT. Do đó, doanh nghiệp cần kê khai và nộp thuế GTGT theo quy định.
+
+Cụ thể, doanh nghiệp cần thực hiện các bước sau:
+
+1. Kê khai thuế GTGT theo quy định tại Thông tư 38/2021/TT-BTC.
+2. Cung cấp hóa đơn GTGT cho khách hàng mua sản phẩm cây trồng chưa chế biến.
+
+Lưu ý rằng, nếu doanh nghiệp mua sản phẩm cây trồng chưa chế biến từ người bán không phải là tổ chức kinh tế, thì doanh nghiệp có thể được miễn thuế GTGT theo quy định tại Điều 5 Thông tư 38/2021/TT-BTC.
+
+Ngoài ra, cần tuân thủ các quy định về quản lý và sử dụng hóa đơn theo quy định của pháp luật hiện hành.",Không. Mua sản phẩm cây trồng chưa chế biến để bán cho doanh nghiệp khác thuộc đối tượng không chịu thuế GTGT.,"Theo ngữ cảnh tham khảo từ VBHN 12/VBHN-VPQH năm 2026 - Luật Thuế giá trị gia tăng, cụ thể là Điều 5 về Đối tượng không chịu thuế, Khoản 1 nêu rõ:
+
+""Sản phẩm cây trồng, rừng trồng, chăn nuôi, thủy sản nuôi trồng, đánh bắt chưa chế biến thành các sản phẩm khác hoặc chỉ qua sơ chế thông thường của tổ chức, cá nhân tự sản xuất, đánh bắt bán ra và ở khâu nhập khẩu. Doanh nghiệp, hợp tác xã, liên hiệp hợp tác xã mua sản phẩm cây trồng, rừng trồng, chăn nuôi, thủy sản nuôi trồng, đánh bắt chưa chế biến thành các sản phẩm khác hoặc chỉ qua sơ chế thông thường bán cho doanh nghiệp, hợp tác xã, liên hiệp hợp tác xã khác thì không phải kê khai, tính nộp thuế giá trị gia tăng nhưng được khấu trừ thuế giá trị gia tăng đầu vào.""
+
+Do đó, khi doanh nghiệp, hợp tác xã mua sản phẩm cây trồng chưa chế biến để bán cho doanh nghiệp khác thì không phải kê khai, nộp thuế GTGT.",,,,,
+4,Một cá nhân kinh doanh có doanh thu năm 480 triệu đồng có phải nộp thuế GTGT không?,"Không. Hộ, cá nhân kinh doanh có doanh thu năm từ 500 triệu đồng trở xuống thuộc đối tượng không chịu thuế GTGT.","Dựa vào ngữ cảnh tham khảo, cụ thể là Điều 5 của VBHN 12/VBHN-VPQH năm 2026 - Luật Thuế giá trị gia tăng, điểm 25 nêu rõ:
+
+""Hàng hóa, dịch vụ của hộ, cá nhân sản xuất, kinh doanh có mức doanh thu năm từ 500 triệu đồng trở xuống; tài sản của tổ chức, cá nhân không kinh doanh, không phải là người nộp thuế giá trị gia tăng bán ra; hàng dự trữ quốc gia do cơ quan dự trữ quốc gia bán ra; các khoản thu phí, lệ phí theo quy định của pháp luật về phí và lệ phí""
+
+Doanh thu năm của cá nhân kinh doanh là 480 triệu đồng, nằm dưới mức 500 triệu đồng quy định trong điểm 25. Do đó, cá nhân này không phải là người nộp thuế giá trị gia tăng.
+
+Kết luận: Cá nhân kinh doanh có doanh thu năm 480 triệu đồng không phải nộp thuế GTGT.",Không. Doanh thu năm dưới 500 triệu đồng không chịu thuế GTGT.,Không. Cá nhân kinh doanh có doanh thu năm từ 360 triệu đồng trở xuống được miễn thuế GTGT.,"Cá nhân kinh doanh có doanh thu năm 480 triệu đồng cần nộp thuế GTGT nếu đáp ứng một trong các điều kiện sau:
+
+1. Cá nhân kinh doanh theo quy định tại Nghị định số 115/2017/NĐ-CP thì phải đăng ký thuế GTGT và nộp thuế theo tháng hoặc quý.
+
+2. Cá nhân kinh doanh không phải đăng ký thuế nhưng có doanh thu bán hàng hóa, cung cấp dịch vụ vượt quá 1 tỷ đồng/năm (trong trường hợp này là 1.2 triệu đồng).
+
+Trường hợp cá nhân kinh doanh không đáp ứng các điều kiện trên thì không phải đăng ký thuế GTGT và không nộp thuế GTGT.
+
+Do doanh thu năm là 480 triệu đồng chưa vượt quá ngưỡng phải đăng ký thuế GTGT nên nếu cá nhân đó không thuộc diện phải đăng ký thuế GTGT theo quy định thì không phải nộp thuế GTGT.",,,,,
+5,Cá nhân nước ngoài ở Việt Nam 200 ngày trong năm dương lịch và không có nhà thuê có là cá nhân cư trú không?,Có. Cá nhân có mặt tại Việt Nam từ 183 ngày trở lên trong một năm dương lịch là cá nhân cư trú.,"Dựa vào ngữ cảnh tham khảo, cá nhân nước ngoài ở Việt Nam 200 ngày trong năm dương lịch nhưng không có nhà thuê không đủ điều kiện để được coi là cá nhân cư trú theo Luật Thuế thu nhập cá nhân.
+
+Theo [passage_000146] và [passage_000147], để được coi là cá nhân cư trú, người đó cần có mặt tại Việt Nam từ 183 ngày trở lên tính trong một năm dương lịch hoặc có nơi ở thường xuyên tại Việt Nam, bao gồm có nơi ở đăng ký thường trú hoặc có nhà thuê để ở tại Việt Nam theo hợp đồng thuê có thời hạn.
+
+Trong trường hợp này, mặc dù cá nhân nước ngoài có mặt tại Việt Nam 200 ngày trong năm dương lịch, nhưng không có nhà thuê, nên không đáp ứng điều kiện về ""nơi ở thường xuyên tại Việt Nam"" theo quy định của Luật Thuế thu nhập cá nhân.",Có. Cá nhân có mặt tại Việt Nam từ 183 ngày trở lên tính trong một năm dương lịch hoặc tính theo 12 tháng liên tục kể từ ngày đầu tiên có mặt tại Việt Nam là cá nhân cư trú.,"Theo Luật Thuế thu nhập cá nhân tại Việt Nam, cá nhân cư trú được xác định theo thời gian ở Việt Nam. Cụ thể, cá nhân được coi là cư trú tại Việt Nam nếu có thời gian ở Việt Nam trong một năm dương lịch từ 183 ngày trở lên.
+
+Trong trường hợp của bạn, cá nhân nước ngoài ở Việt Nam 200 ngày trong năm dương lịch, thì theo quy định này, cá nhân đó sẽ được coi là cá nhân cư trú tại Việt Nam.
+
+Tuy nhiên, việc xác định cá nhân cư trú còn phụ thuộc vào nhiều yếu tố khác như mục đích ở Việt Nam, tình trạng hôn nhân, tình trạng sức khỏe, v.v... Do đó, nếu có bất kỳ thắc mắc nào thêm, bạn nên tham khảo ý kiến của một chuyên gia thuế hoặc luật sư chuyên về thuế tại Việt Nam.",Có. Cá nhân cư trú là người có nơi ở thường xuyên tại Việt Nam hoặc có nơi làm việc tại Việt Nam; người nước ngoài có thời gian ở Việt Nam trên 183 ngày trong năm dương lịch; người Việt Nam định cư ở nước ngoài có thời gian ở Việt Nam trên 183 ngày trong năm dương lịch.,,,,,
+6,Cá nhân ở Việt Nam dưới 183 ngày nhưng có nhà thuê dài hạn để ở thì có phải là cá nhân cư trú không?,"Có. Cá nhân có nơi ở thường xuyên tại Việt Nam, gồm cả nhà thuê có thời hạn theo hợp đồng, được xem là cá nhân cư trú.","Có. Cá nhân có nơi ở thường xuyên tại Việt Nam, bao gồm có nhà thuê để ở tại Việt Nam theo hợp đồng thuê có thời hạn, là đối tượng nộp thuế TNCN.",Có. Cá nhân có nhà ở thường xuyên tại Việt Nam hoặc có nơi ở thường xuyên tại Việt Nam là cá nhân cư trú.,"Dựa vào ngữ cảnh tham khảo, cá nhân ở Việt Nam dưới 183 ngày nhưng có nhà thuê dài hạn để ở vẫn có thể được coi là có nơi ở thường xuyên tại Việt Nam. Theo Điều 2, Khoản 2, Điểm b của VBHN 103/VBHN-VPQH năm 2025 - Luật Thuế thu nhập cá nhân, đối tượng nộp thuế bao gồm những cá nhân có nơi ở thường xuyên tại Việt Nam, bao gồm có nhà thuê để ở tại Việt Nam theo hợp đồng thuê có thời hạn.
+
+Tuy nhiên, việc xác định một cá nhân có phải là người cư trú hay không còn phụ thuộc vào tổng thời gian mặt tại Việt Nam trong một năm dương lịch hoặc tính theo 12 tháng liên tục kể từ ngày đầu tiên có mặt tại Việt Nam, theo Điều 2, Khoản 2, Điểm a của cùng một văn bản pháp luật. Do đó, chỉ có mặt tại Việt Nam ít nhất 183 ngày trong một năm dương lịch hoặc 12 tháng liên tục mới đảm bảo rằng cá nhân đó sẽ được coi là cư trú.
+
+Trong trường hợp cụ thể này, mặc dù cá nhân có nhà thuê dài hạn để ở, nhưng nếu thời gian mặt tại Việt Nam chưa đạt 183 ngày, thì cá nhân đó vẫn chưa chắc chắn sẽ được coi là cư trú theo quy định pháp luật hiện hành.","Theo quy định của Luật Thuế thu nhập cá nhân tại Việt Nam, một cá nhân được coi là cư trú tại Việt Nam nếu có thời gian ở Việt Nam vượt quá 183 ngày trong năm dương lịch. Tuy nhiên, việc xác định cư trú không chỉ dựa vào thời gian ở Việt Nam mà còn phụ thuộc vào nhiều yếu tố khác như mục đích ở, nơi đăng ký tạm trú, v.v.
+
+Trong trường hợp cụ thể của bạn, mặc dù cá nhân đó ở Việt Nam dưới 183 ngày nhưng lại có nhà thuê dài hạn để ở, điều này có thể làm thay đổi tình trạng cư trú của họ. Tuy nhiên, theo quy định hiện hành, chỉ cần thời gian ở Việt Nam vượt quá 183 ngày là đủ để xác định là cư trú tại Việt Nam.
+
+Do đó, mặc dù có nhà thuê dài hạn để ở, nhưng nếu thời gian ở Việt Nam dưới 183 ngày, thì cá nhân đó vẫn chưa được coi là cư trú tại Việt Nam theo quy định hiện hành.
+
+Nếu cần xác định chính xác hơn, nên tham khảo ý kiến của chuyên gia thuế hoặc cơ quan thuế địa phương.",,,,,
+7,Một cá nhân có thu nhập tính thuế tháng là 25 triệu đồng thì áp dụng bậc thuế lũy tiến TNCN nào?,"Bậc 4: thu nhập trên 18 đến 32 triệu đồng/tháng, thuế suất 20%.","Theo Luật Thuế thu nhập cá nhân năm 2020, bậc lũy tiến áp dụng cho thu nhập từ tiền lương, tiền công như sau:
+
+- Thuế suất 0% với thu nhập từ 0 - 1.950.000 đồng/tháng.
+- Thuế suất 5% với thu nhập từ 1.950.001 - 3.900.000 đồng/tháng.
+- Thuế suất 10% với thu nhập từ 3.900.001 - 7.800.000 đồng/tháng.
+- Thuế suất 15% với thu nhập từ 7.800.001 - 11.700.000 đồng/tháng.
+- Thuế suất 20% với thu nhập từ 11.700.001 - 15.600.000 đồng/tháng.
+- Thuế suất 25% với thu nhập từ 15.600.001 - 20.500.000 đồng/tháng.
+- Thuế suất 30% với thu nhập từ 20.500.001 - 26.000.000 đồng/tháng.
+- Thuế suất 35% với thu nhập từ 26.000.001 - 34.000.000 đồng/tháng.
+- Thuế suất 45% với thu nhập từ 34.000.001 đồng trở lên/tháng.
+
+Với thu nhập 25 triệu đồng/tháng, thu nhập này nằm trong khoảng từ 20.500.001 - 26.000.000 đồng/tháng nên sẽ áp dụng thuế suất 30%.","Dựa vào ngữ cảnh tham khảo, thu nhập tính thuế tháng là 25 triệu đồng thuộc bậc thuế 1, vì mức thuế này áp dụng cho phần thu nhập tính thuế/tháng từ 0 đến 5 triệu đồng.
+
+Tuy nhiên, để xác định chính xác bậc thuế lũy tiến, cần biết tổng thu nhập tính thuế/năm của cá nhân đó. Nếu thu nhập tính thuế/năm chưa đạt đến bậc thuế 2 (trên 60 triệu đồng/năm), thì thu nhập tính thuế tháng 25 triệu đồng thuộc bậc thuế 1.
+
+Nếu có thông tin về thu nhập tính thuế/năm, tôi có thể xác định chính xác bậc thuế lũy tiến.",Áp dụng bậc 1 với mức thuế tuyệt đối là 0 đồng.,"Áp dụng bậc 3, thuế suất 15%.",,,,,
+8,Một cá nhân nộp thuế có 2 người phụ thuộc đủ điều kiện thì tổng mức giảm trừ gia cảnh là bao nhiêu mỗi tháng?,"Tổng giảm trừ là 9 triệu đồng cho bản thân và 7,2 triệu đồng cho hai người phụ thuộc (3,6 triệu/người), bằng 16,2 triệu đồng/tháng.","Theo Luật Thuế thu nhập cá nhân năm 2020, mức giảm trừ gia cảnh cho mỗi người phụ thuộc đủ điều kiện là 4 triệu đồng/tháng. Do vậy, nếu một cá nhân nộp thuế có 2 người phụ thuộc đủ điều kiện thì tổng mức giảm trừ gia cảnh sẽ là:
+
+4 triệu đồng/người x 2 người = 8 triệu đồng/tháng.
+
+Lưu ý rằng đây là mức giảm trừ chung và có thể thay đổi theo quy định mới nhất của cơ quan quản lý thuế.",Tổng mức giảm trừ gia cảnh là 4 triệu đồng/tháng.,"Tổng mức giảm trừ gia cảnh là 13,2 triệu đồng/tháng (9 triệu đồng cho đối tượng nộp thuế + 3,6 triệu đồng cho mỗi người phụ thuộc).","Theo ngữ cảnh tham khảo, mức giảm trừ gia cảnh cho mỗi người phụ thuộc là 3,6 triệu đồng/tháng. Do đó, nếu một cá nhân nộp thuế có 2 người phụ thuộc đủ điều kiện, tổng mức giảm trừ gia cảnh sẽ là:
+
+3,6 triệu đồng/tháng x 2 = 7,2 triệu đồng/tháng
+
+Không cần phải điều chỉnh theo CPI vì không có thông tin về biến động giá cả trong ngữ cảnh này.",,,,,
+9,Cha vợ chuyển nhượng nhà cho con rể có phải nộp thuế TNCN không?,"Không. Thu nhập từ chuyển nhượng bất động sản giữa cha vợ, mẹ vợ với con rể được miễn thuế TNCN.","Trong trường hợp cha vợ chuyển nhượng nhà cho con rể, việc phải nộp thuế thu nhập cá nhân (TNCN) phụ thuộc vào giá trị tài sản chuyển nhượng và mối quan hệ giữa các bên.
+
+Theo Nghị định 111/2017/NĐ-CP, nếu giao dịch chuyển nhượng nhà ở giữa cha mẹ và con cái thì không phải chịu thuế thu nhập cá nhân. Tuy nhiên, nếu giao dịch này được thực hiện giữa cha vợ và con rể (không phải là con cái trực tiếp), thì cần xem xét thêm:
+
+1. **Giá trị tài sản**: Nếu giá trị tài sản chuyển nhượng vượt quá mức miễn thuế (hiện nay là 1 tỷ đồng/năm theo Nghị định 111/2017/NĐ-CP), thì người nhận (con rể) có thể phải chịu thuế TNCN.
+
+2. **Mối quan hệ**: Nếu cha vợ và con rể không có mối quan hệ huyết thống trực tiếp, thì việc chuyển nhượng có thể được coi là một giao dịch thương mại bình thường, và có thể phải chịu thuế.
+
+Do đó, để xác định chính xác có phải nộp thuế TNCN hay không, cần xem xét cụ thể giá trị tài sản chuyển nhượng và mối quan hệ giữa các bên. Nếu không chắc chắn, nên tham khảo ý kiến của chuyên gia thuế hoặc cơ quan thuế địa phương.","Không. Thu nhập từ chuyển nhượng bất động sản giữa vợ với chồng; cha đẻ, mẹ đẻ với con đẻ; cha nuôi, mẹ nuôi với con nuôi; cha chồng, mẹ chồng với con dâu; cha vợ, mẹ vợ với con rể; ông nội, bà nội với cháu nội; ông ngoại, bà ngoại với cháu ngoại; anh, chị, em ruột với nhau được miễn thuế TNCN.",Không. Giao dịch giữa cha vợ và con rể thuộc quan hệ gia đình không chịu thuế TNCN.,"Theo ngữ cảnh tham khảo từ VBHN 103/VBHN-VPQH năm 2025 - Luật Thuế thu nhập cá nhân:
+
+- Điều 4 quy định về các loại thu nhập được miễn thuế, trong đó có thu nhập từ chuyển nhượng bất động sản giữa vợ với chồng; cha đẻ, mẹ đẻ với con đẻ; cha nuôi, mẹ nuôi với con nuôi; cha chồng, mẹ chồng với con dâu; cha vợ, mẹ vợ với con rể; ông nội, bà nội với cháu nội; ông ngoại, bà ngoại với cháu ngoại; anh, chị, em ruột với nhau.
+
+- Điều 29 quy định về thuế đối với thu nhập từ chuyển nhượng bất động sản của cá nhân không cư trú.
+
+Trong trường hợp cụ thể, cha vợ chuyển nhượng nhà cho con rể thuộc trường hợp được miễn thuế theo Điều 4 của Luật Thuế thu nhập cá nhân. Do đó, không cần phải nộp thuế TNCN.
+
+Tuy nhiên, cần lưu ý rằng Điều 29 quy định về thuế đối với thu nhập từ chuyển nhượng bất động sản của cá nhân không cư trú, nhưng không đề cập đến trường hợp cụ thể này. Vì vậy, nếu con rể là cá nhân không cư trú thì có thể chịu thuế theo quy định này, nhưng điều này không ảnh hưởng đến việc miễn thuế TNCN giữa cha vợ và con rể.",,,,,
+10,Cá nhân chỉ có một nhà ở duy nhất bán nhà đó có phải nộp thuế TNCN không?,"Không. Thu nhập từ chuyển nhượng nhà ở, quyền sử dụng đất ở duy nhất của cá nhân được miễn thuế TNCN.","Cá nhân chỉ có một nhà ở duy nhất bán nhà đó có thể được miễn thuế TNCN theo quy định tại khoản 2 Điều 4 của VBHN 103/VBHN-VPQH năm 2025 - Luật Thuế thu nhập cá nhân. Tuy nhiên, cần lưu ý rằng ngữ cảnh cung cấp không đủ thông tin về mức thuế hoặc các điều kiện cụ thể để xác định hoàn toàn tình huống này.","Có. Thu nhập từ chuyển nhượng nhà ở, đất ở duy nhất của cá nhân được miễn thuế TNCN nếu cá nhân chỉ có một nhà ở, đất ở duy nhất.",Không. Cá nhân chỉ có một nhà ở duy nhất bán nhà đó được miễn thuế TNCN.,"Theo quy định tại Điều 18 Thông tư 111/2013/TT-BTC, cá nhân bán nhà ở duy nhất có giá trị từ 15 tỷ đồng trở lên phải nộp thuế thu nhập cá nhân với phần chênh lệch từ 15 tỷ đồng trở lên. Tuy nhiên, nếu chênh lệch từ 15 tỷ đồng trở xuống thì không phải chịu thuế. Cần lưu ý rằng, việc xác định nhà ở duy nhất cần dựa trên các điều kiện cụ thể được quy định tại Nghị định 116/2010/NĐ-CP và Thông tư 111/2013/TT-BTC.",,,,,
+11,Một cá nhân nhận giải thưởng xổ số trị giá 8 triệu đồng có phải nộp thuế TNCN không?,"Không. Thu nhập chịu thuế từ trúng thưởng là phần giá trị giải thưởng vượt trên 10 triệu đồng theo từng lần trúng thưởng, nên giải 8 triệu đồng không phát sinh thuế.",Không. Số tiền từ 1 - 2 triệu đồng được miễn thuế.,Không. Phần giá trị giải thưởng vượt trên 10 triệu đồng mới chịu thuế.,"Cá nhân nhận giải thưởng xổ số trị giá 8 triệu đồng không phải nộp thuế Thuế thu nhập cá nhân (TNCN) vì mức thu nhập này dưới ngưỡng chịu thuế theo quy định của pháp luật Việt Nam. Theo Nghị định 111/2013/NĐ-CP, mức miễn thuế đối với tiền lương, thu nhập từ công việc phụ, tiền thưởng, tiền lãi, tiền hoa hồng từ bán hàng, tiền từ các hoạt động khác là 1.000.000 đồng/tháng. Do đó, khoản tiền 8 triệu đồng từ giải thưởng xổ số không vượt quá ngưỡng chịu thuế nên không cần phải nộp thuế TNCN.","Không, cá nhân nhận giải thưởng xổ số trị giá 8 triệu đồng không cần nộp thuế TNCN vì số tiền này không vượt quá 10 triệu đồng. Theo [passage_000220], [passage_000163] và [passage_000271], chỉ có phần giá trị giải thưởng vượt quá 10 triệu đồng mới chịu thuế TNCN.",,,,,
+12,Một thuyền viên Việt Nam làm việc cho hãng tàu nước ngoài vận tải quốc tế có phải nộp thuế TNCN trên thu nhập đó không?,"Không. Thu nhập từ tiền lương, tiền công của thuyền viên Việt Nam làm việc cho hãng tàu nước ngoài hoặc hãng tàu Việt Nam vận tải quốc tế được miễn thuế TNCN.","Có. Thu nhập từ hoạt động kinh doanh, dịch vụ của thuyền viên Việt Nam làm việc cho tổ chức, cá nhân nước ngoài tại Việt Nam thuộc đối tượng chịu thuế TNCN.","Thuyền viên Việt Nam làm việc cho hãng tàu nước ngoài nhưng hoạt động trong lĩnh vực vận tải quốc tế thường được coi là lao động thuộc đối tượng chịu thuế thu nhập cá nhân (TNCN) tại Việt Nam. Theo Điều 3 Thông tư 111/2013/TT-BTC, thu nhập từ lao động của người Việt Nam làm việc cho tổ chức, cá nhân nước ngoài tại Việt Nam cũng thuộc đối tượng chịu thuế TNCN.
+
+Tuy nhiên, cần lưu ý rằng có một số trường hợp ngoại lệ và điều kiện cụ thể như:
+
+1. Nếu thu nhập từ lao động của người lao động Việt Nam làm việc cho tổ chức, cá nhân nước ngoài tại Việt Nam không vượt quá mức miễn thuế theo quy định tại Nghị định 111/2013/NĐ-CP (tức là không vượt quá 1.000 USD/tháng hoặc tương đương).
+
+2. Nếu thu nhập từ lao động của người lao động Việt Nam làm việc cho tổ chức, cá nhân nước ngoài tại Việt Nam được hưởng ưu đãi thuế theo quy định của pháp luật Việt Nam.
+
+Do đó, để xác định chính xác trách nhiệm thuế TNCN, cần xem xét chi tiết các điều kiện và hoàn cảnh cụ thể của trường hợp này.","Theo ngữ cảnh tham khảo từ VBHN 103/VBHN-VPQH năm 2025 - Luật Thuế thu nhập cá nhân, cụ thể là Điều 4 - Thu nhập được miễn thuế, Khoản 15, thu nhập từ tiền lương, tiền công của thuyền viên là người Việt Nam làm việc cho các hãng tàu nước ngoài hoặc các hãng tàu Việt Nam vận tải quốc tế được miễn thuế TNCN.
+
+Vì vậy, một thuyền viên Việt Nam làm việc cho hãng tàu nước ngoài vận tải quốc tế không phải nộp thuế TNCN trên thu nhập đó.","Không. Thu nhập từ tiền lương, tiền công của thuyền viên là người Việt Nam làm việc cho các hãng tàu nước ngoài hoặc các hãng tàu Việt Nam vận tải quốc tế được miễn thuế TNCN.",,,,,
+13,"Hộ gia đình có 200m² đất ở khi hạn mức đất ở là 100m² thì phần diện tích nào áp dụng thuế suất 0,07%?","Phần diện tích vượt không quá 3 lần hạn mức (tức tối đa 200m² vượt) áp dụng thuế suất 0,07%; trong trường hợp này 100m² vượt áp dụng thuế suất 0,07%.","Theo ngữ cảnh tham khảo, hộ gia đình có 200m² đất ở khi hạn mức đất ở là 100m² thì phần diện tích vượt hạn mức 100m² (tức là 100m²) sẽ áp dụng thuế suất 0,07%. Phần diện tích trong hạn mức 100m² đầu tiên vẫn áp dụng thuế suất 0,03%.
+
+Lý do:
+- Hạn mức đất ở là 100m².
+- Diện tích đất ở của hộ gia đình là 200m².
+- Theo Điều 7, Khoản 1, bậc 2 của Luật 48/2010/QH12, phần diện tích vượt không quá 3 lần hạn mức sẽ áp dụng thuế suất 0,07%.
+
+Vì vậy, phần diện tích 100m² vượt hạn mức sẽ áp dụng thuế suất 0,07%, trong khi 100m² còn lại trong hạn mức sẽ áp dụng thuế suất 0,03%.","Phần diện tích vượt 100m² đến 300m² (không quá 3 lần hạn mức) áp dụng thuế suất 0,07%.","Trong trường hợp này, hộ gia đình có 200m² đất ở nhưng hạn mức đất ở được phép là 100m². Theo quy định của pháp luật Việt Nam về thuế sử dụng đất phi nông nghiệp, chỉ phần diện tích vượt quá hạn mức được miễn thuế.
+
+Cụ thể, phần diện tích 100m² đầu sẽ được miễn thuế sử dụng đất phi nông nghiệp. Phần diện tích còn lại là 200m² - 100m² = 100m² sẽ phải chịu thuế với thuế suất 0,07%.
+
+Vì vậy, phần diện tích 100m² vượt quá hạn mức sẽ áp dụng thuế suất 0,07%.","Phần diện tích vượt trên hạn mức (100m²) áp dụng thuế suất 0,07%.",,,,,
+14,Một thửa đất 600m² với hạn mức 100m² thì phần diện tích vượt trên 3 lần hạn mức là bao nhiêu m² và áp dụng thuế suất bao nhiêu?,"Phần diện tích vượt trên 3 lần hạn mức là 200m² (vượt 300m² nhưng quá 3 lần hạn mức là phần trên 300m²), áp dụng thuế suất 0,15%.","Phần diện tích vượt trên 3 lần hạn mức là 500m² (600 - 100 = 500) và áp dụng thuế suất 0,15%.","Phần diện tích vượt trên 3 lần hạn mức là 500m² (600 - 100 * 3 = 500). Áp dụng thuế suất 0,2% cho phần diện tích vượt trên 3 lần hạn mức.","Theo ngữ cảnh tham khảo từ [passage_000310], hạn mức là 100m² và diện tích đất tính thuế là 600m². 
+
+Phần diện tích vượt trên 3 lần hạn mức sẽ là:
+600m² - 3 × 100m² = 600m² - 300m² = 300m²
+
+Theo [passage_000310], thuế suất áp dụng cho phần diện tích vượt 3 lần hạn mức là 0,15%.
+
+Vậy, phần diện tích vượt trên 3 lần hạn mức là 300m² và áp dụng thuế suất 0,15%.","Theo quy định tại Nghị định 147/2021/NĐ-CP, phần diện tích đất vượt quá hạn mức sử dụng đất phi nông nghiệp sẽ được tính thuế theo thuế suất 2%.
+
+Trong trường hợp này, hạn mức sử dụng đất phi nông nghiệp là 100m² cho một thửa đất. Thửa đất bạn có diện tích là 600m², tức là vượt quá hạn mức 500m² (600m² - 100m²).
+
+Phần diện tích vượt trên 3 lần hạn mức là:
+500m² / 3 = 166.67m²
+
+Vậy, phần diện tích vượt trên 3 lần hạn mức là 166.67m² và áp dụng thuế suất 2%.",,,,,
+15,Một người vừa thuộc thương binh hạng 1/4 vừa nằm trong diện hộ nghèo có quyền được miễn thuế tại mấy nơi đất ở?,"Chỉ được miễn thuế hoặc giảm thuế tại một nơi do người nộp thuế lựa chọn, trừ trường hợp khoản 9 Điều 9 và khoản 4 Điều 10.","Dựa vào ngữ cảnh tham khảo, người thuộc thương binh hạng 1/4 có thể được miễn thuế tại hai nơi đất ở:
+
+1. Theo Điều 9 Khoản 5 của Luật 48/2010/QH12 - Thuế sử dụng đất phi nông nghiệp: Người hoạt động cách mạng trước ngày 19/8/1945; thương binh hạng 1/4; người hưởng chính sách như thương binh hạng 1/4; bệnh binh hạng 1/3; anh hùng lực lượng vũ trang nhân dân; mẹ Việt Nam anh hùng; cha đẻ, mẹ đẻ, người có công nuôi dưỡng liệt sỹ khi còn nhỏ; vợ, chồng của liệt sỹ; con của liệt sỹ được hưởng trợ cấp hàng tháng.
+
+2. Theo Điều 9 Khoản 4 của Luật 48/2010/QH12 - Thuế sử dụng đất phi nông nghiệp: Đất ở tại địa bàn có điều kiện kinh tế - xã hội đặc biệt khó khăn.
+
+Tuy nhiên, ngữ cảnh không đề cập đến việc người thuộc thương binh hạng 1/4 và hộ nghèo có được cộng dồn ưu đãi miễn thuế hay không. Do đó, mặc dù họ thuộc đối tượng được miễn thuế tại hai nơi, nhưng không có thông tin xác định họ có được cộng dồn ưu đãi miễn thuế hay không.",Một nơi. Người thuộc đối tượng được miễn thuế theo khoản 5 Điều 9 của Luật 48/2010/QH12.,"Theo quy định hiện hành của Việt Nam, người thuộc thương binh hạng 1/4 và nằm trong diện hộ nghèo có thể được miễn thuế sử dụng đất phi nông nghiệp đối với phần diện tích đất ở theo quy định của địa phương. Tuy nhiên, cụ thể số diện tích đất được miễn thuế sẽ phụ thuộc vào quy định cụ thể của từng địa phương.
+
+Theo Nghị định 158/2020/NĐ-CP, người thuộc diện hộ nghèo có thể được miễn thuế sử dụng đất phi nông nghiệp đối với phần diện tích đất ở tối đa 100m². Đối với người khuyết tật nặng (trong đó có thương binh hạng 1/4) thì số diện tích được miễn thuế có thể lớn hơn, nhưng cũng cần tuân thủ theo quy định cụ thể của địa phương.
+
+Do đó, để biết chính xác số diện tích đất ở được miễn thuế, bạn nên tham khảo quy định cụ thể của địa phương nơi người đó cư trú.","Có 2 nơi: Nhà ở, nhà để sản xuất, kinh doanh.",,,,,
+16,Khi đất bị thiệt hại do sự kiện bất khả kháng chiếm 60% giá tính thuế thì người nộp thuế được hưởng chính sách gì?,Được miễn thuế sử dụng đất phi nông nghiệp (do thiệt hại trên 50% giá tính thuế).,Được giảm thuế. Giá trị thiệt hại từ 20% đến 50% giá tính thuế thì được giảm thuế; trên 50% giá tính thuế thì được miễn thuế.,"Theo ngữ cảnh tham khảo từ Luật 48/2010/QH12 - Thuế sử dụng đất phi nông nghiệp:
+
+- Điều 9 - Miễn thuế: Người nộp thuế được miễn thuế nếu giá trị thiệt hại về đất và nhà trên đất trên 50% giá tính thuế.
+- Điều 10 - Giảm thuế: Người nộp thuế được giảm thuế nếu giá trị thiệt hại về đất và nhà trên đất từ 20% đến 50% giá tính thuế.
+
+Trong trường hợp đất bị thiệt hại do sự kiện bất khả kháng chiếm 60% giá tính thuế, người nộp thuế không thuộc diện được miễn thuế (vì vượt quá 50%) nhưng cũng không thuộc diện giảm thuế (vì dưới 70%). Do đó, không có chính sách cụ thể nào được đề cập trong ngữ cảnh tham khảo phù hợp với trường hợp này.","Theo quy định tại Nghị định số 158/2020/NĐ-CP ngày 12 tháng 11 năm 2020 của Chính phủ về quản lý, sử dụng đất đai, nếu diện tích đất bị thiệt hại do sự kiện bất khả kháng chiếm từ 50% trở lên giá đất tính thuế thì người nộp thuế được miễn thuế sử dụng đất phi nông nghiệp trong thời gian đất bị thiệt hại.
+
+Trong trường hợp bạn đề cập, diện tích đất bị thiệt hại chiếm 60% giá tính thuế, điều này đáp ứng điều kiện để được miễn thuế sử dụng đất phi nông nghiệp trong thời gian đất bị thiệt hại.
+
+Tuy nhiên, cần lưu ý rằng:
+
+1. Người nộp thuế phải chứng minh được rằng sự kiện bất khả kháng đã gây thiệt hại cho diện tích đất đó.
+2. Thời gian miễn thuế sẽ được xác định theo quyết định của cơ quan nhà nước có thẩm quyền.
+
+Do đó, để được hưởng chính sách này, người nộp thuế cần thực hiện các thủ tục và cung cấp hồ sơ chứng minh theo quy định của cơ quan thuế địa phương.",Được miễn thuế đối với phần diện tích bị thiệt hại.,,,,,
+17,Khi đất bị thiệt hại do sự kiện bất khả kháng chiếm 30% giá tính thuế thì người nộp thuế được hưởng chính sách gì?,Được giảm thuế sử dụng đất phi nông nghiệp (do thiệt hại từ 20% đến 50% giá tính thuế).,"Theo quy định tại Điều 125 Thông tư 111/2013/TT-BTC, nếu diện tích đất bị thiệt hại do sự kiện bất khả kháng chiếm từ 30% trở lên giá đất tính thuế thì người nộp thuế được giảm 100% tiền sử dụng đất trong năm xảy ra sự kiện bất khả kháng.
+
+Tuy nhiên, cần lưu ý rằng:
+
+1. Diện tích đất bị thiệt hại phải được xác định theo kết quả kiểm kê của cơ quan nhà nước có thẩm quyền.
+2. Sự kiện bất khả kháng phải được xác nhận theo quy định của pháp luật.
+
+Do đó, nếu đất bị thiệt hại do sự kiện bất khả kháng chiếm 30% giá tính thuế, người nộp thuế sẽ được giảm 100% tiền sử dụng đất trong năm xảy ra sự kiện bất khả kháng, nhưng điều này cần được xác nhận theo quy định của pháp luật và có kết quả kiểm kê phù hợp.","Theo ngữ cảnh tham khảo từ [passage_000465], Luật Thuế tiêu thụ đặc biệt 66/2025/QH15, người nộp thuế được giảm thuế khi gặp khó khăn do sự kiện bất khả kháng và giá trị thiệt hại về đất và nhà trên đất chiếm từ 20% đến 30% giá tính thuế, nhưng mức giảm thuế không quá 30% số thuế phải nộp của năm xảy ra thiệt hại và không vượt quá giá trị tài sản bị thiệt hại sau khi được bồi thường (nếu có). 
+
+Trong trường hợp đất bị thiệt hại do sự kiện bất khả kháng chiếm 30% giá tính thuế, người nộp thuế sẽ được giảm thuế theo quy định này.",Được miễn thuế đối với phần diện tích bị thiệt hại đó.,Được giảm thuế. Mức giảm thuế không quá 30% số thuế phải nộp của năm xảy ra thiệt hại và không vượt quá giá trị tài sản bị thiệt hại sau khi được bồi thường (nếu có).,,,,,
+18,Một xe ô tô 7 chỗ ngồi chạy bằng xăng kết hợp năng lượng điện có dung tích xi lanh 2.000 cm³ áp dụng thuế suất TTĐB như thế nào?,"Bằng 70% mức thuế suất áp dụng cho xe cùng loại (40% với 1.500-2.000 cm³), tức bằng 28%.",Áp dụng thuế suất 1% đối với ô tô chở người từ 9 chỗ trở xuống.,"Theo quy định hiện hành của Việt Nam, xe ô tô 7 chỗ ngồi chạy bằng xăng kết hợp năng lượng điện thuộc loại xe ô tô tải người và được áp dụng thuế tiêu thụ đặc biệt (TTĐB) theo dung tích xi-lanh. 
+
+Trong trường hợp này, xe có dung tích xi-lanh là 2.000 cm³ nên sẽ áp dụng thuế suất TTĐB tương ứng với các xe ô tô có dung tích từ 1.501 - 2.000 cm³.
+
+Cụ thể, thuế suất TTĐB cho các loại xe ô tô có dung tích từ 1.501 - 2.000 cm³ là 35% (theo Nghị định số 148/2020/NĐ-CP).
+
+Vì vậy, xe ô tô 7 chỗ ngồi chạy bằng xăng kết hợp năng lượng điện có dung tích xi-lanh 2.000 cm³ sẽ áp dụng thuế suất TTĐB là 35%.","Thuế suất 70% mức thuế suất áp dụng cho xe cùng loại quy định tại các mục 4a, 4b, 4c và 4d của Biểu thuế.","Dựa vào ngữ cảnh tham khảo, không có thông tin cụ thể về thuế suất áp dụng cho xe ô tô 7 chỗ ngồi chạy bằng xăng kết hợp năng lượng điện có dung tích xi lanh 2.000 cm³. 
+
+Biểu thuế trong [passage_000421] chỉ đề cập đến xe ô tô chạy bằng xăng kết hợp năng lượng điện với tỷ trọng xăng sử dụng không quá 70%, nhưng không nêu rõ thuế suất cụ thể cho loại xe này. Đồng thời, các đoạn văn còn lại đề cập chủ yếu đến xe chạy điện hoặc xe có động cơ diesel, không phải xe chạy xăng kết hợp năng lượng điện.
+
+Do đó, không đủ thông tin để xác định thuế suất tiêu thụ đặc biệt (TTĐB) cho loại xe mô tả trong câu hỏi. Cần thêm thông tin từ cơ quan quản lý thuế hoặc quy định cụ thể từ Bộ Tài chính.",,,,,
+19,Một xe ô tô chở người 9 chỗ chạy hoàn toàn bằng pin được mua năm 2026 áp dụng thuế suất TTĐB bao nhiêu?,Thuế suất 3%.,"Theo quy định hiện hành của Việt Nam, xe ô tô chở người hoàn toàn bằng điện (bao gồm cả xe chạy bằng pin) không thuộc đối tượng chịu thuế tiêu thụ đặc biệt (TTĐB). Do đó, không có thuế suất TTĐB áp dụng cho trường hợp này.
+
+Theo Nghị định số 148/2020/NĐ-CP ngày 13 tháng 11 năm 2020 của Chính phủ về quản lý thuế tiêu thụ đặc biệt, thuế xuất khẩu, thuế nhập khẩu và thuế giá trị gia tăng, các loại xe ô tô chở người dùng năng lượng điện không phải chịu thuế TTĐB.",Thuế suất 3%.,Thuế suất 15%.,"Theo ngữ cảnh tham khảo từ [passage_000425], xe ô tô chở người và xe chở người bốn bánh có gắn động cơ từ 9 chỗ trở xuống, xe ô tô pick-up chở người áp dụng thuế suất:
+
+- Từ 01/01/2026: 3%
+
+Vì vậy, một xe ô tô chở người 9 chỗ chạy hoàn toàn bằng pin được mua năm 2026 sẽ áp dụng thuế suất thuế tiêu thụ đặc biệt là 3%.",,,,,
+20,Một xe pickup chở hàng cabin kép có dung tích xi lanh 2.700 cm³ mua năm 2026 áp dụng thuế suất TTĐB bao nhiêu?,Thuế suất 20%.,"Theo quy định hiện hành của Việt Nam, xe ô tô tải có dung tích xi lanh từ 1.501 cm³ đến 3.000 cm³ thì thuế suất thuế tiêu thụ đặc biệt (TTĐB) là 25%. 
+
+Vì vậy, xe pickup chở hàng cabin kép có dung tích xi lanh 2.700 cm³ sẽ áp dụng thuế suất TTĐB là 25%.
+
+Lưu ý rằng thuế suất có thể thay đổi theo thời gian, nên nếu bạn cần thông tin chính xác nhất, bạn nên kiểm tra quy định mới nhất từ cơ quan thuế.","Dựa vào thông tin được cung cấp trong ngữ cảnh tham khảo, xe ô tô pick-up chở hàng cabin kép có dung tích xi lanh từ 2.500 cm³ trở xuống (nhóm mà xe này thuộc về) áp dụng thuế suất như sau:
+
+- Từ 01/01/2026: 15%
+- Từ 01/01/2027: 18%
+- Từ 01/01/2028: 21%
+- Từ 01/01/2029: 24%
+
+Vì xe này được mua năm 2026, nên áp dụng thuế suất từ 01/01/2026, tức là 15%.
+
+Do đó, thuế suất TTĐB cho xe ô tô pick-up chở hàng cabin kép có dung tích xi lanh 2.700 cm³ mua năm 2026 là 15%.",Thuế suất 15%.,Thuế suất 2% từ 01/01/2026.,,,,,
+21,"Cùng một loại nước giải khát trên 5g/100ml đường, mức thuế suất TTĐB năm 2027 và 2028 khác nhau ra sao?","Năm 2027 áp dụng thuế suất 8%, năm 2028 tăng lên 10%.","Theo ngữ cảnh tham khảo, từ ngày 01/01/2027 đến trước 01/01/2028, mức thuế suất thuế tiêu thụ đặc biệt (TTĐB) áp dụng cho nước giải khát có hàm lượng đường trên 5g/100ml là 8%. Tuy nhiên, từ ngày 01/01/2028 trở đi, mức thuế suất này tăng lên 10%.
+
+Vậy, mức thuế suất TTĐB cho loại nước giải khát này:
+- Năm 2027: 8%
+- Năm 2028: 10%
+
+Do đó, mức thuế suất TTĐB cho loại nước giải khát này tăng từ 8% năm 2027 lên 10% năm 2028.",Mức thuế suất TTĐB áp dụng cho nước giải khát trên 5g/100ml đường là 8% từ 01/01/2027 và 10% từ 01/01/2028.,"Theo quy định hiện hành của Việt Nam, thuế tiêu thụ đặc biệt (TTĐB) đối với các sản phẩm có chứa đường như nước giải khát được áp dụng theo mức thuế suất cố định, không thay đổi theo thời gian. Cụ thể, mức thuế suất TTĐB cho các sản phẩm có chứa đường từ 5g đến dưới 20g/100ml là 10%. 
+
+Nếu không có thông tin cụ thể về thay đổi chính sách thuế trong tương lai, tôi không thể khẳng định mức thuế suất TTĐB sẽ thay đổi từ năm 2027 đến 2028. Tuy nhiên, nếu có thay đổi, thông tin đó cần được công bố rộng rãi và tuân thủ theo quy định của pháp luật.
+
+Do đó, theo thông tin hiện có, mức thuế suất TTĐB cho nước giải khát trên 5g/100ml đường không thay đổi từ năm 2027 đến 2028, vẫn là 10%. Nếu có thay đổi, cần cập nhật theo quy định mới.","Mức thuế suất TTĐB từ 1/1/2027 là 30%, từ 1/1/2028 là 40%.",,,,,
+22,Một xì gà có trọng lượng 30g/điếu sẽ áp dụng mức thuế tuyệt đối ra sao?,Mức thuế tuyệt đối quy định cho xì gà 20g/điếu; Chính phủ hướng dẫn quy đổi mức thuế áp dụng cho xì gà có trọng lượng khác 20g/điếu.,"Theo ngữ cảnh tham khảo, mức thuế tuyệt đối áp dụng cho xì gà được quy định dựa trên trọng lượng 20g/điếu. Tuy nhiên, không có thông tin cụ thể về cách quy đổi mức thuế tuyệt đối cho xì gà có trọng lượng khác 20g/điếu. Do đó, không có căn cứ pháp lý để xác định mức thuế tuyệt đối cho xì gà có trọng lượng 30g/đrief. Cần có thêm thông tin từ cơ quan quản lý thuế hoặc chính phủ về cách quy đổi này để có câu trả lời chính xác.",Áp dụng mức thuế tuyệt đối 15.000 đồng/điếu.,"Theo Luật Quản lý thuế số 39/2008/QH11 và Nghị định 111/2013/NĐ-CP, xì gà thuộc đối tượng chịu thuế tiêu thụ đặc biệt (TTĐB). Tuy nhiên, để xác định mức thuế tuyệt đối áp dụng cho một đĩa xì gà có trọng lượng 30g, cần biết thêm thông tin như:
+
+1. Mức thuế suất hiện hành cho xì gà.
+2. Đơn vị tính thuế (ví dụ: mỗi điếu, mỗi gói, v.v.).
+
+Thông thường, xì gà được tính thuế theo đơn vị điếu hoặc gói. Nếu bạn chỉ biết trọng lượng của một đĩa xì gà mà không biết quy cách đóng gói, thì không thể xác định chính xác mức thuế tuyệt đối.
+
+Ví dụ, nếu xì gà được tính thuế theo điếu và mỗi điếu có trọng lượng 30g, thì bạn cần biết số điếu trong một đĩa để tính tổng trọng lượng và từ đó tính thuế.
+
+Nếu bạn cung cấp thêm thông tin về quy cách đóng gói và thuế suất, tôi có thể giúp bạn tính toán chính xác hơn.",Áp dụng mức thuế tuyệt đối 30.000 đồng/điếu.,,,,,
+23,Người nộp thuế TTĐB sản xuất rượu bị thiệt hại 40% sản phẩm do thiên tai có được giảm thuế không và mức giảm tối đa là bao nhiêu?,Được giảm thuế. Mức giảm xác định trên cơ sở tổn thất thực tế nhưng không quá 30% số thuế phải nộp của năm xảy ra thiệt hại và không vượt quá giá trị tài sản bị thiệt hại sau bồi thường.,"Dựa vào ngữ cảnh tham khảo từ [passage_000464] và [passage_000465], người nộp thuế thuế tiêu thụ đặc biệt (TTĐB) sản xuất hàng hóa gặp khó khăn do thiên tai có thể được giảm thuế. Tuy nhiên, mức giảm thuế cụ thể không được đề cập trong các văn bản này.
+
+Theo [passage_000464], người nộp thuế gặp khó khăn do thiên tai có thể được giảm thuế, nhưng không có thông tin về mức giảm cụ thể. Theo [passage_000465], mức giảm thuế được xác định dựa trên tổn thất thực tế do thiên tai gây ra, nhưng không quá 30% số thuế phải nộp của năm xảy ra thiệt hại và không vượt quá giá trị tài sản bị thiệt hại sau khi được bồi thường (nếu có).
+
+Trong trường hợp cụ thể, người nộp thuế sản xuất rượu bị thiệt hại 40% sản phẩm do thiên tai, theo [passage_000465], mức giảm thuế không quá 30% số thuế phải nộp của năm xảy ra thiệt hại. Do đó, không thể xác định mức giảm thuế tối đa chính xác mà không biết số thuế phải nộp ban đầu.",Có. Mức giảm tối đa là 50%.,"Có. Mức giảm thuế không quá 30% số thuế phải nộp của năm xảy ra thiệt hại, không vượt quá giá trị tài sản bị thiệt hại sau khi được bồi thường.","Theo quy định hiện hành tại Nghị định 119/2018/NĐ-CP và các văn bản hướng dẫn thi hành, người nộp thuế TTĐB không được giảm thuế tiêu thụ đặc biệt do thiệt hại do thiên tai. Do đó, trong trường hợp người nộp thuế sản xuất rượu bị thiệt hại 40% sản phẩm do thiên tai thì không được giảm thuế tiêu thụ đặc biệt.",,,,,
+24,"Doanh nghiệp Việt Nam có thu nhập 100 tỷ ở Việt Nam và 20 tỷ ở Lào (đã nộp thuế tại Lào 4 tỷ, thuế suất Việt Nam 20%) thì được trừ tối đa bao nhiêu khi nộp thuế tại Việt Nam?","Được trừ số thuế đã nộp tại Lào nhưng không vượt quá số thuế TNDN tính theo pháp luật Việt Nam, tức tối đa 4 tỷ (= 20% × 20 tỷ).","Dựa vào ngữ cảnh tham khảo, doanh nghiệp có thu nhập từ hoạt động sản xuất, kinh doanh ở nước ngoài sẽ được trừ số thuế đã nộp ở nước ngoài vào số thuế phải nộp ở Việt Nam, nhưng không được vượt quá số thuế phải nộp theo quy định của Việt Nam.
+
+Trong trường hợp này:
+- Thu nhập từ hoạt động ở Việt Nam: 100 tỷ
+- Thu nhập từ hoạt động ở Lào: 20 tỷ
+- Số thuế đã nộp ở Lào: 4 tỷ (tương đương 20% của 20 tỷ)
+
+Theo quy định, doanh nghiệp chỉ được trừ tối đa số thuế đã nộp ở nước ngoài (4 tỷ) vào số thuế phải nộp ở Việt Nam, nhưng không được vượt quá số thuế phải nộp theo quy định của Việt Nam.
+
+Thuế phải nộp ở Việt Nam = 100 tỷ x 20% + 20 tỷ x 20% = 20 tỷ + 4 tỷ = 24 tỷ
+
+Do đó, doanh nghiệp chỉ được trừ tối đa 4 tỷ (số thuế đã nộp ở Lào) vào số thuế phải nộp ở Việt Nam, vì 4 tỷ không vượt quá 24 tỷ.
+
+Kết luận: Doanh nghiệp được trừ tối đa 4 tỷ khi nộp thuế tại Việt Nam.","Theo quy định của Luật Thuế thu nhập doanh nghiệp (TNDN) của Việt Nam, doanh nghiệp có thể được trừ các khoản đã nộp thuế tại nước ngoài trước khi tính thuế TNDN tại Việt Nam.
+
+Trong trường hợp này, doanh nghiệp đã nộp thuế tại Lào là 4 tỷ đồng (tương đương khoảng 20% của 20 tỷ đồng thu nhập tại Lào). Khi tính thuế TNDN tại Việt Nam, doanh nghiệp có thể được trừ số thuế đã nộp tại nước ngoài này.
+
+Tổng thu nhập của doanh nghiệp là 120 tỷ đồng (100 tỷ đồng từ Việt Nam + 20 tỷ đồng từ Lào).
+
+Số thuế TNDN phải nộp tại Việt Nam trước khi trừ đi thuế đã nộp tại nước ngoài là:
+- Thuế TNDN tại Việt Nam = 120 tỷ đồng x 20% = 24 tỷ đồng
+
+Sau khi trừ đi số thuế đã nộp tại Lào (4 tỷ đồng), số thuế còn phải nộp tại Việt Nam là:
+- Số thuế còn phải nộp = 24 tỷ đồng - 4 tỷ đồng = 20 tỷ đồng
+
+Vậy, doanh nghiệp được trừ tối đa 4 tỷ đồng khi nộp thuế tại Việt Nam.",Được trừ tối đa 16 tỷ đồng (20 tỷ x 80% - 4 tỷ).,Được trừ tối đa 4 tỷ (số thuế đã nộp tại Lào) vì không vượt quá số thuế phải nộp tại Việt Nam.,,,,,
+25,"Một doanh nghiệp có doanh thu 2,8 tỷ đồng và doanh thu 4 tỷ đồng vào hai năm liên tiếp thì áp dụng thuế suất TNDN ra sao?","Năm có doanh thu 2,8 tỷ áp dụng thuế suất 15%; năm có doanh thu 4 tỷ (trên 3 tỷ đến 50 tỷ) áp dụng thuế suất 17%.","Theo Luật Thuế thu nhập doanh nghiệp năm 2020, thuế suất thuế thu nhập doanh nghiệp (TNDN) áp dụng cho các doanh nghiệp có doanh thu từ 10 tỷ đồng trở lên là 20%. Đối với các doanh nghiệp có doanh thu dưới 10 tỷ đồng, thuế suất là 15%.
+
+Trong trường hợp của bạn:
+
+- Năm thứ nhất: Doanh thu là 2,8 tỷ đồng < 10 tỷ đồng nên thuế suất TNDN là 15%.
+- Năm thứ hai: Doanh thu là 4 tỷ đồng < 10 tỷ đồng nên thuế suất TNDN vẫn là 15%.
+
+Do vậy, trong cả hai năm, doanh nghiệp sẽ áp dụng thuế suất TNDN là 15%.","Áp dụng thuế suất 15% đối với doanh thu năm 2021 (2,8 tỷ đồng) và 20% đối với doanh thu năm 2022 (4 tỷ đồng).","Dựa vào ngữ cảnh tham khảo, doanh nghiệp có doanh thu 2,8 tỷ đồng trong một năm sẽ thuộc đối tượng áp dụng thuế suất 15%. Tuy nhiên, thông tin về thuế suất áp dụng cho doanh nghiệp có doanh thu 4 tỷ đồng trong hai năm liên tiếp không đủ trong ngữ cảnh đã cung cấp. Cần thêm thông tin từ Chính phủ về cách tính doanh thu làm căn cứ xác định thuế suất để xác định thuế suất áp dụng cho doanh nghiệp này.",Thuế suất 15% cho doanh thu năm không quá 3 tỷ đồng; thuế suất 17% cho doanh thu năm từ trên 3 tỷ đồng đến không quá 50 tỷ đồng.,,,,,
+26,Doanh nghiệp có 30% lao động là người sau cai nghiện ma túy nhưng chỉ có 15 lao động bình quân năm thì có được miễn thuế TNDN không?,Không. Điều kiện cần là có số lao động bình quân trong năm từ 20 người trở lên; doanh nghiệp này không đủ điều kiện được miễn thuế TNDN.,"Theo ngữ cảnh tham khảo từ [passage_000509], để doanh nghiệp được miễn thuế TNDN từ hoạt động sản xuất, kinh doanh hàng hóa, dịch vụ có từ 30% số lao động bình quân trong năm trở lên là người khuyết tật, người sau cai nghiện ma túy, người nhiễm HIV/AIDS và có số lao động bình quân trong năm từ 20 người trở lên, thì doanh nghiệp phải đáp ứng cả hai điều kiện này.
+
+Trong trường hợp này, doanh nghiệp có 30% lao động là người sau cai nghiện ma túy, nhưng chỉ có 15 lao động bình quân năm. Điều này không đáp ứng điều kiện về số lượng lao động bình quân trong năm phải từ 20 người trở lên.
+
+Vì vậy, doanh nghiệp không được miễn thuế TNDN theo quy định này.","Theo quy định hiện hành tại Nghị định số 83/2019/NĐ-CP ngày 14 tháng 8 năm 2019 của Chính phủ về một số chính sách khuyến khích việc giải quyết việc làm cho người lao động bị nghiện ma túy, người lao động sau cai nghiện ma túy, người lao động có hoàn cảnh khó khăn, người lao động nữ có con nhỏ dưới 36 tháng tuổi, người lao động ở vùng sâu, vùng xa, vùng khó khăn, vùng đồng bào dân tộc thiểu số nghèo, người lao động ở các khu công nghiệp, khu chế xuất, khu kinh tế, doanh nghiệp có vốn đầu tư nước ngoài, doanh nghiệp có vốn đầu tư trực tiếp nước ngoài, doanh nghiệp có vốn đầu tư trong nước, doanh nghiệp có vốn đầu tư nước ngoài, doanh nghiệp có vốn đầu tư trực tiếp nước ngoài, doanh nghiệp có vốn đầu tư trong nước, doanh nghiệp có vốn đầu tư nước ngoài, doanh nghiệp có vốn đầu tư trực tiếp nước ngoài, doanh nghiệp có vốn đầu tư trong nước, doanh nghiệp có vốn đầu tư nước ngoài, doanh nghiệp có vốn đầu tư trực tiếp nước ngoài, doanh nghiệp có vốn đầu tư trong nước, doanh nghiệp có vốn đầu tư nước ngoài, doanh nghiệp có vốn đầu tư trực tiếp nước ngoài, doanh nghiệp có vốn đầu tư trong nước, doanh nghiệp có vốn đầu tư nước ngoài, doanh nghiệp có vốn đầu tư trực tiếp nước ngoài, doanh nghiệp có vốn đầu tư trong nước, doanh nghiệp có vốn đầu tư nước ngoài, doanh nghiệp có vốn đầu tư trực tiếp nước ngoài, doanh nghiệp có vốn đầu tư trong nước, doanh nghiệp có vốn đầu tư nước ngoài, doanh nghiệp có vốn đầu tư trực tiếp nước ngoài, doanh nghiệp có vốn đầu tư trong nước, doanh nghiệp có vốn đầu tư nước ngoài, doanh nghiệp có vốn đầu tư trực tiếp nước ngoài, doanh nghiệp có vốn đầu tư trong nước, doanh nghiệp có vốn đầu tư nước ngoài, doanh nghiệp có vốn đầu tư trực tiếp nước ngoài, doanh nghiệp có vốn đầu tư trong nước, doanh nghiệp có vốn đầu tư nước ngoài, doanh nghiệp có vốn đầu tư trực tiếp nước ngoài, doanh nghiệp có vốn đầu tư trong nước, doanh nghiệp có vốn đầu tư nước ngoài, doanh nghiệp có vốn đầu",Không. Số lao động bình quân trong năm phải từ 20 người trở lên.,"Có. Doanh nghiệp có ít nhất 30% số lao động là người sau cai nghiện ma túy hoặc người khuyết tật, người cao tuổi, người nhiễm HIV, người nhiễm bệnh AIDS, người nhiễm bệnh lây truyền qua đường tình dục, người bị bệnh tâm thần, bệnh hiểm nghèo, bệnh hiểm nghèo ở trẻ em, người bị tai nạn lao động, bệnh nghề nghiệp, người bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác tại địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác tại địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/dioxin, người bị nhiễm chất độc da cam/dioxin do công tác ở địa bàn bị nhiễm chất độc da cam/d",,,,,
+27,Doanh nghiệp tư nhân có chủ doanh nghiệp tự trả lương cho mình 50 triệu/tháng có được trừ vào chi phí khi tính thuế TNDN không?,"Không. Tiền lương, tiền công của chủ doanh nghiệp tư nhân không được trừ khi xác định thu nhập chịu thuế TNDN.","Không. Tiền lương, tiền công của chủ doanh nghiệp tư nhân, chủ công ty TNHH một thành viên do cá nhân làm chủ; thù lao trả cho sáng lập viên doanh nghiệp không trực tiếp tham gia điều hành sản xuất, kinh doanh; tiền lương, tiền công, các khoản hạch toán chi khác để chi trả cho người lao động nhưng thực tế không chi trả hoặc không có hóa đơn, chứng từ theo quy định của pháp luật không được trừ khi xác định thu nhập chịu thuế TNDN.","Theo [passage_000553], khoản 2, điểm h của Điều 9 của Luật 67/2025/QH15 về Thuế thu nhập doanh nghiệp quy định rằng tiền lương, tiền công của chủ doanh nghiệp tư nhân, chủ công ty trách nhiệm hữu hạn một thành viên do cá nhân làm chủ không được trừ vào chi phí khi tính thuế TNDN.
+
+Vì vậy, trong trường hợp doanh nghiệp tư nhân có chủ doanh nghiệp tự trả lương cho mình 50 triệu/tháng, khoản lương này không được trừ vào chi phí khi tính thuế TNDN.","Có. Chủ doanh nghiệp tư nhân được coi là người lao động của doanh nghiệp mình, nên tiền lương trả cho chính mình được tính là chi phí hợp lý, cần thiết và hợp pháp.","Theo quy định tại Điều 18 Thông tư 116/2013/TT-BTC, chi phí hợp lý về lương, tiền công phải đáp ứng các điều kiện sau mới được trừ vào chi phí:
+
+1. Lương, tiền công phải được trả theo hợp đồng lao động hoặc thỏa thuận giữa người lao động và người sử dụng lao động.
+
+2. Hợp đồng lao động hoặc thỏa thuận phải nêu rõ số lượng, mức lương, tiền công phải trả cho người lao động.
+
+Trong trường hợp doanh nghiệp tư nhân trả lương cho chủ doanh nghiệp, nếu thỏa thuận này được coi là hợp đồng lao động và đáp ứng đầy đủ các điều kiện nêu trên, thì khoản chi này có thể được trừ vào chi phí khi tính thuế TNDN.
+
+Tuy nhiên, cần lưu ý rằng việc xác định mức lương cho chủ doanh nghiệp phải phù hợp với thực tế lao động và không được vượt quá mức trần quy định bởi pháp luật lao động. Nếu mức lương này vượt quá mức trần, phần vượt quá sẽ không được trừ vào chi phí khi tính thuế TNDN.
+
+Ngoài ra, cần kiểm tra các quy định cụ thể của cơ quan thuế địa phương vì có thể có những hướng dẫn bổ sung.",,,,,
+28,Doanh nghiệp khai thác mỏ vàng có 80% diện tích ở địa bàn đặc biệt khó khăn áp dụng thuế suất TNDN bao nhiêu?,Thuế suất 40% (do mỏ có từ 70% diện tích trở lên ở địa bàn có điều kiện kinh tế - xã hội đặc biệt khó khăn).,Thuế suất 40%.,"Theo ngữ cảnh tham khảo từ [passage_000567], đối với hoạt động thăm dò, khai thác tài nguyên quý hiếm (bao gồm vàng) ở địa bàn có điều kiện kinh tế - xã hội đặc biệt khó khăn, thuế suất là 40%. Do doanh nghiệp có 80% diện tích ở địa bàn đặc biệt khó khăn nên sẽ áp dụng thuế suất 40% cho hoạt động khai thác mỏ vàng của mình.","Theo Nghị định số 81/2015/NĐ-CP ngày 15 tháng 9 năm 2015 của Chính phủ quy định về thuế thu nhập doanh nghiệp, doanh nghiệp hoạt động trong lĩnh vực khai thác khoáng sản có 80% diện tích nằm ở địa bàn đặc biệt khó khăn sẽ được áp dụng thuế suất ưu đãi là 10%.",Thuế suất 15%. Phần diện tích còn lại áp dụng thuế suất 20%.,,,,,
+29,Doanh nghiệp đầu tư dự án có vốn đầu tư 10.000 tỷ đồng thì có được hưởng ưu đãi đặc biệt theo điểm g.1 không?,Không. Quy mô vốn đầu tư phải tối thiểu 12.000 tỷ đồng để thuộc đối tượng ưu đãi đặc biệt theo điểm g.1.,"Có. Doanh nghiệp đầu tư vào địa bàn có điều kiện kinh tế - xã hội đặc biệt khó khăn, có vốn đầu tư từ 5.000 tỷ đồng trở lên được miễn thuế TNDN trong 10 năm kể từ ngày đầu tiên của tháng doanh nghiệp nộp hồ sơ đăng ký đầu tư.","Không đủ thông tin để kết luận doanh nghiệp có được hưởng ưu đãi đặc biệt theo điểm g.1 không. Theo ngữ cảnh tham khảo, điểm g.1 yêu cầu quy mô vốn đầu tư tối thiểu là 12.000 tỷ đồng và thực hiện giải ngân tổng vốn đầu tư đăng ký không quá 5 năm kể từ ngày được phép đầu tư. Trong trường hợp này, vốn đầu tư là 10.000 tỷ đồng không đáp ứng điều kiện về quy mô vốn đầu tư tối thiểu nên không đủ căn cứ để khẳng định doanh nghiệp có được hưởng ưu đãi đặc biệt theo điểm g.1 không.","Theo quy định tại Nghị định 83/2019/NĐ-CP, doanh nghiệp đầu tư dự án có vốn đầu tư từ 5.000 tỷ đồng trở lên sẽ được hưởng một số ưu đãi thuế, trong đó có ưu đãi về thuế thu nhập doanh nghiệp (TNDN) theo điểm g khoản 1 Điều 46 như sau:
+
+""Đối với dự án đầu tư có tổng mức đầu tư từ 5.000 tỷ đồng trở lên, kể từ năm đầu tiên tính từ năm dự kiến đưa vào sử dụng công trình, cơ sở, dự án, doanh nghiệp được miễn thuế TNDN trong thời hạn 5 năm.""
+
+Tuy nhiên, ưu đãi này chỉ áp dụng cho các dự án thuộc một trong các ngành, lĩnh vực được ưu đãi theo quy định tại Nghị định 83/2019/NĐ-CP.
+
+Nếu dự án của bạn đáp ứng cả hai điều kiện: tổng mức đầu tư từ 10.000 tỷ đồng và thuộc ngành, lĩnh vực được ưu đãi, thì doanh nghiệp sẽ được hưởng ưu đãi về thuế TNDN theo điểm g.1.
+
+Nếu dự án không thuộc ngành, lĩnh vực được ưu đãi, hoặc tổng mức đầu tư dưới 5.000 tỷ đồng, thì không được hưởng ưu đãi này.
+
+Vì vậy, để xác định chính xác doanh nghiệp có được hưởng ưu đãi hay không, cần kiểm tra xem dự án có thuộc ngành, lĩnh vực được ưu đãi và có tổng mức đầu tư từ 10.000 tỷ đồng không.",Không. Vốn đầu tư tối thiểu là 12.000 tỷ đồng và thực hiện giải ngân không quá 5 năm kể từ ngày được phép đầu tư.,,,,,
+30,Doanh nghiệp có dự án đầu tư đã hoàn thành nhưng chưa làm thủ tục hoàn thuế GTGT thì có thời hạn bao lâu để nộp hồ sơ hoàn?,"Cơ sở kinh doanh nộp hồ sơ hoàn thuế GTGT trong thời hạn 01 năm kể từ ngày dự án đầu tư hoặc giai đoạn, hạng mục đầu tư hoàn thành.","Trong thời hạn 01 năm kể từ ngày dự án đầu tư hoặc ngày giai đoạn, hạng mục đầu tư hoàn thành.","Theo ngữ cảnh tham khảo từ [passage_000127], doanh nghiệp có dự án đầu tư đã hoàn thành nhưng chưa thực hiện hoàn thuế GTGT phát sinh trong giai đoạn đầu tư thì phải nộp hồ sơ hoàn thuế GTGT trong thời hạn 01 năm kể từ ngày dự án đầu tư hoặc ngày giai đoạn, hạng mục đầu tư hoàn thành.
+
+Vì vậy, thời hạn doanh nghiệp có để nộp hồ sơ hoàn thuế GTGT là 1 năm kể từ ngày dự án đầu tư hoặc ngày giai đoạn, hạng mục đầu tư hoàn thành.",Thời hạn 12 tháng kể từ ngày dự án hoàn thành.,"Theo quy định tại Điều 102 Thông tư 38/2011/TT-BTC, doanh nghiệp có quyền hoàn thuế GTGT đã nộp thừa trong trường hợp đầu tư theo dự án đầu tư công nghiệp, xây lắp hoặc mua sắm trang thiết bị, máy móc, nguyên vật liệu sản xuất, kinh doanh. Thời hạn nộp hồ sơ hoàn thuế GTGT là 36 tháng kể từ ngày kết thúc hoạt động của dự án đầu tư.
+
+Tuy nhiên, cần lưu ý rằng thời hạn này có thể thay đổi tùy thuộc vào các quy định cụ thể của cơ quan thuế địa phương hoặc các văn bản hướng dẫn mới sau này. Do đó, tốt nhất là doanh nghiệp nên tham khảo ý kiến của cơ quan thuế địa phương hoặc luật sư chuyên về thuế để đảm bảo tuân thủ đúng quy định.",,,,,
+31,Cá nhân không cư trú nhận quà tặng tại Việt Nam trị giá 25 triệu đồng phải nộp thuế TNCN bao nhiêu?,"Thuế suất 10% trên phần thu nhập vượt trên 10 triệu đồng, tức 10% × 15 triệu = 1,5 triệu đồng.","Thu nhập chịu thuế từ quà tặng là phần vượt trên 10 triệu đồng, nên là 15 triệu đồng. Thuế suất 10% áp dụng cho thu nhập từ trúng thưởng, thừa kế, quà tặng của cá nhân không cư trú.","Theo quy định hiện hành của Việt Nam, cá nhân không cư trú nhận quà tặng tại Việt Nam không phải chịu thuế thu nhập cá nhân (TNCN) vì khoản thu từ quà tặng không được coi là nguồn thu nhập chịu thuế theo Luật Thuế thu nhập cá nhân. Do đó, cá nhân không cư trú nhận quà tặng trị giá 25 triệu đồng không cần nộp thuế TNCN.
+
+Tuy nhiên, nếu quà tặng có giá trị lớn hoặc liên quan đến hoạt động kinh tế khác, cơ quan thuế có thể đánh giá cụ thể để xác định tính chất của khoản thu nhập đó. Trong trường hợp này, cần tham khảo ý kiến của cơ quan thuế địa phương để có hướng xử lý phù hợp.",Không quá 1 triệu đồng. Số tiền quà tặng dưới 1 triệu đồng được miễn thuế.,"Cá nhân không cư trú nhận quà tặng tại Việt Nam trị giá 25 triệu đồng sẽ phải nộp thuế TNCN như sau:
+
+1. Theo [passage_000271], phần giá trị quà tặng vượt quá 10 triệu đồng (trong trường hợp này là 15 triệu đồng) sẽ chịu thuế.
+2. Theo [passage_000271], thuế suất áp dụng cho thu nhập từ quà tặng là 10%.
+
+Do đó, thuế TNCN phải nộp là: 15 triệu đồng x 10% = 1,5 triệu đồng.
+
+Trả lời: Cá nhân không cư trú nhận quà tặng tại Việt Nam trị giá 25 triệu đồng phải nộp thuế TNCN là 1,5 triệu đồng.",,,,,
+32,Cá nhân không cư trú có thu nhập từ kinh doanh dịch vụ tại Việt Nam áp dụng thuế suất TNCN bao nhiêu?,Thuế suất 5% trên doanh thu từ hoạt động kinh doanh dịch vụ.,"Theo ngữ cảnh tham khảo, thuế đối với thu nhập từ kinh doanh dịch vụ của cá nhân không cư trú tại Việt Nam được quy định ở Điều 25, Khoản 3, Điểm b với thuế suất 5%.",Cá nhân không cư trú có thu nhập từ kinh doanh dịch vụ tại Việt Nam sẽ chịu thuế thu nhập cá nhân với thuế suất 20%. Đây là quy định tại Điều 19 Nghị định 115/2020/NĐ-CP về thuế thu nhập cá nhân.,Thuế suất 5%.,Thuế suất 20% trên tổng số tiền thu được từ hoạt động kinh doanh dịch vụ tại Việt Nam.,,,,,
+33,Cá nhân không cư trú có thu nhập 200 triệu từ chuyển nhượng bất động sản tại Việt Nam phải nộp thuế TNCN bao nhiêu?,"Thuế suất 2% trên giá chuyển nhượng, tức 4 triệu đồng.",Phải nộp 40 triệu đồng. Thu nhập từ chuyển nhượng bất động sản áp dụng thuế suất 20%.,"Cá nhân không cư trú có thu nhập từ chuyển nhượng bất động sản tại Việt Nam sẽ chịu thuế thu nhập cá nhân (TNCN) với tỷ lệ 10% trên phần thu nhập vượt quá 1 tỷ đồng/năm.
+
+Trong trường hợp cụ thể:
+
+- Tổng thu nhập từ chuyển nhượng bất động sản là 200 triệu đồng.
+- Không có thông tin về thu nhập khác trong năm nên ta chỉ tính trên số tiền này.
+
+Do đó, số thuế TNCN phải nộp là:
+(200 triệu - 1 tỷ) x 10% = 0 đồng
+
+Lý do:
+- Theo Luật Thuế thu nhập cá nhân, cá nhân không cư trú chỉ chịu thuế TNCN đối với thu nhập từ hoạt động kinh tế trong nước và thu nhập từ chuyển nhượng bất động sản tại Việt Nam.
+- Tỷ lệ thuế là 10% nhưng áp dụng từ mức 1 tỷ đồng thu nhập/năm.
+- Tổng thu nhập 200 triệu đồng không đủ để phải chịu thuế TNCN.
+
+Kết luận: Cá nhân không cư trú này không phải nộp thuế TNCN vì tổng thu nhập từ chuyển nhượng bất động sản chưa đạt mức phải chịu thuế.","Thuế suất 2% trên giá chuyển nhượng bất động sản, tối thiểu 1 triệu đồng.","Dựa vào ngữ cảnh tham khảo, cá nhân không cư trú có thu nhập 200 triệu từ chuyển nhượng bất động sản tại Việt Nam sẽ phải nộp thuế TNCN với thuế suất 2%. 
+
+Thực hiện tính toán:
+200 triệu x 2% = 4 triệu đồng
+
+Vậy, cá nhân không cư trú này phải nộp 4 triệu đồng thuế TNCN.",,,,,
+34,Bạn cùng có quyền sử dụng một thửa đất với 3 người khác và là đại diện hợp pháp thì có là người nộp thuế sử dụng đất phi nông nghiệp không?,Có. Người đại diện hợp pháp của những người cùng có quyền sử dụng thửa đất là người nộp thuế.,Có. Là người đại diện hợp pháp của nhiều người cùng có quyền sử dụng thửa đất thì là người nộp thuế.,"Dựa vào ngữ cảnh tham khảo từ [passage_000300], nếu bạn là người đại diện hợp pháp của những người cùng có quyền sử dụng thửa đất đó thì bạn sẽ là người nộp thuế sử dụng đất phi nông nghiệp.","Có. Là người đại diện hợp pháp của hộ gia đình, tổ chức có quyền sử dụng đất thì được xác định là người nộp thuế.","Căn cứ vào Luật Quản lý, sử dụng đất đai năm 2013 và Nghị định 146/2020/NĐ-CP, người nộp thuế sử dụng đất phi nông nghiệp là người có quyền sử dụng đất hoặc người được chủ đất ủy quyền sử dụng đất. Trong trường hợp bạn cùng có quyền sử dụng một thửa đất với 3 người khác và là đại diện hợp pháp, bạn sẽ được coi là người có quyền sử dụng đất. Do đó, bạn có thể là người nộp thuế sử dụng đất phi nông nghiệp cho thửa đất đó.
+
+Tuy nhiên, cần lưu ý rằng việc xác định cụ thể ai là người nộp thuế cần dựa vào quy định cụ thể của cơ quan thuế địa phương và các điều khoản trong hợp đồng ủy quyền (nếu có). Nếu không có hợp đồng ủy quyền, bạn cần làm rõ vai trò của mình theo quy định của pháp luật hiện hành.",,,,,
+35,Luật Thuế tiêu thụ đặc biệt cũ số 27/2008/QH12 sẽ hết hiệu lực khi nào?,"Hết hiệu lực kể từ ngày Luật mới (số 66/2025/QH15) có hiệu lực thi hành, tức từ 01/01/2026.","Theo ngữ cảnh tham khảo [passage_000468], Luật Thuế tiêu thụ đặc biệt số 27/2008/QH12 đã được sửa đổi, bổ sung một số điều theo Luật số 70/2014/QH13, Luật số 71/2014/QH13, Luật số 106/2016/QH13 và Luật số 03/2022/QH15. Luật này sẽ hết hiệu lực kể từ ngày Luật Thuế tiêu thụ đặc biệt mới số 66/2025/QH15 có hiệu lực thi hành.",Sau ngày Luật Thuế thu nhập cá nhân số 67/2025/QH13 có hiệu lực.,"Theo quy định tại Nghị định 135/2018/NĐ-CP ngày 29 tháng 10 năm 2018 của Chính phủ về việc chuyển giao thẩm quyền lập dự toán và quyết toán ngân sách nhà nước giữa trung ương và địa phương, khoản 4 Điều 10, Luật Thuế tiêu thụ đặc biệt số 27/2008/QH12 sẽ hết hiệu lực kể từ ngày 01 tháng 1 năm 2019.
+
+Do đó, Luật Thuế tiêu thụ đặc biệt cũ số 27/2008/QH12 sẽ hết hiệu lực từ ngày 01/01/2019.",Kể từ ngày Luật mới (số 66/2025/QH15) có hiệu lực thi hành.,,,,,
+36,Nguồn vốn để hoàn trả thuế tiêu thụ đặc biệt được lấy từ đâu?,Từ số thu về thuế tiêu thụ đặc biệt của ngân sách trung ương.,Làm từ số thu về thuế TTĐB của ngân sách trung ương.,"Theo quy định của pháp luật Việt Nam, nguồn vốn để hoàn trả thuế tiêu thụ đặc biệt (TTĐB) được lấy từ ngân sách nhà nước. Cụ thể:
+
+- Theo Nghị định 123/2020/NĐ-CP ngày 15/10/2020 của Chính phủ về quản lý thuế, việc hoàn thuế GTGT và TTĐB được thực hiện theo quy định của Luật Quản lý thuế và các văn bản hướng dẫn thi hành.
+
+- Khoản 4 Điều 16 Nghị định 123/2020/NĐ-CP nêu rõ: ""Việc hoàn thuế GTGT, thuế xuất khẩu, thuế nhập khẩu, thuế tiêu thụ đặc biệt, thuế giá trị gia tăng đối với hàng hóa, dịch vụ xuất khẩu, thuế thu nhập doanh nghiệp, thuế thu nhập cá nhân, thuế tài sản, thuế sử dụng đất phi nông nghiệp, thuế bất động sản doanh nghiệp, thuế bất động sản cá nhân, thuế tài nguyên, thuế môi trường, thuế bảo vệ môi trường, thuế thu nhập khác, thuế giá trị gia tăng đối với hàng hóa, dịch vụ xuất khẩu, thuế xuất khẩu, thuế nhập khẩu, thuế tiêu thụ đặc biệt, thuế giá trị gia tăng đối với hàng hóa, dịch vụ xuất khẩu, thuế xuất khẩu, thuế nhập khẩu, thuế thu nhập doanh nghiệp, thuế thu nhập cá nhân, thuế tài sản, thuế sử dụng đất phi nông nghiệp, thuế bất động sản doanh nghiệp, thuế bất động sản cá nhân, thuế tài nguyên, thuế môi trường, thuế bảo vệ môi trường, thuế thu nhập khác, thuế giá trị gia tăng đối với hàng hóa, dịch vụ xuất khẩu, thuế xuất khẩu, thuế nhập khẩu, thuế tiêu thụ đặc biệt, thuế giá trị gia tăng đối với hàng hóa, dịch vụ xuất khẩu, thuế xuất khẩu, thuế nhập khẩu, thuế thu nhập doanh nghiệp, thuế thu nhập cá nhân, thuế tài sản, thuế sử dụng đất phi nông nghiệp, thuế bất động sản doanh nghiệp, thuế bất động sản cá nhân, thuế tài nguyên, thuế môi trường, thuế bảo vệ môi trường, thuế thu nhập khác, thuế giá trị gia tăng đối với hàng hóa, dịch vụ xuất khẩu, thuế xuất khẩu, thuế nhập khẩu, thuế tiêu thụ đặc biệt, thuế giá trị gia tăng đối với hàng hóa, dịch vụ xuất khẩu, thuế xuất khẩu, thuế nhập khẩu, thuế thu nhập doanh nghiệp, thuế thu","Theo ngữ cảnh tham khảo từ [passage_000462], nguồn vốn để hoàn trả thuế tiêu thụ đặc biệt được lấy từ số thu về thuế tiêu thụ đặc biệt của ngân sách trung ương.",Là nguồn thu từ hoạt động kinh doanh hàng hóa chịu thuế TTĐB của doanh nghiệp.,,,,,
+37,Doanh nghiệp nhập khẩu hàng hóa chịu thuế TTĐB sau đó bán ra thì có được khấu trừ thuế TTĐB đã nộp ở khâu nhập khẩu không?,Có. Người nộp thuế nhập khẩu được khấu trừ số thuế TTĐB đã nộp ở khâu nhập khẩu khi xác định số thuế TTĐB phải nộp ở khâu bán ra.,"Dựa vào ngữ cảnh tham khảo từ [passage_000463], Điều 9 - Hoàn thuế, khấu trừ thuế, giảm thuế, Khoản 3 của Luật Thuế tiêu thụ đặc biệt 66/2025/QH15, người nộp thuế nhập khẩu hàng hóa chịu thuế tiêu thụ đặc biệt được khấu trừ số thuế tiêu thụ đặc biệt đã nộp ở khâu nhập khẩu khi xác định số thuế tiêu thụ đặc biệt phải nộp ở khâu bán ra.
+
+Do vậy, doanh nghiệp nhập khẩu hàng hóa chịu thuế TTĐB sau đó bán ra sẽ được khấu trừ thuế TTĐB đã nộp ở khâu nhập khẩu khi xác định số thuế TTĐB phải nộp ở khâu bán ra.",Có. Doanh nghiệp được khấu trừ thuế TTĐB đã nộp ở khâu nhập khẩu khi bán hàng hóa ra thị trường.,Có. Người nộp thuế nhập khẩu hàng hóa chịu thuế TTĐB được khấu trừ số thuế TTĐB đã nộp ở khâu nhập khẩu khi xác định số thuế TTĐB phải nộp ở khâu bán ra.,"Theo quy định tại Điều 15 Thông tư 38/2016/TT-BTC, doanh nghiệp khi mua hàng hóa chịu thuế tiêu thụ đặc biệt (TTĐB) để bán lại thì có quyền khấu trừ thuế TTĐB đã nộp ở khâu nhập khẩu. Cụ thể:
+
+- Doanh nghiệp phải chứng minh được nguồn gốc thuế TTĐB đã nộp.
+- Thuế TTĐB đã nộp phải thuộc đối tượng được áp dụng thuế TTĐB theo quy định của pháp luật.
+
+Vì vậy, nếu doanh nghiệp đáp ứng các điều kiện trên, họ sẽ được khấu trừ thuế TTĐB đã nộp ở khâu nhập khẩu khi bán hàng hóa.",,,,,
+38,Doanh nghiệp nước ngoài có cơ sở thường trú tại Việt Nam và có thu nhập phát sinh ngoài Việt Nam không liên quan đến cơ sở thường trú thì nộp thuế TNDN ra sao?,Chỉ nộp thuế TNDN đối với thu nhập chịu thuế phát sinh tại Việt Nam (không liên quan đến cơ sở thường trú đó).,Nộp thuế đối với thu nhập phát sinh tại Việt Nam và thu nhập phát sinh ngoài Việt Nam liên quan đến hoạt động của cơ sở thường trú.,"Theo ngữ cảnh tham khảo từ [passage_000476], Điều 2 - Người nộp thuế của Luật 67/2025/QH15 về Thuế thu nhập doanh nghiệp, quy định:
+
+""Khoản 2, điểm b: Doanh nghiệp nước ngoài có cơ sở thường trú tại Việt Nam nộp thuế đối với thu nhập chịu thuế phát sinh tại Việt Nam và thu nhập chịu thuế phát sinh ngoài Việt Nam liên quan đến hoạt động của cơ sở thường trú đó.""
+
+Tuy nhiên, câu hỏi đề cập đến trường hợp thu nhập phát sinh ngoài Việt Nam không liên quan đến cơ sở thường trú. Ngữ cảnh tham khảo không có quy định cụ thể về trường hợp này.
+
+Vì vậy, dựa trên thông tin có sẵn, không có quy định cụ thể về việc doanh nghiệp nước ngoài có cơ sở thường trú tại Việt Nam và thu nhập phát sinh ngoài Việt Nam không liên quan đến cơ sở thường trú phải nộp thuế như thế nào. Cần thêm thông tin pháp lý để xác định chính xác trường hợp này.",Cơ sở thường trú phải nộp thuế đối với thu nhập phát sinh ở Việt Nam và thu nhập phát sinh ở nước ngoài nhưng liên quan đến cơ sở thường trú.,"Theo quy định của Luật Thuế thu nhập doanh nghiệp năm 2020, doanh nghiệp nước ngoài có cơ sở thường trú tại Việt Nam (cơ sở chịu thuế) có thu nhập phát sinh ngoài Việt Nam không liên quan đến cơ sở thường trú sẽ phải nộp thuế TNDN theo cách thức sau:
+
+1. Doanh nghiệp phải kê khai và nộp thuế TNDN theo quy định của pháp luật về thuế TNDN đối với phần thu nhập phát sinh ngoài Việt Nam.
+
+2. Phần thu nhập phát sinh ngoài Việt Nam phải được tính vào thu nhập chịu thuế của doanh nghiệp.
+
+3. Trường hợp doanh nghiệp không có cơ sở tại nước nhận thu nhập, doanh nghiệp nước ngoài có cơ sở thường trú tại Việt Nam phải kê khai và nộp thuế TNDN theo phương pháp khấu trừ theo quy định.
+
+4. Doanh nghiệp phải tuân thủ các quy định về quản lý thuế, báo cáo và cung cấp thông tin cho cơ quan thuế theo yêu cầu.
+
+Tuy nhiên, cần lưu ý rằng có thể có những điều chỉnh cụ thể dựa trên các nghị định, thông tư hướng dẫn thi hành Luật Thuế thu nhập doanh nghiệp. Do đó, để có thông tin chính xác nhất, doanh nghiệp nên tham khảo ý kiến của tư vấn thuế hoặc cơ quan thuế địa phương.",,,,,
+39,Đại diện không có thẩm quyền ký hợp đồng nhưng thường xuyên giao hàng tại Việt Nam có là cơ sở thường trú không?,Có. Đại diện không có thẩm quyền ký hợp đồng đứng tên doanh nghiệp nước ngoài nhưng thường xuyên thực hiện việc giao hàng hóa hoặc cung ứng dịch vụ tại Việt Nam là cơ sở thường trú.,"Theo ngữ cảnh tham khảo từ [passage_000483], Đại diện không có thẩm quyền ký hợp đồng nhưng thường xuyên giao hàng tại Việt Nam được quy định trong Điều 2 - Người nộp thuế, Khoản 3, điểm đ: Đây là một trong những trường hợp được coi là đại diện tại Việt Nam của doanh nghiệp nước ngoài. Tuy nhiên, điều này không đủ để kết luận rằng đó là cơ sở thường trú theo nghĩa của thuế GTGT hay TNDN. Cơ sở thường trú thường liên quan đến việc có một địa điểm hoạt động cố định và thường xuyên tại Việt Nam.
+
+Do đó, dựa vào ngữ cảnh cung cấp, chúng tôi không thể xác định chính xác liệu Đại diện không có thẩm quyền ký hợp đồng nhưng thường xuyên giao hàng tại Việt Nam có là cơ sở thường trú hay không. Cần thêm thông tin về quy định cụ thể về cơ sở thường trú trong Luật Thuế thu nhập doanh nghiệp hoặc các văn bản hướng dẫn khác để đưa ra kết luận chính xác.",Có. Đại diện không có thẩm quyền ký kết hợp đồng đứng tên doanh nghiệp nước ngoài nhưng thường xuyên thực hiện việc giao hàng hóa hoặc cung ứng dịch vụ tại Việt Nam là cơ sở thường trú.,Có. Đại diện không có thẩm quyền ký hợp đồng nhưng thường xuyên giao hàng tại Việt Nam được coi là cơ sở thường trú của tổ chức nước ngoài.,"Theo quy định của Luật Thuế thu nhập doanh nghiệp (TNDN) và Nghị định số 116/2020/NĐ-CP, để xác định một tổ chức nước ngoài có cơ sở thường trú tại Việt Nam hay không, cần xem xét các yếu tố như:
+
+1. Tần suất hoạt động kinh doanh tại Việt Nam.
+2. Số lượng nhân viên làm việc tại Việt Nam.
+3. Cơ sở vật chất tại Việt Nam.
+4. Tính độc lập của hoạt động tại Việt Nam.
+
+Trong trường hợp đại diện không có thẩm quyền ký hợp đồng nhưng thường xuyên giao hàng tại Việt Nam, điều này có thể được xem xét như một dấu hiệu cho thấy tổ chức nước ngoài có thể có cơ sở thường trú tại Việt Nam. Tuy nhiên, để xác định chính xác, cần đánh giá toàn diện các yếu tố trên.
+
+Nếu tổ chức nước ngoài đáp ứng đủ các tiêu chí trên, thì có thể coi đây là cơ sở thường trú tại Việt Nam theo quy định của pháp luật thuế Việt Nam.",,,,,
+40,Phần thuế GTGT đầu vào của xe ô tô chở người dưới 9 chỗ vượt mức của Chính phủ có được trừ khi tính thuế TNDN không?,Không. Thuế GTGT đầu vào của phần giá trị xe ô tô chở người từ 9 chỗ ngồi trở xuống vượt mức do Chính phủ quy định không được trừ.,"Theo quy định hiện hành tại Nghị định 158/2020/NĐ-CP và các văn bản hướng dẫn thi hành, chi phí mua xe ô tô chở người dưới 9 chỗ để sử dụng trong hoạt động sản xuất kinh doanh có thể được tính vào chi phí hợp lý, cần thiết và hợp lệ để trừ khi tính thuế Thuế thu nhập doanh nghiệp (TNDN).
+
+Tuy nhiên, phần thuế GTGT đầu vào của xe ô tô này chỉ được trừ khi tính thuế GTGT theo nguyên tắc tín dụng trực tiếp, tức là chỉ được trừ vào doanh thu từ bán hàng hóa hoặc cung cấp dịch vụ tương ứng.
+
+Về việc được trừ khi tính thuế TNDN, theo quy định, chi phí mua sắm tài sản cố định như xe ô tô có thể được tính vào chi phí hợp lý, cần thiết và hợp lệ để trừ khi tính thuế TNDN. Tuy nhiên, phần thuế GTGT đầu vào của xe ô tô này không được trừ trực tiếp khi tính thuế TNDN mà chỉ được trừ khi tính thuế GTGT.
+
+Do đó, phần thuế GTGT đầu vào của xe ô tô chở người dưới 9 chỗ không được trừ trực tiếp khi tính thuế TNDN, mà chỉ được trừ khi tính thuế GTGT.",Có. Phần thuế GTGT đầu vào của xe ô tô chở người từ 9 chỗ trở xuống vượt mức do Chính phủ quy định được trừ khi xác định thu nhập chịu thuế TNDN.,"Có. Phần thuế GTGT đầu vào của hàng hóa, dịch vụ mua để sản xuất, kinh doanh sản phẩm chịu thuế TNDN được trừ khi tính thuế TNDN.","Dựa vào ngữ cảnh tham khảo [passage_000556], phần thuế GTGT đầu vào của xe ô tô chở người từ 09 chỗ ngồi trở xuống vượt mức do Chính phủ quy định có thể được trừ khi tính thuế TNDN. Cụ thể, khoản 2, điểm l của Điều 9 nêu rõ rằng ""Phần thuế giá trị gia tăng đầu vào đã được khấu trừ; thuế giá trị gia tăng nộp theo phương pháp khấu trừ"" được phép trừ khi xác định thu nhập chịu thuế.",,,,,
+41,Một cá nhân bán cổ phiếu được lợi nhuận 50 triệu đồng phải nộp thuế TNCN với thuế suất bao nhiêu?,"Thuế suất 0,1% trên giá chuyển nhượng từng lần (theo biểu thuế toàn phần đối với chuyển nhượng chứng khoán).","Theo quy định hiện hành của Việt Nam, lợi nhuận từ việc bán cổ phiếu được coi là thu nhập khác và chịu thuế thu nhập cá nhân (TNCN) với thuế suất 20%. Do vậy, cá nhân bán cổ phiếu được lợi nhuận 50 triệu đồng sẽ phải nộp thuế TNCN với thuế suất 20%.
+
+Công thức tính thuế như sau:
+Thuế = Lợi nhuận x Thuế suất = 50 triệu đồng x 20% = 10 triệu đồng
+
+Lưu ý rằng có thể có một số khoản miễn thuế hoặc giảm trừ cho người nộp thuế, nhưng thông tin cung cấp không đề cập đến các trường hợp này.",Thuế suất 10% trên phần vượt trên 12 triệu đồng.,"Thuế suất 20% cho phần thu nhập vượt 10 triệu đồng, sau đó áp dụng thuế suất 0,1% đối với phần còn lại.","Dựa vào ngữ cảnh tham khảo, thuế suất cho thu nhập từ chuyển nhượng vốn (bao gồm lợi tức cổ phần) của cá nhân cư trú là 20% (theo Điều 23, Khoản 2, Điểm đ của VBHN 103/VBHN-VPQH năm 2025). Tuy nhiên, không có thông tin cụ thể về thuế suất dành cho cá nhân không cư trú trong trường hợp này. 
+
+Vì vậy, câu hỏi yêu cầu xác định thuế suất cho một cá nhân bán cổ phiếu được lợi nhuận 50 triệu đồng không đủ thông tin để trả lời chính xác. Cần biết thêm liệu cá nhân đó cư trú ở đâu và có quy định riêng nào áp dụng cho cá nhân không cư trú không.",,,,,
+42,Doanh nghiệp sản xuất bia bán hàng cho công ty con thì giá tính thuế TTĐB được xác định ra sao?,Giá tính thuế TTĐB không được thấp hơn tỷ lệ % so với giá bình quân các doanh nghiệp thương mại mua trực tiếp của nhà sản xuất bán ra theo quy định của Chính phủ.,"Giá tính thuế là giá bán ra của công ty con, nhưng không được thấp hơn tỷ lệ phần trăm so với giá bình quân của các doanh nghiệp kinh doanh thương mại mua trực tiếp của doanh nghiệp sản xuất, doanh nghiệp nhập khẩu bán ra.","Theo quy định tại Nghị định 113/2020/NĐ-CP, giá tính thuế tiêu thụ đặc biệt (TTĐB) đối với hàng hóa bán giữa các tổ chức trong cùng một tập đoàn kinh tế, liên doanh, liên kết, công ty mẹ - công ty con... sẽ được xác định theo nguyên tắc:
+
+1. Nếu giá bán giữa các tổ chức thuộc cùng một tập đoàn kinh tế, liên doanh, liên kết, công ty mẹ - công ty con... được xác định theo giá chuyển nhượng nội bộ thì giá tính thuế TTĐB là giá chuyển nhượng nội bộ đã được cơ quan thuế chấp thuận.
+
+2. Trường hợp giá chuyển nhượng nội bộ chưa được cơ quan thuế chấp thuận hoặc không có giá chuyển nhượng nội bộ thì giá tính thuế TTĐB là giá bán bình thường giữa các bên độc lập.
+
+Trong trường hợp cụ thể của bạn, doanh nghiệp sản xuất bia bán hàng cho công ty con thuộc cùng một tập đoàn kinh tế nên có thể áp dụng giá chuyển nhượng nội bộ. Tuy nhiên, giá này phải được cơ quan thuế chấp thuận. Nếu không có giá chuyển nhượng nội bộ hoặc giá này chưa được chấp thuận, thì giá bán bình thường giữa các bên độc lập sẽ được dùng làm cơ sở tính thuế TTĐB.
+
+Lưu ý rằng việc xác định giá chuyển nhượng nội bộ cần tuân thủ các quy định về giá chuyển nhượng nội bộ của pháp luật Việt Nam để đảm bảo tính minh bạch và hợp lý.","Bằng giá bán hàng hóa theo hợp đồng giữa hai bên, trừ trường hợp giá bán không phản ánh đúng giá thị trường.","Theo ngữ cảnh tham khảo từ [passage_000381], nếu hàng hóa chịu thuế tiêu thụ đặc biệt được bán cho doanh nghiệp kinh doanh thương mại là doanh nghiệp có quan hệ liên kết (như công ty con), thì giá tính thuế tiêu thụ đặc biệt không được thấp hơn tỷ lệ phần trăm (%) so với giá bình quân của các doanh nghiệp kinh doanh thương mại mua trực tiếp của doanh nghiệp sản xuất, doanh nghiệp nhập khẩu bán ra theo quy định của Chính phủ.
+
+Do đó, trong trường hợp doanh nghiệp sản xuất bia bán hàng cho công ty con, giá tính thuế tiêu thụ đặc biệt sẽ không được thấp hơn giá bình quân mà các doanh nghiệp kinh doanh thương mại khác mua trực tiếp từ doanh nghiệp sản xuất bia bán ra, theo quy định của Chính phủ.",,,,,
+43,Một dự án đầu tư khai thác khoáng sản có được hoàn thuế GTGT không?,"Không. Dự án đầu tư khai thác tài nguyên, khoáng sản và dự án sản xuất sản phẩm tài nguyên, khoáng sản chế biến không được hoàn thuế GTGT.","Dựa trên quy định hiện hành của pháp luật Việt Nam, dự án đầu tư khai thác khoáng sản có thể được hoàn thuế GTGT nhưng điều kiện và quy trình hoàn thuế cần tuân thủ theo quy định cụ thể của cơ quan thuế.
+
+Theo Nghị định 116/2020/NĐ-CP, doanh nghiệp khai thác khoáng sản có thể được hoàn thuế GTGT theo một số trường hợp như:
+
+1. Khoản 1 Điều 39 Nghị định 116/2020/NĐ-CP: Doanh nghiệp khai thác khoáng sản có quyền được hoàn thuế GTGT đã nộp theo mức thuế suất 0% đối với hàng hóa, dịch vụ thuộc danh mục được ưu đãi thuế GTGT.
+
+2. Khoản 2 Điều 39 Nghị định 116/2020/NĐ-CP: Doanh nghiệp khai thác khoáng sản có quyền được hoàn thuế GTGT đã nộp theo mức thuế suất 5% đối với hàng hóa, dịch vụ thuộc danh mục được ưu đãi thuế GTGT.
+
+Để được hoàn thuế, doanh nghiệp cần đáp ứng các điều kiện và trình hồ sơ theo quy định của cơ quan thuế. Việc hoàn thuế GTGT cho hoạt động khai thác khoáng sản thường phụ thuộc vào nhiều yếu tố như loại khoáng sản, quy mô khai thác, và các chính sách ưu đãi cụ thể.
+
+Do đó, để biết chính xác dự án của bạn có thể hoàn thuế GTGT hay không, cần tham khảo thêm từ cơ quan thuế địa phương hoặc luật sư chuyên về thuế.","Có. Dự án đầu tư khai thác tài nguyên, khoáng sản (trừ dự án tìm kiếm thăm dò, phát triển mỏ dầu khí) và dự án đầu tư sản xuất sản phẩm là tài nguyên, khoáng sản khai thác đã chế biến thành sản phẩm khác được hoàn thuế GTGT.","Dựa vào ngữ cảnh tham khảo, một dự án đầu tư khai thác khoáng sản có thể được hoàn thuế GTGT. Cụ thể, theo điểm b.2 Điều 15 của VBHN 12/VBHN-VPQH năm 2026 - Luật Thuế giá trị gia tăng, dự án đầu tư khai thác tài nguyên, khoáng sản (trừ dự án tìm kiếm thăm dò, phát triển mỏ dầu khí) có thể được hoàn thuế GTGT nếu đáp ứng một số điều kiện:
+
+1. Dự án đang trong giai đoạn đầu tư.
+2. Có số thuế GTGT đầu vào phát sinh trong giai đoạn đầu tư chưa được hoàn thuế.
+3. Số thuế GTGT đầu vào chưa được khấu trừ từ 300 triệu đồng trở lên.
+
+Do đó, dự án đầu tư khai thác khoáng sản có thể được hoàn thuế GTGT nếu thỏa mãn các điều kiện trên.","Có. Khoáng sản, hải sản đánh bắt được, sản phẩm từ rừng trồng, sản phẩm từ rừng tự nhiên, sản phẩm từ rừng phòng hộ, sản phẩm từ rừng đặc dụng, sản phẩm từ rừng sản xuất được trồng mới, chăm sóc, bảo vệ, tái tạo, khôi phục, khai thác, chế biến, chế tác theo quy hoạch của Chính phủ được hoàn thuế GTGT.",,,,,
+44,Cá nhân kinh doanh trên sàn TMĐT mà người quản lý sàn đã khấu trừ thuế thì cá nhân này có phải tự kê khai thêm không?,"Người quản lý sàn TMĐT thực hiện khấu trừ, nộp thuế thay và kê khai số thuế đã khấu trừ. Cá nhân kinh doanh trên sàn vẫn có trách nhiệm kê khai, nộp thuế và quyết toán thuế theo quy định pháp luật.","Theo quy định tại Điều 10 Thông tư 51/2020/TT-BTC, cá nhân kinh doanh trên sàn TMĐT mà người quản lý sàn đã khấu trừ thuế GTGT thì cá nhân kinh doanh vẫn phải tự kê khai, nộp thuế GTGT theo quy định. Người quản lý sàn chỉ khấu trừ thuế thay cho cá nhân kinh doanh nhưng không được coi là đã nộp thay cho cá nhân kinh doanh. Do đó, cá nhân kinh doanh vẫn cần tự kê khai và nộp thuế GTGT của mình.","Dựa vào ngữ cảnh tham khảo, chúng tôi không tìm thấy quy định cụ thể về việc cá nhân kinh doanh trên sàn TMĐT cần phải kê khai thêm sau khi người quản lý sàn đã khấu trừ thuế. Tuy nhiên, theo Điều 24 của VBHN 103/VBHN-VPQH năm 2025 - Luật Thuế thu nhập cá nhân, tổ chức là nhà quản lý sàn giao dịch thương mại điện tử, nhà quản lý nền tảng số có chức năng thanh toán có trách nhiệm khấu trừ, nộp thuế thay và kê khai số thuế đã khấu trừ.
+
+Trong trường hợp này, mặc dù người quản lý sàn đã khấu trừ thuế, nhưng không có quy định rõ ràng yêu cầu cá nhân kinh doanh phải kê khai thêm. Tuy nhiên, cá nhân kinh doanh vẫn cần tuân thủ các quy định khác về báo cáo tài chính và thuế theo quy định của pháp luật.
+
+Do đó, dựa vào ngữ cảnh cung cấp, chúng tôi không thể khẳng định chắc chắn cá nhân kinh doanh có cần phải kê khai thêm hay không. Cần tham khảo thêm quy định cụ thể từ cơ quan thuế hoặc văn bản hướng dẫn pháp lý liên quan.",Không. Người quản lý sàn đã khấu trừ thuế GTGT nên cá nhân kinh doanh không cần kê khai.,"Không. Nhà quản lý sàn giao dịch thương mại điện tử, nhà quản lý nền tảng số có chức năng thanh toán, các tổ chức có hoạt động kinh tế số khác là người nộp thuế, thực hiện khấu trừ, nộp thuế thay, kê khai số thuế đã khấu trừ.",,,,,
+45,Một doanh nghiệp công nghệ cao có dự án đầu tư mới tại khu công nghệ số tập trung được hưởng ưu đãi theo cả tiêu chí ngành nghề và địa bàn thì áp dụng ra sao?,Doanh nghiệp được lựa chọn áp dụng mức ưu đãi thuế có lợi nhất khi cùng được hưởng nhiều mức ưu đãi khác nhau cho cùng một khoản thu nhập.,"Dựa vào ngữ cảnh tham khảo, doanh nghiệp công nghệ cao có dự án đầu tư mới tại khu công nghệ số tập trung sẽ được hưởng ưu đãi thuế thu nhập doanh nghiệp theo cả hai tiêu chí ngành nghề và địa bàn.
+
+Theo [passage_000573], doanh nghiệp công nghệ cao được ưu đãi về ứng dụng công nghệ cao, đầu tư mạo hiểm, ươm tạo công nghệ cao, ươm tạo doanh nghiệp công nghệ cao.
+
+Theo [passage_000597], khu công nghệ số tập trung cũng là một trong những khu vực được ưu đãi thuế.
+
+Tuy nhiên, ngữ cảnh không cung cấp chi tiết về cách thức áp dụng ưu đãi khi đáp ứng cả hai tiêu chí này. Do đó, cần thêm thông tin từ cơ quan quản lý thuế để xác định chính xác cách áp dụng ưu đãi trong trường hợp cụ thể này.","Áp dụng ưu đãi theo địa bàn, trừ trường hợp Chính phủ có quy định khác.",Áp dụng ưu đãi thuế TNDN theo địa bàn (khu công nghệ số tập trung) và ngành nghề (công nghệ cao).,"Theo quy định của pháp luật Việt Nam, doanh nghiệp có thể được hưởng ưu đãi thuế đối với dự án đầu tư theo cả tiêu chí ngành nghề và địa bàn. Tuy nhiên, để xác định cụ thể cách áp dụng ưu đãi, cần xem xét các điều kiện sau:
+
+1. **Tiêu chí ngành nghề**: Doanh nghiệp phải thuộc một trong những ngành nghề được ưu đãi thuế theo quy định tại Nghị định 83/2021/NĐ-CP.
+
+2. **Tiêu chí địa bàn**: Dự án đầu tư phải nằm trong khu công nghệ số tập trung được Chính phủ phê duyệt.
+
+**Cách áp dụng ưu đãi**:
+- **Thuế thu nhập doanh nghiệp (TNDN)**: Doanh nghiệp sẽ được giảm 100% thuế TNDN trong 5 năm đầu kể từ năm đầu tiên có doanh thu từ hoạt động kinh doanh liên quan đến dự án đầu tư.
+- **Thuế giá trị gia tăng (GTGT)**: Doanh nghiệp được miễn thuế GTGT trong 5 năm đầu kể từ năm đầu tiên có doanh thu từ hoạt động kinh doanh liên quan đến dự án đầu tư.
+
+**Lưu ý**:
+- Cần xác minh chi tiết các điều kiện cụ thể tại Nghị định 83/2021/NĐ-CP và các văn bản hướng dẫn để đảm bảo doanh nghiệp đáp ứng đầy đủ các yêu cầu.
+- Các ưu đãi này thường có thời hạn và cần được đăng ký trước khi bắt đầu hoạt động.
+
+Nếu cần thông tin chi tiết hơn, bạn nên tham khảo trực tiếp từ cơ quan thuế hoặc đơn vị quản lý dự án đầu tư.",,,,,
+46,Bán nợ thuộc đối tượng nào của Luật Thuế GTGT?,Không chịu thuế GTGT. Bán nợ bao gồm bán khoản phải trả và khoản phải thu thuộc đối tượng không chịu thuế GTGT.,"Bán nợ, bán cổ phiếu, chuyển nhượng chứng khoán, chuyển nhượng quyền sử dụng đất, chuyển nhượng bất động sản, chuyển nhượng vốn góp của tổ chức, cá nhân không phải là doanh nghiệp được xác định là hoạt động kinh doanh chịu thuế GTGT.",Bán nợ thuộc đối tượng không chịu thuế GTGT.,"Theo ngữ cảnh tham khảo từ VBHN 12/VBHN-VPQH năm 2026 - Luật Thuế giá trị gia tăng, bán nợ bao gồm hai trường hợp cụ thể:
+
+1. Bán khoản phải trả và khoản phải thu (điểm đ, Điều 5, Khoản 9).
+2. Bán tài sản bảo đảm của khoản nợ của tổ chức mà Nhà nước sở hữu 100% vốn điều lệ do Chính phủ thành lập có chức năng mua, bán nợ để xử lý nợ xấu của các tổ chức tín dụng Việt Nam (điểm h, Điều 5, Khoản 9).
+
+Vì vậy, bán nợ thuộc đối tượng không chịu thuế GTGT theo quy định của Luật Thuế giá trị gia tăng.","Theo quy định của Luật Thuế giá trị gia tăng tại Việt Nam, việc bán nợ không thuộc đối tượng chịu thuế GTGT. Việc bán nợ được quy định trong lĩnh vực tín dụng và đầu tư, không phải là hoạt động kinh doanh có tính chất bán hàng hóa hoặc cung cấp dịch vụ để tạo ra doanh thu chịu thuế GTGT. Do đó, giao dịch bán nợ không phải đăng ký thuế GTGT hay kê khai, nộp thuế GTGT.",,,,,
+47,Một sản phẩm phái sinh tài chính có chịu thuế GTGT không?,"Không. Sản phẩm phái sinh theo quy định của pháp luật về tổ chức tín dụng, chứng khoán và thương mại (như hoán đổi lãi suất, hợp đồng kỳ hạn, hợp đồng tương lai, quyền chọn) thuộc đối tượng không chịu thuế GTGT.","Không. Sản phẩm phái sinh tài chính theo quy định của pháp luật về các tổ chức tín dụng, pháp luật về chứng khoán và pháp luật về thương mại là đối tượng không chịu thuế GTGT.","Sản phẩm phái sinh tài chính thường không chịu thuế Giá trị gia tăng (GTGT) theo quy định tại Điều 5 Thông tư 38/2016/TT-BTC. Theo đó, các dịch vụ liên quan đến phái sinh tài chính như giao dịch, ký quỹ, quản lý danh mục đầu tư… không phải chịu thuế GTGT. Tuy nhiên, cần kiểm tra cụ thể trường hợp cụ thể vì có thể có những thay đổi hoặc điều chỉnh sau này.",Không. Sản phẩm phái sinh tài chính được miễn thuế GTGT.,"Dựa vào ngữ cảnh tham khảo từ VBHN 12/VBHN-VPQH năm 2026 - Luật Thuế giá trị gia tăng, sản phẩm phái sinh tài chính như hoán đổi lãi suất, hợp đồng kỳ hạn, hợp đồng tương lai, hợp đồng quyền chọn mua, chọn bán và sản phẩm phái sinh khác được liệt kê trong Điều 5, Khoản 9, điểm g, thuộc đối tượng không chịu thuế giá trị gia tăng.
+
+Vì vậy, một sản phẩm phái sinh tài chính không chịu thuế GTGT theo quy định của pháp luật hiện hành.",,,,,
+48,"Đối với hoạt động sản xuất điện của Tập đoàn Điện lực Việt Nam, giá tính thuế GTGT là gì?","Là giá bán chưa có thuế GTGT, do Chính phủ quy định cụ thể.","Theo ngữ cảnh tham khảo từ [passage_000067], đối với hoạt động cung cấp điện và hoạt động sản xuất điện, thời điểm xác định thuế GTGT được quy định riêng biệt. Tuy nhiên, văn bản không cung cấp thông tin cụ thể về giá tính thuế GTGT trong trường hợp sản xuất điện của Tập đoàn Điện lực Việt Nam. Do đó, không đủ thông tin để xác định chính xác giá tính thuế GTGT trong trường hợp này. Cần có thêm quy định cụ thể từ cơ quan ban hành pháp luật.",Là giá bán lẻ điện cho người dùng cuối cùng của Tập đoàn.,Là giá bán chưa có thuế GTGT.,"Theo quy định của pháp luật Việt Nam, đối với hoạt động sản xuất điện của Tập đoàn Điện lực Việt Nam (EVN), giá tính thuế GTGT sẽ là giá bán lẻ điện cho người sử dụng cuối cùng, được công bố theo quy định của Bộ Công Thương và Tổng cục Thuế.
+
+Cụ thể:
+
+1. EVN sẽ phải kê khai và nộp thuế GTGT theo mức giá bán lẻ điện cho người sử dụng cuối cùng.
+
+2. Giá bán lẻ điện này bao gồm cả thuế GTGT.
+
+3. EVN cần tuân thủ các quy định về giá điện do cơ quan nhà nước có thẩm quyền ban hành.
+
+4. EVN cũng cần tuân thủ các quy định về quản lý thuế GTGT theo quy định của pháp luật hiện hành.
+
+Nếu bạn cần thông tin chi tiết hơn về cách tính giá bán lẻ điện hoặc các quy định cụ thể khác, vui lòng cung cấp thêm thông tin.",,,,,
+49,Cơ sở kinh doanh không đáp ứng điều kiện khấu trừ thuế thì hậu quả là gì?,"Không được khấu trừ thuế GTGT. Các hóa đơn, chứng từ lập từ các hành vi bị nghiêm cấm cũng không được khấu trừ thuế GTGT.",Không được khấu trừ thuế giá trị gia tăng đầu vào.,Phải nộp thuế trực tiếp theo mức thuế suất 5% trên doanh thu.,"Khi cơ sở kinh doanh không đáp ứng điều kiện để được khấu trừ thuế giá trị gia tăng (GTGT), hậu quả chính là họ không được trừ phần thuế GTGT đã nộp vào thuế GTGT phải nộp. Điều này dẫn đến việc cơ sở kinh doanh phải nộp thêm số thuế GTGT đã nộp nhưng không được khấu trừ.
+
+Theo Nghị định 116/2020/NĐ-CP, nếu cơ sở kinh doanh không đáp ứng điều kiện để được khấu trừ thuế GTGT, thì thuế GTGT đã nộp vào thuế GTGT phải nộp của kỳ kế toán tương ứng. 
+
+Tuy nhiên, cần lưu ý rằng cụ thể về các trường hợp không đáp ứng điều kiện để được khấu trừ và hậu quả cụ thể có thể thay đổi theo quy định mới nhất của pháp luật thuế Việt Nam. Vì vậy, bạn nên tham khảo thêm từ cơ quan thuế địa phương hoặc tư vấn pháp luật thuế chuyên nghiệp.","Theo ngữ cảnh tham khảo, nếu cơ sở kinh doanh không đáp ứng điều kiện khấu trừ thuế, cụ thể là không đáp ứng quy định về khấu trừ thuế tại khoản 1 và khoản 2 Điều 14 của VBHN 12/VBHN-VPQH năm 2026 - Luật Thuế giá trị gia tăng, thì hậu quả là cơ sở kinh doanh không được khấu trừ thuế giá trị gia tăng.",,,,,
+50,Doanh thu từ chuyển nhượng dự án thăm dò khoáng sản được hạch toán thế nào khi xác định thuế TNDN?,"Phải xác định riêng để kê khai nộp thuế, không được bù trừ lỗ, lãi với hoạt động sản xuất, kinh doanh trong kỳ tính thuế.","Theo ngữ cảnh tham khảo từ [passage_000529], doanh thu từ chuyển nhượng dự án thăm dò khoáng sản phải xác định riêng để kê khai nộp thuế, không được bù trừ lỗ, lãi với hoạt động sản xuất, kinh doanh trong kỳ tính thuế. Điều này có nghĩa là doanh thu từ chuyển nhượng dự án thăm dò khoáng sản cần được hạch toán riêng khi xác định thuế thu nhập doanh nghiệp (TNDN), không thể kết hợp hoặc bù trừ với các hoạt động khác của doanh nghiệp.","Thu nhập từ chuyển nhượng dự án thăm dò, khai thác, chế biến khoáng sản phải xác định riêng, không được bù trừ lỗ, lãi với hoạt động sản xuất, kinh doanh trong kỳ tính thuế.","Theo quy định tại Điều 10 Thông tư 55/2013/TT-BTC, doanh thu từ hoạt động chuyển nhượng quyền sử dụng đất, tài sản gắn liền với đất, chuyển nhượng dự án thăm dò, khai thác khoáng sản sẽ được hạch toán vào doanh thu bán hàng và cung cấp dịch vụ khác. 
+
+Cụ thể, doanh thu từ chuyển nhượng dự án thăm dò khoáng sản sẽ được tính vào doanh thu bán hàng và cung cấp dịch vụ khác để xác định thuế thu nhập doanh nghiệp (TNDN) theo quy định.
+
+Tuy nhiên, cần lưu ý rằng các khoản chi phí hợp lý liên quan đến việc chuyển nhượng dự án này cũng cần được tính vào chi phí để giảm trừ khi xác định thu nhập chịu thuế TNDN.
+
+Nếu có thêm thông tin cụ thể như thời điểm chuyển nhượng, giá trị chuyển nhượng, chi phí liên quan... sẽ giúp xác định chính xác hơn.",Có thể hạch toán theo từng hợp đồng hoặc từng phần việc riêng biệt của hợp đồng.,,,,,

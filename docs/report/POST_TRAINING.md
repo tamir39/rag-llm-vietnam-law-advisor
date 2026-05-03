@@ -17,8 +17,8 @@ python scripts/run_eval.py
 
 Sản phẩm: `experiments/results/<config>/predictions.jsonl` + `metrics.json` cho 4 cấu hình + `summary.json`.
 
-- [ ] Đẩy `experiments/results/` lên git? Mặc định gitignore nội dung, nhưng nên commit `summary.json` để báo cáo có dấu tích thời gian.
-- [ ] Sao bảng số trong `summary.json` vào **bảng 6.1** của `report.md`.
+- [x] Đẩy `experiments/results/` lên git? Mặc định gitignore nội dung, nhưng nên commit `summary.json` để báo cáo có dấu tích thời gian.
+- [x] Sao bảng số trong `summary.json` vào **bảng 6.1** của `report.md`.
 
 ## 3. Human eval (50 câu)
 
